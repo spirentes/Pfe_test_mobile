@@ -1,14 +1,17 @@
 package PageObjects;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 
 public
-class LoginPage {
+class LoginPage extends BasePage{
     private AndroidDriver driver;
-    private By            newUser           =
-            By.xpath ( "//android.view.ViewGroup[@index='3']/android.widget.TextView" );
+   // private By            newUser           =By.xpath ( "//android.view.ViewGroup[@index='3']/android.widget.TextView" );
     private By            emailField        =
             By.xpath ( "//android.view.ViewGroup[@index='5']/android.widget.EditText" );
     private By            passwordField     =
@@ -17,10 +20,15 @@ class LoginPage {
             By.xpath ( "//android.view.ViewGroup[@index='9']/android.widget.TextView" );
     private By            conditionCheckbox = By.xpath (
             "//android.view.ViewGroup[@index='8']/android.view.ViewGroup[@index='0']/android.widget.TextView" );
+    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='3']/android.widget.TextView")
+    WebElement newUser   ;
+
 
     public
     LoginPage ( AndroidDriver driver ) {
+        super(driver);
         this.driver = driver;
+        PageFactory.initElements ( new AppiumFieldDecorator ( driver), this );
     }
 
     public
@@ -47,7 +55,7 @@ class LoginPage {
 
     public
     RegistrationPage clickNewUserBtn ( ) {
-        driver.findElement ( newUser ).click ( );
+         click (newUser );
         return new RegistrationPage ( driver );
     }
 }

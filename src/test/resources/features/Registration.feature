@@ -1,16 +1,13 @@
 Feature: Successful Registration
 
-  Scenario Outline: User registers with valid information
-    Given I am on the registration page
-    When I enter "<FirstName>" as the first name
-    And I enter "<LastName>" as the last name
-    And I enter "kalboussioumaima02@gmail.com" as the email
-    And I enter "Password123*" as the password
-    And I accept the terms and conditions
-    And I click on the register button
-    Then I should see the login page
+  Scenario Outline: User successfully registers with valid details
+    Given User clicks on the new user button
+    When User enters "<FirstName>", "<LastName>", "<Email>", and "<Password>"
+    And User accepts the terms and conditions
+    And User clicks on the register button
+    Then User should be registered successfully
 
     Examples:
-      | FirstName | LastName |
-      | oumaima   | kalboussi|
-      | sabri     | mejri    |
+      | FirstName | LastName | Email                      | Password     |
+      | oumaima   | kalboussi  | kalboussioumaima1@gmail.com | Password123* |
+      | sabri     | mejri   | mejrisabri@gmail.com      | Password12** |

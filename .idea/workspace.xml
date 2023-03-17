@@ -5,64 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d470034b-f243-42b1-8a48-36c7b85c8fca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/RegistrationData.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ActionsChargingStationsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/HEARTBEAT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ChargePointCSPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ChartSessionPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/InfoChargingStationsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/OCPPConfigPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ReportErrorPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SessionPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/JsonReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/SuccessfulRegistration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/registration/RegistrationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Registration.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Login.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/RegistrationData.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/RegistrationData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AlertDialogs/AddAnOrganization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/AddAnOrganization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AlertDialogs/HEARTBEAT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AlertDialogs/NoOrganizationFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/NoOrganizationFound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AlertDialogs/OrganizationHasBeenAdded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/OrganizationHasBeenAdded.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/WattzHubCPO/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ActionsChargingStationsPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/AddOrganizationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AddOrganizationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ChargePointCSPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ChargingStationsListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ChargingStationsListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ChartCSPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ChartCSPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ChartSessionPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/FiltersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/FiltersPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/InfoChargingStationsPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/InvoicesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/InvoicesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/NavSidebarMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/NavSidebarMenuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/OCPPConfigPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/PaymentMethodsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/RFIDCardsListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/RFIDCardsListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ReportErrorPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ScanChargingStations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ScanChargingStations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchChargingStationsMapPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SearchChargingStationsMapPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SessionPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SessionsHistoryListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsHistoryListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SessionsInProgressListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsInProgressListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SitesListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SitesListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/StatisticsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/StatisticsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/UsersListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/UsersListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/permissions/LocationPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/permissions/LocationPermission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/permissions/MediaAccessPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/permissions/MediaAccessPermission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/alerts/RegitreOrganizationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/alerts/RegitreOrganizationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/base/BaseTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/filters/FiltersTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/filters/FiltersTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/login/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/login/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/navSidebarmenu/NavSidebarMenuTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/navSidebarmenu/NavSidebarMenuTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/organizations/AddOrganizationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/organizations/AddOrganizationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/permission_tests/LocationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/permission_tests/LocationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/permission_tests/MediaAccessTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/permission_tests/MediaAccessTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/registration/RegistrationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/search/SearchTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/search/SearchTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ActionsChargingStationsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ActionsChargingStationsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ChargePointCSPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ChargePointCSPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ChargingStationsListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ChargingStationsListPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/JsonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/JsonReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/SuccessfulRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/SuccessfulRegistration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/registration/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/registration/RegistrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Registration.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,8 +66,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/msi/IdeaProjects/WattzHubCPO_MobileAutomation/src/test/java/steps",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -119,17 +76,17 @@
       <recent name="C:\Users\msi\IdeaProjects\WattzHubCPO_MobileAutomation\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.NavSidebarMenuTests.testOpenQRCodeScanner">
-    <configuration name="NavSidebarMenuTests" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.TestRunner (1)">
+    <configuration name="SuccessfulRegistration (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="navSidebarmenu.*" />
+          <option name="PATTERN" value="steps.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="navSidebarmenu" />
-      <option name="MAIN_CLASS_NAME" value="navSidebarmenu.NavSidebarMenuTests" />
+      <option name="PACKAGE_NAME" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="steps.SuccessfulRegistration" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -137,85 +94,150 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NavSidebarMenuTests.testAllSidebarMenuElementsClickable" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SuccessfulRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="navSidebarmenu.*" />
+          <option name="PATTERN" value="steps.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="navSidebarmenu" />
-      <option name="MAIN_CLASS_NAME" value="navSidebarmenu.NavSidebarMenuTests" />
-      <option name="METHOD_NAME" value="testAllSidebarMenuElementsClickable" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="steps.SuccessfulRegistration" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="--add-opens java.base/java.lang=ALL-UNNAMED " />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NavSidebarMenuTests.testOpenQRCodeScanner" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRunner (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="navSidebarmenu.*" />
+          <option name="PATTERN" value="runner.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="navSidebarmenu" />
-      <option name="MAIN_CLASS_NAME" value="navSidebarmenu.NavSidebarMenuTests" />
-      <option name="METHOD_NAME" value="testOpenQRCodeScanner" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.TestRunner" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NavSidebarMenuTests.testOpenSites" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="navSidebarmenu.*" />
+          <option name="PATTERN" value="runner.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="navSidebarmenu" />
-      <option name="MAIN_CLASS_NAME" value="navSidebarmenu.NavSidebarMenuTests" />
-      <option name="METHOD_NAME" value="testOpenSites" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.TestRunner" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="--add-opens java.base/java.lang=ALL-UNNAMED " />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTests.testSearchField" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="search.*" />
+          <option name="PATTERN" value="runner.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="search" />
-      <option name="MAIN_CLASS_NAME" value="search.SearchTests" />
-      <option name="METHOD_NAME" value="testSearchField" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.TestRunner" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="--add-opens java.base/java.lang=ALL-UNNAMED " />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestRunner" type="TestNG" nameIsGenerated="true">
+      <module name="WattzHubCPO_MobileAutomation" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.TestRunner" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="--add-opens java.base/java.lang=ALL-UNNAMED " />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties>
+        <property name="" value="" />
+      </properties>
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TestNG.TestRunner" />
+      <item itemvalue="TestNG.SuccessfulRegistration (1)" />
+      <item itemvalue="TestNG.TestRunner (1)" />
+      <item itemvalue="TestNG.SuccessfulRegistration" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.NavSidebarMenuTests.testOpenQRCodeScanner" />
-        <item itemvalue="TestNG.NavSidebarMenuTests" />
-        <item itemvalue="TestNG.NavSidebarMenuTests.testAllSidebarMenuElementsClickable" />
-        <item itemvalue="TestNG.NavSidebarMenuTests.testOpenSites" />
-        <item itemvalue="TestNG.SearchTests.testSearchField" />
+        <item itemvalue="TestNG.TestRunner (1)" />
+        <item itemvalue="TestNG.SuccessfulRegistration (1)" />
+        <item itemvalue="TestNG.TestRunner" />
+        <item itemvalue="TestNG.TestRunner" />
+        <item itemvalue="TestNG.TestRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -231,6 +253,14 @@
     <servers />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="TestNG">
         <watch expression="((ByXPath)((LoginPage)this).emailField).xpathExpression" custom="org.openqa.selenium.By.ByXPath,pages.LoginPage" />

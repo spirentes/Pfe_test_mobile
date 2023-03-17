@@ -3,11 +3,15 @@
 
     {
       "FirstName" : "oumaima",
-      "LastName" : "kalboussi"
+      "LastName" : "kalboussi",
+      "Email": "kalboussioumaima1@gmail.com",
+      "Password" : "Password123*"
     },
     {
       "FirstName" : "sabri",
-      "LastName" : "mejri"
+      "LastName" : "mejri",
+      "Email": "mejrisabri@gmail.com",
+      "Password" : "Password12**"
     }
 
   ]

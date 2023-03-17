@@ -25,7 +25,7 @@ class RegistrationTests extends BaseTests {
     Object[][] passData ( ) throws IOException, org.json.simple.parser.ParseException {
         return JsonReader.getJSONdata
                                  ( System.getProperty ( "user.dir" ) + "/data/TRegistrationData.json"
-                                         , "Registration Data" , 2 );
+                                         , "Registration Data" , 4);
     }
 
     @BeforeClass
@@ -33,6 +33,7 @@ class RegistrationTests extends BaseTests {
     void setUp ( ) throws MalformedURLException {
         configureAppium ( );
         registrationPage = new RegistrationPage ( driver );
+
     }
 
 
@@ -40,11 +41,12 @@ class RegistrationTests extends BaseTests {
 
     @Test( dataProvider = "Registration Data")
     public
-    void testSuccessfulRegistration (String FirstName, String LastName ) {
+    void testSuccessfulRegistration (String FirstName, String LastName,String Email,String Password) {
+        loginPage.clickNewUserBtn ();
         registrationPage.setFirstName ( FirstName );
         registrationPage.setLastName ( LastName );
-        registrationPage.setEmail ( "kalboussioumaima02@gmail.com" );
-        registrationPage.setPassword ( "Password123*" );
+        registrationPage.setEmail ( Email );
+        registrationPage.setPassword ( Password);
         registrationPage.acceptConditions ( );
         loginPage = registrationPage.clickRegisterButton ( );
 

@@ -1,60 +1,78 @@
 package PageObjects;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import static org.openqa.selenium.support.PageFactory.initElements;
 
 public
-class RegistrationPage {
+class RegistrationPage extends BasePage {
     private  AndroidDriver driver;
+    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='6']/android.widget.EditText")
+    WebElement firstnameField ;
+    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='5']/android.widget.EditText")
+    WebElement nameField ;
+    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='7']/android.widget.EditText")
+    WebElement emailField  ;
+    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='8']/android.widget.EditText")
+    WebElement passwordField  ;
+    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='9']/android.widget.EditText")
+    WebElement confirmPasswordField  ;
+    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='12']/android.widget.TextView")
+    WebElement registerButton ;
+    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='10']/android.widget.TextView")
+    WebElement  conditionCheckbox  ;
 
-    private By firstnameField = By.xpath("//android.view.ViewGroup[@index='6']/android.widget.EditText");
-    private By nameField = By.xpath("//android.view.ViewGroup[@index='5']/android.widget.EditText");
-    private By emailField = By.xpath("//android.view.ViewGroup[@index='7']/android.widget.EditText");
-    private By passwordField = By.xpath("//android.view.ViewGroup[@index='8']/android.widget.EditText");
-    private By confirmPasswordField = By.xpath("//android.view.ViewGroup[@index='9']/android.widget.EditText");
-    private By registerButton = By.xpath("//android.widget.Button[@text='REGISTER']");
-    private By            conditionCheckbox = By.xpath (
-            "//android.view.ViewGroup[@index='8']/android.view.ViewGroup[@index='0']/android.widget.TextView" );
-    private By            loginButton       =
-            By.xpath ( "//android.view.ViewGroup[@index='9']/android.widget.TextView" );
-    private By          backToLogin      =
-            By.xpath ( "//android.view.ViewGroup[@index='9']/android.widget.TextView" );
-
-
-    public RegistrationPage(AndroidDriver driver){
-        this.driver =driver;
+    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='9']/android.widget.TextView")
+    WebElement backToLogin;
+    public RegistrationPage(AndroidDriver driver) {
+        super(driver);
+        this.driver = driver;
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
+
     public void setFirstName(String firstname) {
-        driver.findElement(firstnameField).sendKeys(firstname);
+        clear(firstnameField );
+        sendText(firstnameField , firstname);
     }
     public void setLastName(String name) {
-        driver.findElement(nameField).sendKeys(name);
+        clear(nameField);
+        sendText(nameField , name);
     }
 
     public void setEmail(String email) {
-        driver.findElement(emailField).sendKeys(email);
+
+        clear(emailField);
+        sendText(emailField, email);
     }
 
     public void setPassword(String password) {
-        driver.findElement(passwordField).sendKeys(password);
+         clear(passwordField );
+        sendText(passwordField, password);
     }
 
     public void setConfirmPassword(String confirmPassword) {
-        driver.findElement(confirmPasswordField).sendKeys(confirmPassword);
+        clear(confirmPasswordField );
+        sendText(confirmPasswordField , confirmPassword);
     }
     public
     void acceptConditions ( ) {
-        driver.findElement ( conditionCheckbox ).click ( );
+        click (conditionCheckbox);
     }
 
     public
     SearchChargingStationsMapPage clickLoginButton ( ) {
-        driver.findElement ( loginButton ).click ( );
+       click (backToLogin);
         return new SearchChargingStationsMapPage ( driver );
     }
 
     public LoginPage clickRegisterButton() {
-        driver.findElement(registerButton).click();
+        click (registerButton);
         return new LoginPage ( driver );
     }
 
