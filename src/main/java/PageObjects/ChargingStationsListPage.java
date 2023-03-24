@@ -7,71 +7,93 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public
-class ChargingStationsListPage  extends BasePage{
+class ChargingStationsListPage extends BasePage {
     private AndroidDriver driver;
-    @AndroidFindBy(xpath= "")
+    @AndroidFindBy ( xpath = "")
     WebElement navMenuIcon;
 
-    @AndroidFindBy(xpath= "")
+    @AndroidFindBy ( xpath = "")
     WebElement scanChargingStation;
 
-    @AndroidFindBy(xpath= "")
+    @AndroidFindBy ( xpath = "")
     WebElement searchField;
 
-    @AndroidFindBy(xpath= "")
+    @AndroidFindBy ( xpath = "")
     WebElement filterIcon;
-    @AndroidFindBy(xpath= "")
+    @AndroidFindBy ( xpath = "")
     WebElement clearSearchField;
 
-    @AndroidFindBy(xpath= "")
+    @AndroidFindBy ( xpath = "")
     WebElement actionBtn;
 
-    @AndroidFindBy(xpath= "")
+    @AndroidFindBy ( xpath = "")
     WebElement heartbeatIcon;
 
-    @AndroidFindBy(xpath= "")
+    @AndroidFindBy ( xpath = "")
     WebElement moreInfo;
-    @AndroidFindBy(xpath= "")
+    @AndroidFindBy ( xpath = "")
     WebElement mapViewIcon;
+
     public
     ChargingStationsListPage ( AndroidDriver driver ) {
-        super(driver);
+        super ( driver );
         this.driver = driver;
-        PageFactory.initElements ( new AppiumFieldDecorator ( driver), this );
+        PageFactory.initElements ( new AppiumFieldDecorator ( driver ) , this );
     }
-public void openNavMenu(){
+
+    public
+    void openNavMenu ( ) {
         click ( navMenuIcon );
-}
-public ScanChargingStations openScanCS(){
-        click (  scanChargingStation);
+    }
+
+    public
+    ScanChargingStations openScanCS ( ) {
+        click ( scanChargingStation );
         return new ScanChargingStations ( driver );
 
-}
-public void searchForCS(String nameCS){
+    }
+
+    public
+    void searchForCS ( String nameCS ) {
         clear ( searchField );
-        sendText ( searchField,nameCS );
-}
-public FiltersPage openFilterPage () {
+        sendText ( searchField , nameCS );
+    }
+
+    public
+    FiltersPage openFilterPage ( ) {
         click ( filterIcon );
         return new FiltersPage ( driver );
 
     }
-    public void clearSearchField (){
+
+    public
+    void clearSearchField ( ) {
         click ( clearSearchField );
 
     }
 
-    public ActionsChargingStationsPage openActionPage(){
-        click (actionBtn );
+    public
+    ActionsChargingStationsPage openActionPage ( ) {
+        click ( actionBtn );
         return new ActionsChargingStationsPage ( driver );
     }
-    public void StatusCS(){
+
+    public
+    void StatusCS ( ) {
         click ( heartbeatIcon );
     }
-public ChargePointCSPage seeMoreInfo()
-{click ( moreInfo );
-return new  ChargePointCSPage(driver);}
-    public SearchChargingStationsMapPage mapView()
-    {click ( mapViewIcon );
-    return new SearchChargingStationsMapPage ( driver );}
+
+    public
+    ChargePointCSPage seeMoreInfo ( )
+    {
+        click ( moreInfo );
+        return new ChargePointCSPage ( driver );
+    }
+
+    public
+    SearchChargingStationsMapPage mapView ( )
+    {
+        click ( mapViewIcon );
+        return new SearchChargingStationsMapPage ( driver );
+    }
 }
