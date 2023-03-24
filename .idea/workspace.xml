@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d470034b-f243-42b1-8a48-36c7b85c8fca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/ChargingStationsListPageSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/steps/NavSidebarMenuStepDefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/NavSidebarMenu.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ActionsChargingStationsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ActionsChargingStationsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/AddAnOrganization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/AddAnOrganization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ChargePointCSPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ChargePointCSPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ChargingStationsListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ChargingStationsListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ChartCSPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ChartCSPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ChartSessionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ChartSessionPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/FiltersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/FiltersPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/InfoChargingStationsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/InfoChargingStationsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/InvoicesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/InvoicesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/NavSidebarMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/NavSidebarMenuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/OCPPConfigPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/OCPPConfigPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/RFIDCardsListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/RFIDCardsListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ReportErrorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ReportErrorPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ScanChargingStations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ScanChargingStations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SearchChargingStationsMapPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SearchChargingStationsMapPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SessionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SessionPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsHistoryListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsHistoryListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsInProgressListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsInProgressListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SitesListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SitesListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/StatisticsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/StatisticsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/UsersListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/UsersListPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/AddOrganizationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AddOrganizationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Registration.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRunner (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRunner (1)" type="TestNG" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
       <extension name="coverage">
         <pattern>
@@ -235,14 +217,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="TestNG.TestRunner (1)" />
       <item itemvalue="TestNG.TestRunner" />
       <item itemvalue="TestNG.SuccessfulRegistration (1)" />
-      <item itemvalue="TestNG.TestRunner (1)" />
       <item itemvalue="TestNG.SuccessfulRegistration" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestRunner (1)" />
         <item itemvalue="TestNG.SuccessfulRegistration (1)" />
         <item itemvalue="TestNG.TestRunner" />
         <item itemvalue="TestNG.TestRunner" />
