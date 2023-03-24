@@ -1,96 +1,129 @@
 package PageObjects;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 public
-class FiltersPage {
+class FiltersPage extends BasePage{
     private AndroidDriver driver;
-    private By             availableCS      = By.xpath ( "//android.widget.Switch[@index='3']" );
-    private By            showRoamingCS    = By.xpath ( "//android.widget.Switch[@index='5']" );
-    private By            type2Btn         = By.xpath ( "//android.view.ViewGroup[@index='6']" );
-    private By            type2ComboCSSBtn = By.xpath ( "//android.view.ViewGroup[@index='7']" );
-    private By            CHAdeMOBtn       = By.xpath ( "//android.view.ViewGroup[@index='8']" );
-    private By            type1Btn         = By.xpath ( "//android.view.ViewGroup[@index='9']" );
-    private By            type1ComboCSSBtn = By.xpath ( "//android.view.ViewGroup[@index='10']" );
-    private By            domesticBtn      = By.xpath ( "//android.view.ViewGroup[@index='11']" );
-    private By            type3CBtn        = By.xpath ( "//android.view.ViewGroup[@index='12']" );
-    private By            unknownBtn       = By.xpath ( "//android.view.ViewGroup[@index='13']" );
-    private By            applyBtn         = By.xpath ( "//android.view.ViewGroup[@index='14']/android.widget.Button" );
-    private By            clearBtn         = By.xpath ( "//android.view.ViewGroup[@index='15']/android.widget.Button" );
-    private By            exitBtn          =
-            By.xpath ( "//android.view.ViewGroup[@index='1']/android.widget.TextView" );
+    @AndroidFindBy(xpath = "//android.widget.Switch[@index='3']")
+    private WebElement    availableCS;
+    @AndroidFindBy(xpath = "//android.widget.Switch[@index='5']")
+    private WebElement    showRoamingCS;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='6']")
+    private WebElement    type2Btn;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='7']")
+    private WebElement    type2ComboCSSBtn;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='8']")
+    private WebElement CHAdeMOBtn;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='9']")
+    private WebElement type1Btn;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='10']")
+    private WebElement type1ComboCSSBtn;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='11']")
+    private WebElement domesticBtn;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='12']")
+    private WebElement type3CBtn;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='13']")
+    private WebElement unknownBtn;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='14']/android.widget.Button")
+    private WebElement applyBtn;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='15']/android.widget.Button")
+    private WebElement clearBtn;
+    @AndroidFindBy (xpath = "//android.view.ViewGroup[@index='1']/android.widget.TextView")
+    private WebElement exitBtn;
+    @AndroidFindBy (xpath = "//android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView[@index='0']")
+    private WebElement pageName;
+
 
     public
     FiltersPage ( AndroidDriver driver ) {
+        super(driver);
         this.driver = driver;
+        PageFactory.initElements ( new AppiumFieldDecorator ( driver), this );
     }
 
     public
     void clickAvailableCS ( ) {
-        driver.findElement ( availableCS ).click ( );
+        click (availableCS );
     }
 
     public
     void clickShowRoamingCS ( ) {
-        driver.findElement ( showRoamingCS ).click ( );
+        click ( showRoamingCS);
     }
 
     public
     void selectType2 ( ) {
-        driver.findElement ( type2Btn ).click ( );
+        click (type2Btn );
     }
 
     public
     void selectType2ComboCSS ( ) {
-        driver.findElement ( type2ComboCSSBtn ).click ( );
+        click ( type2ComboCSSBtn );
     }
 
     public
     void selectCHdeMo ( ) {
-        driver.findElement ( CHAdeMOBtn ).click ( );
+        click (CHAdeMOBtn  );
     }
 
     public
     void selectType1 ( ) {
-        driver.findElement ( type1Btn ).click ( );
+        click ( type1Btn );
     }
 
     public
     void selectType1ComboCCS ( ) {
-        driver.findElement ( type1ComboCSSBtn ).click ( );
+        click ( type1ComboCSSBtn);
     }
 
     public
     void selectDomestic ( ) {
-        driver.findElement ( domesticBtn ).click ( );
+        click ( domesticBtn);
     }
 
     public
     void selectType3C ( ) {
-        driver.findElement ( type3CBtn ).click ( );
+        click (type3CBtn );
     }
 
     public
     void selectUnknown ( ) {
-        driver.findElement ( unknownBtn ).click ( );
+        click ( unknownBtn  );
     }
 
     public
     SearchChargingStationsMapPage clickApply ( ) {
-        driver.findElement ( applyBtn ).click ( );
+        click (applyBtn );
         return new SearchChargingStationsMapPage ( driver );
     }
 
     public
     void clickClear ( ) {
-        driver.findElement ( clearBtn ).click ( );
+        click ( clearBtn);
     }
     public
     SearchChargingStationsMapPage clickExit ( ) {
-        driver.findElement ( exitBtn ).click ( );
+        click (exitBtn  );
         return new SearchChargingStationsMapPage ( driver );
     }
+    public boolean isOnPage() {
+        try {
+            // Check for the presence of the navMenuIcon element
+            return pageName.isDisplayed();
+        } catch (NoSuchElementException e) {
+            // The element is not present, so the page is not displayed
+            return false;
+        }
+    }
+
+
 
 
 }

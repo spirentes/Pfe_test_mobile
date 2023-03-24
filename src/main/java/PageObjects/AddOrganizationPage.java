@@ -1,10 +1,12 @@
 package PageObjects;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 
 public
-class AddOrganizationPage {
+class AddOrganizationPage extends BasePage {
     private AndroidDriver driver;
     private By            organisationBtn     =
             By.xpath ( "//android.view.ViewGroup[@index='4']/android.widget.TextView" );
@@ -12,7 +14,9 @@ class AddOrganizationPage {
 
     public
     AddOrganizationPage ( AndroidDriver driver ) {
+        super(driver);
         this.driver = driver;
+        PageFactory.initElements ( new AppiumFieldDecorator ( driver), this );
     }
 
     public
