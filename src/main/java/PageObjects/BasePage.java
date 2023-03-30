@@ -12,7 +12,7 @@ import java.time.Duration;
 
 public class BasePage {
     RemoteWebDriver driver;
-    public static final long WAIT = 20;
+    public static final long WAIT = 60;
 
     public BasePage(RemoteWebDriver webDriver) {
         driver = webDriver;

@@ -1,2 +1,5 @@
-package PageObjects;public class ScanOrganization {
+package PageObjects;
+
+public
+class ScanOrganization{
 }

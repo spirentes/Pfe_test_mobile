@@ -1,6 +1,6 @@
 package tests.base;
 
-//object Locators : xpath, id, className, accessibilityId,androidUIautomator
+
 
 
 import io.appium.java_client.MobileBy;
@@ -34,13 +34,13 @@ class BaseTests extends AbstractTestNGCucumberTests {
     void configureAppium ( ) throws MalformedURLException {
         System.out.println("Configuring Appium...");
         // run appium server automatically
-        service =
+      /*  service =
                 new AppiumServiceBuilder ( ).withAppiumJS ( new File (
                                                     "C:\\Users\\msi\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js" ) )
                                             .withIPAddress ( "127.0.0.1" ).usingPort ( 4723 )
                                             .withTimeout ( Duration.ofSeconds ( 300 ) )
                                             .build ( );
-        service.start ( );
+        service.start ( ); */
 
         //___________________USING ANDROID EMULATOR___________________
 
@@ -88,10 +88,9 @@ class BaseTests extends AbstractTestNGCucumberTests {
     @AfterClass
     public
     void afterTest ( ) {
-
         driver.quit ( );
 
-        service.stop ( );
+       // service.stop ( );
     }
 
 
