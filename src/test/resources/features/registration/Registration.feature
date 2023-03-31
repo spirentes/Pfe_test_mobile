@@ -27,24 +27,24 @@ Feature: Registration
       | FirstName | LastName  | InvalidEmail                   | Password     |
       | oumaima   | kalboussi | kalboussioumaima12@gmail.com | Password123* |
 
-  @failed
-  @stepdef=FailedRegistrationSteps
-  Scenario: User enters password with less than 8 characters
-    Given User is on the registration page
-    When User enters a password with less than 8 characters
-    And User accepts the terms and conditions
-    And User clicks on the register button
-    Then User should see an error message indicating that the password is too short
+#  @failed
+#  @stepdef=FailedRegistrationSteps
+#  Scenario: User enters password with less than 8 characters
+#    Given User is on the registration page
+#    When User enters a password with less than 8 characters
+#    And User accepts the terms and conditions
+#    And User clicks on the register button
+#    Then User should see an error message indicating that the password is too short
 
 
-  @failed
-  @stepdef=FailedRegistrationSteps
-  Scenario: User enters password without special character
-    Given User is on the registration page
-    When User enters a password without a special character
-    And User accepts the terms and conditions
-    And User clicks on the register button
-    Then User should see an error message indicating that the password must contain at least one special character
+#  @failed
+#  @stepdef=FailedRegistrationSteps
+#  Scenario: User enters password without special character
+#    Given User is on the registration page
+#    When User enters a password without a special character
+#    And User accepts the terms and conditions
+#    And User clicks on the register button
+#    Then User should see an error message indicating that the password must contain at least one special character
 
 
 

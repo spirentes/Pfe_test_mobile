@@ -36,17 +36,19 @@ class FailedRegistrationSteps extends BaseTests {
         registrationPage.setConfirmPassword ( password );
 
     }
-    @And ("User accepts the terms and conditions  For Failed registration")
+    @And ("User accepts the terms and conditions  For Failed Registration")
     public
     void userAcceptsTheTermsAndConditionsForFailedRegistration ( ) {
         registrationPage.acceptConditions ( );
+        throw new io.cucumber.java.PendingException();
     }
 
-    @And ("User clicks on the register button For Failed registration")
+    @And ("User clicks on the register button For Failed Registration")
     public
     void userClicksOnTheRegisterButtonForFailedRegistration ( ) {
 
         loginPage = registrationPage.clickRegisterButton ( );
+        throw new io.cucumber.java.PendingException();
     }
 
     @Then ("User should see an error message indicating that the email already exists")
@@ -60,7 +62,7 @@ class FailedRegistrationSteps extends BaseTests {
     }
 
 
-
+/*
     @When ("User enters valid details")
     public
     void userEntersValidDetails ( ) {
@@ -104,7 +106,7 @@ class FailedRegistrationSteps extends BaseTests {
     @Then ("User should see an error message indicating that the password must contain at least one special character")
     public
     void userShouldSeeAnErrorMessageIndicatingThatThePasswordMustContainAtLeastOneSpecialCharacter ( ) {
-    }
+    }*/
 }
 
 

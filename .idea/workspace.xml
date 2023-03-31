@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d470034b-f243-42b1-8a48-36c7b85c8fca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/FailedRegistrationSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/Spark.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/extent.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/FiltersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/FiltersPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ScanOrganization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ScanOrganization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/SuccessfulRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/SuccessfulRegistrationSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/base/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/base/BaseTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/registration/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/registration/RegistrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Registration.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/registration/FailedRegistrationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/registration/FailedRegistrationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/registration/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/registration/Registration.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,20 +52,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/msi/IdeaProjects/WattzHubCPO_MobileAutomation/src/test/java/steps&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/msi/Desktop/jar_files",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\msi\IdeaProjects\WattzHubCPO_MobileAutomation\src\test\resources\features\login" />
+      <recent name="C:\Users\msi\IdeaProjects\WattzHubCPO_MobileAutomation\src\test\resources\features\Registration" />
       <recent name="C:\Users\msi\IdeaProjects\WattzHubCPO_MobileAutomation\data" />
       <recent name="C:\Users\msi\IdeaProjects\WattzHubCPO_MobileAutomation\resources" />
     </key>
@@ -79,12 +78,12 @@
       <module name="WattzHubCPO_MobileAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="steps.*" />
+          <option name="PATTERN" value="steps.registration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="steps" />
-      <option name="MAIN_CLASS_NAME" value="steps.SuccessfulRegistrationSteps" />
+      <option name="MAIN_CLASS_NAME" value="steps.registration.SuccessfulRegistrationSteps" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -268,6 +267,9 @@
       <updated>1676885813177</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
