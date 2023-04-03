@@ -26,11 +26,11 @@ import java.time.Duration;
 
 public
 class BaseTests extends AbstractTestNGCucumberTests {
-    public AndroidDriver            driver;
-    public AppiumDriverLocalService service;
+    public static AndroidDriver            driver;
+    public        AppiumDriverLocalService service;
 
-    @BeforeClass
-    public
+    //@BeforeClass
+    public static
     void configureAppium ( ) throws MalformedURLException {
         System.out.println("Configuring Appium...");
         // run appium server automatically
@@ -85,9 +85,10 @@ class BaseTests extends AbstractTestNGCucumberTests {
     // }
 
 
-    @AfterClass
+    //@AfterClass
     public
     void afterTest ( ) {
+
         driver.quit ( );
 
        // service.stop ( );

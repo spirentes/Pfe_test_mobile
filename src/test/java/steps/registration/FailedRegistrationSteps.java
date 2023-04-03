@@ -26,7 +26,7 @@ class FailedRegistrationSteps extends BaseTests {
         registrationPage = loginPage.clickNewUserBtn ( );
 
     }
-    @When ("User enters {string}, {string}, {string}, and {string} with an existing email address")
+  /*  @When ("User enters {string}, {string}, {string}, and {string} with an existing email address")
     public
     void userEntersAnExistingEmailAddress ( String firstName , String lastName , String invalidEmail , String password ) {
         registrationPage.setLastName ( lastName );
@@ -61,44 +61,48 @@ class FailedRegistrationSteps extends BaseTests {
         //assertEquals ( emailToastText , "Email already exist" );
     }
 
+*/
 
-/*
-    @When ("User enters valid details")
-    public
-    void userEntersValidDetails ( ) {
-    }
 
-    @And ("User does not accept the terms and conditions")
-    public
-    void userDoesNotAcceptTheTermsAndConditions ( ) {
-    }
 
-    @Then ("User should see an error message indicating that the terms and conditions must be accepted")
-    public
-    void userShouldSeeAnErrorMessageIndicatingThatTheTermsAndConditionsMustBeAccepted ( ) {
-    }
 
-    @When ("User enters an invalid email address")
+    @When ("User enters FirstName, LastName, Email, and passwordLength")
     public
-    void userEntersAnInvalidEmailAddress ( ) {
-    }
+    void userEntersAPasswordWithLessThanCharacters () {
+      String  firstName="oumaima";
+        String  lastName="kalboussi";
+        String  email="kalboussioumaima1@gmail.com";
+       int  passwordLength=8;
 
-    @Then ("User should see an error message indicating that the email address is invalid")
-    public
-    void userShouldSeeAnErrorMessageIndicatingThatTheEmailAddressIsInvalid ( ) {
-    }
 
-    @When ("User enters a password with less than {int} characters")
-    public
-    void userEntersAPasswordWithLessThanCharacters ( int arg0 ) {
+        // Enter a password with length less than 'passwordLength'
+        String password = "1234"; // example password
+        if (password.length() >= passwordLength) {
+            password = password.substring(0, passwordLength - 1);
+            registrationPage.setLastName ( lastName );
+            registrationPage.setFirstName ( firstName );
+            registrationPage.setEmail ( email );
+            registrationPage.setPassword ( password );
+            registrationPage.setConfirmPassword ( password );
+            registrationPage.acceptConditions ( );
+            loginPage = registrationPage.clickRegisterButton ( );
+            throw new io.cucumber.java.PendingException();
+
+
+
+        }
     }
 
     @Then ("User should see an error message indicating that the password is too short")
     public
     void userShouldSeeAnErrorMessageIndicatingThatThePasswordIsTooShort ( ) {
+        driver.hideKeyboard ( );
+        assertTrue ( registrationPage.isOnPage ( ) );
+
+
     }
 
-    @When ("User enters a password without a special character")
+    /*@When ("User enters a password without a special character")
     public
     void userEntersAPasswordWithoutASpecialCharacter ( ) {
     }

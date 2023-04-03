@@ -1,4 +1,4 @@
-package steps;
+package steps.chargingStationList;
 
 import PageObjects.*;
 import io.appium.java_client.android.AndroidDriver;

@@ -1,18 +1,31 @@
 package PageObjects;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public
 class SearchChargingStationsMapPage extends  BasePage{
+
     private
     AndroidDriver driver;
-    private By searchField = By.xpath ( "//android.view.ViewGroup[@index='3']/android.view.ViewGroup[@index='0']/android.widget.EditText" );
-    private By filterIcon= By.xpath ( "//android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.widget.TextView" );
-    private By listViewIcon =By.xpath ( "//android.view.ViewGroup[4]/android.view.ViewGroup[2]/android.widget.TextView" );
+    @AndroidFindBy (xpath= "//android.view.ViewGroup[1]/android.widget.TextView[@index='1'][@bounds='[122,116][400,163]']")
+    private  WebElement pageTitle;
+    @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.EditText\").text(\"Search\")")
+    private        WebElement searchField;
+    @AndroidFindBy (xpath= "//android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.widget.TextView")
+    private WebElement filterIcon;
+    @AndroidFindBy (xpath= "//android.view.ViewGroup[4]/android.view.ViewGroup[2]/android.widget.TextView")
+    private WebElement listViewIcon;
+    @AndroidFindBy (xpath= "//android.view.ViewGroup[1]/android.widget.TextView[@bounds='[13,105][75,174]']")
+    private WebElement navBarIcon;
+
+
 
     public
     SearchChargingStationsMapPage ( AndroidDriver driver ) {
@@ -21,16 +34,31 @@ class SearchChargingStationsMapPage extends  BasePage{
         PageFactory.initElements ( new AppiumFieldDecorator ( driver), this );
     }
 
+    public
+    boolean isOnPage ( ) {
+        try {
+            // Check for the presence of the navMenuIcon element
+            return pageTitle.isDisplayed();
+        } catch ( NoSuchElementException e) {
+            // The element is not present, so the page is not displayed
+            return false;
+        }
+    }
+public void clickNavBarBtn(){
+        click ( navBarIcon );
+}
+
+
 
     public void setSearchField(){
-        driver.findElement ( searchField ).sendKeys ( "sabri" );
+        sendText ( searchField,"mycompany101" );
     }
     public FiltersPage clickFilterIcon(){
-        driver.findElement (filterIcon ).click ();
+        click (filterIcon);
         return new FiltersPage ( driver );
     }
     public ChargingStationsListPage clickListViewIcon(){
-        driver.findElement (listViewIcon ).click ();
+        click (listViewIcon);
         return new ChargingStationsListPage( driver );
     }
 
