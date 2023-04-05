@@ -5,32 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d470034b-f243-42b1-8a48-36c7b85c8fca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/runner/navBar/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/navBar/LogOutStepDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/Spark.html" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Spark.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/InvoicesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/InvoicesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/NavSidebarMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/NavSidebarMenuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/RFIDCardsListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/RFIDCardsListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ReportErrorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ReportErrorPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ScanChargingStations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ScanChargingStations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SearchChargingStationsMapPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SearchChargingStationsMapPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsHistoryListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsHistoryListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsInProgressListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsInProgressListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SitesListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SitesListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/StatisticsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/StatisticsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/UsersListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/UsersListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/ChargingStationsListPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/chargingStationList/ChargingStationsListPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/NavSidebarMenuStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/navBar/NavSidebarMenuStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/registration/FailedRegistrationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/registration/FailedRegistrationSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/base/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/base/BaseTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/filters/FiltersTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/search/SearchTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/CSLIst.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/chargingStationList/CSLIst.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/NavSidebarMenu.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/navBar/NavSidebarMenu.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/registration/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/registration/Registration.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +68,7 @@
       <recent name="C:\Users\msi\IdeaProjects\WattzHubCPO_MobileAutomation\data" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestRunner (1)">
+  <component name="RunManager" selected="Cucumber Java.Scenario: User clicks the sessions in progress button">
     <configuration name="Scenario: User clicks the sessions in progress button" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/navBar/NavSidebarMenu.feature" />
@@ -331,7 +306,9 @@
     </configuration>
     <list>
       <item itemvalue="Cucumber Java.Scenario: User clicks the sessions in progress button" />
-      <item itemvalue="TestNG.TestRunner (1)" />
+      <item itemvalue="TestNG.TestRunner" />
+      <item itemvalue="TestNG.SuccessfulRegistrationSteps" />
+      <item itemvalue="TestNG.TestRunner.runScenario (2)" />
       <item itemvalue="TestNG.NavSidebarMenuStepDefs" />
       <item itemvalue="TestNG.TestRunner.runScenario (3)" />
       <item itemvalue="TestNG.TestRunner.runScenario (1)" />
