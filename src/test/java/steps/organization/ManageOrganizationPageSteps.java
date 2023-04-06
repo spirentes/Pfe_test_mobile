@@ -3,7 +3,7 @@ package steps.organization;
 import PageObjects.AlertDialogs.EditOrganizationdialog;
 import PageObjects.organization.ManageOrganizationPage;
 import PageObjects.AlertDialogs.AddAnOrganizationDialog;
-import PageObjects.LoginPage;
+import PageObjects.login.LoginPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;

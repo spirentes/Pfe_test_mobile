@@ -1,9 +1,9 @@
 package PageObjects;
 
+import PageObjects.login.LoginPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -11,6 +11,9 @@ import org.openqa.selenium.support.PageFactory;
 public
 class NavSidebarMenuPage extends  BasePage{
     private AndroidDriver driver;
+
+    @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Log Out\")")
+    private WebElement logOutBtn;
 
     @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]")
     private WebElement qrcodeScanner;
@@ -41,9 +44,11 @@ class NavSidebarMenuPage extends  BasePage{
 
     @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[10]")
     private WebElement invoices;
+    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[11]")
+    private WebElement reportError;
 
-    @AndroidFindBy (xpath= "//android.view.ViewGroup[@index='3']/android.widget.EditText")
-    private WebElement userName;
+    @AndroidFindBy (accessibility = "RNE__Image")
+    private  WebElement userName;
 
 
 
@@ -65,7 +70,7 @@ class NavSidebarMenuPage extends  BasePage{
 
     public
     SitesListPage clickSites ( ) {
-       click ( sites);
+        click ( sites);
         return new SitesListPage ( driver );
     }
 
@@ -107,7 +112,7 @@ class NavSidebarMenuPage extends  BasePage{
 
     public
     PaymentMethodsPage clickPaymentMethods ( ) {
-        click ( RFIDcards);
+        click ( paymentMethods);
         return new PaymentMethodsPage ( driver );
     }
 
@@ -116,10 +121,19 @@ class NavSidebarMenuPage extends  BasePage{
         click (invoices );
         return new InvoicesPage ( driver );
     }
-    public boolean isOnPage() {
+    public
+    ReportErrorPage clickReportError ( ) {
+        click (reportError );
+        return new ReportErrorPage ( driver );
+    }
+    public LoginPage logOUt ( ) {
+        click (logOutBtn );
+        return new LoginPage ( driver );
+    }
+    public  boolean isOnPage() {
         try {
             // Check for the presence of the navMenuIcon element
-            return userName.isDisplayed();
+            return qrcodeScanner.isDisplayed();
         } catch (NoSuchElementException e) {
             // The element is not present, so the page is not displayed
             return false;

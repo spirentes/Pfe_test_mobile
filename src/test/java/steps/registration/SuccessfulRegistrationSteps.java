@@ -1,6 +1,6 @@
 package steps.registration;
 
-import PageObjects.LoginPage;
+import PageObjects.login.LoginPage;
 import PageObjects.registration.RegistrationPage;
 import PageObjects.SearchChargingStationsMapPage;
 import io.cucumber.java.After;

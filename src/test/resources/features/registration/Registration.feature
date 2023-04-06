@@ -1,4 +1,5 @@
 Feature: Registration Page
+
 @successful_registration
   Scenario Outline: User successfully registers with valid details
     Given User is on the registration page
@@ -12,7 +13,11 @@ Feature: Registration Page
       | oumaima   | kalboussi123| kalboussioumaima12345@gmail.com | Password123* |
       | sabri     | mejri    | mejrisabri@gmail.com            | Password12** |
 
-
+#  Scenario: User click on new user btn without selecting an organization
+#    Given User is on the login page page
+#    When  User clicks on the new user btn
+#    And User does not select an organization
+#    Then User should see an error message indicating that he should select an organization first
   Scenario Outline: User registers with existing email
     Given User is on the registration page
     When User enters "<FirstName>", "<LastName>", "<existingEmail>", and "<Password>"

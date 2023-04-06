@@ -1,5 +1,7 @@
-package PageObjects;
+package PageObjects.login;
 
+import PageObjects.BasePage;
+import PageObjects.SearchChargingStationsMapPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -14,7 +16,7 @@ import java.time.Duration;
 
 
 public
-class LoginPage extends BasePage{
+class LoginPage extends BasePage {
     private AndroidDriver driver;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[3]/android.widget.TextView")
     WebElement organizationButton;
@@ -22,7 +24,7 @@ class LoginPage extends BasePage{
     WebElement emailField;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='6']/android.widget.EditText")
     WebElement passwordField;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='9']/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Login\")")
     WebElement loginButton;
 //    @AndroidFindBy(uiAutomator ="" )
 //    private WebElement forgetPassword;
@@ -32,6 +34,13 @@ class LoginPage extends BasePage{
     WebElement newUser   ;
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"WattzHub CPO\")")
     WebElement pageTitle;
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"You must accept the End-User License Agreement\")")
+    WebElement terms_error_message;
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"The email is invalid\")")
+    WebElement emailErrorMessage;
+    //can not locate toast!!!!!!!!!!!!!!!!!!!
+//    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\")")
+//    WebElement passwdErrorMessage;
 
     public
     LoginPage ( AndroidDriver driver ) {
@@ -58,8 +67,7 @@ class LoginPage extends BasePage{
         click (conditionCheckbox );
     }
 
-    public
-    SearchChargingStationsMapPage clickLoginButton ( ) {
+    public SearchChargingStationsMapPage clickLoginButton ( ) {
        click (loginButton );
         return new SearchChargingStationsMapPage ( driver );
     }
@@ -73,7 +81,7 @@ class LoginPage extends BasePage{
     public boolean isOnPage() {
         try {
             // Check for the presence of the alertTitle element
-            return pageTitle.isDisplayed();
+            return loginButton.isDisplayed();
         } catch (NoSuchElementException e) {
             // The element is not present, so the alert is not displayed
             return false;
@@ -93,5 +101,15 @@ class LoginPage extends BasePage{
         System.out.println("waiting for login page to load.....");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOf(loginButton));
+    }
+    public boolean check_accept_conditions(){return conditionCheckbox.isSelected();}
+    public String get_email_error_message ( ) {
+        return getAttribute(emailErrorMessage,"text");
+    }
+//    public String get_passwd_error_message ( ) {
+//        return getAttribute(passwdErrorMessage,"text");
+//    }
+    public String get_terms_error_message ( ) {
+        return getAttribute(terms_error_message,"text");
     }
 }
