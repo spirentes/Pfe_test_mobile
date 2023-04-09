@@ -1,50 +1,55 @@
-package PageObjects;
+package PageObjects.navbar;
 
+import PageObjects.*;
+import PageObjects.login.LoginPage;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.By;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public
-class NavSidebarMenuPage extends  BasePage{
+class NavSidebarMenuPage extends BasePage {
     private AndroidDriver driver;
 
     @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Log Out\")")
     private WebElement logOutBtn;
 
-    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"QR-Code Scanner\")")
     private WebElement qrcodeScanner;
 
-    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Sites\")")
     private WebElement sites;
 
-    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Charging Stations\")")
     private WebElement chargingStations;
 
-    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Sessions History\")")
     private WebElement sessionsHistory;
 
-    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Sessions In Progress\")")
     private WebElement sessionsInProgress;
 
-    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[6]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Statistics\")")
     private WebElement statistics;
 
-    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[7]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Users\")")
     private WebElement users;
 
-    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[8]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"RFID Cards\")")
     private WebElement RFIDcards;
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Cars\")")
+    private WebElement cars;
 
-    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[9]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Payment Methods\")")
     private WebElement paymentMethods;
 
-    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[10]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Invoices\")")
     private WebElement invoices;
-    @AndroidFindBy(xpath= "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[11]")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Report Error\")")
     private WebElement reportError;
 
     @AndroidFindBy (accessibility = "RNE__Image")
@@ -70,7 +75,7 @@ class NavSidebarMenuPage extends  BasePage{
 
     public
     SitesListPage clickSites ( ) {
-       click ( sites);
+        click ( sites);
         return new SitesListPage ( driver );
     }
 
@@ -126,8 +131,7 @@ class NavSidebarMenuPage extends  BasePage{
         click (reportError );
         return new ReportErrorPage ( driver );
     }
-    public
-   LoginPage logOUt ( ) {
+    public LoginPage logOUt ( ) {
         click (logOutBtn );
         return new LoginPage ( driver );
     }
@@ -141,6 +145,16 @@ class NavSidebarMenuPage extends  BasePage{
         }
     }
 
+
+    public
+    CarsPage clickCars ( ) {
+        click ( cars );
+        return new CarsPage ( driver );
+    }
+    public void ScrollUp()
+    {
+        scroll_up ( users,driver );
+    }
 
 
 }

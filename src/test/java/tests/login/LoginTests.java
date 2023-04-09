@@ -5,7 +5,8 @@ import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import PageObjects.LoginPage;
+import PageObjects.login.LoginPage;
+
 import PageObjects.SearchChargingStationsMapPage;
 
 import java.net.MalformedURLException;

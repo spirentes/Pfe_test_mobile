@@ -1,6 +1,8 @@
 package steps.navBar;
 
 import PageObjects.*;
+import PageObjects.login.LoginPage;
+import PageObjects.navbar.NavSidebarMenuPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -17,7 +19,7 @@ import static org.testng.Assert.assertTrue;
 public class NavSidebarMenuStepDefs  extends BaseTests {
 
     NavSidebarMenuPage navSidebarMenuPage;
-    SitesListPage sitesListPage;
+    SitesListPage      sitesListPage;
     SearchChargingStationsMapPage searchChargingStationsMapPage;
     ScanChargingStations scanChargingStations;
     SessionsInProgressListPage sessionsInProgressListPage;
@@ -25,6 +27,7 @@ public class NavSidebarMenuStepDefs  extends BaseTests {
     StatisticsPage statisticsPage ;
     UsersListPage usersListPage ;
     RFIDCardsListPage rfidCardsListPage;
+    CarsPage carsPage ;
     PaymentMethodsPage paymentMethodsPage;
 
     InvoicesPage invoicesPage ;
@@ -38,8 +41,8 @@ public class NavSidebarMenuStepDefs  extends BaseTests {
     }
     @After ( value = "not @openCS and not @logOUT")
     public void clickBack(){
+        System.out.println ( "im going back !!!!!!!!!!!" );
         driver.navigate ().back ();
-
     }
 
 
@@ -102,7 +105,7 @@ public class NavSidebarMenuStepDefs  extends BaseTests {
 
     @Then("User should be taken to the sessions in progress page")
     public void SessionInProgressIsDisplayed() {
-       sessionsInProgressListPage=new SessionsInProgressListPage ( driver );
+        sessionsInProgressListPage=new SessionsInProgressListPage ( driver );
         assertTrue ( sessionsInProgressListPage.isOnPage ( ) );
 
     }
@@ -138,6 +141,16 @@ public class NavSidebarMenuStepDefs  extends BaseTests {
         assertTrue (rfidCardsListPage.isOnPage ( ) );
 
     }
+    @When("the user clicks the Cars button")
+    public void userClicksCars() {
+        navSidebarMenuPage.clickCars();
+    }
+    @Then("User should be taken to the Cars page")
+    public void CarsIsDisplayed() {
+        carsPage=new CarsPage (  driver);
+        assertTrue (carsPage.isOnPage ( ) );
+
+    }
     @When("the user clicks the payment methods button")
     public void userClicksPaymentMethods() {
         navSidebarMenuPage.clickPaymentMethods();
@@ -161,6 +174,7 @@ public class NavSidebarMenuStepDefs  extends BaseTests {
     }
     @When("the user clicks the report error button")
     public void userClicksReportError() {
+        navSidebarMenuPage.ScrollUp (  );
         navSidebarMenuPage.clickReportError ();
     }
     @Then ("User should be taken to the report error  page")

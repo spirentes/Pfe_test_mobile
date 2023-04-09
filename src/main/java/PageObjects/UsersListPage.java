@@ -36,4 +36,6 @@ class UsersListPage  extends BasePage{
             return false;
         }
     }
+
 }
+

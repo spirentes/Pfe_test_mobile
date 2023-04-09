@@ -48,7 +48,6 @@ class BaseTests extends AbstractTestNGCucumberTests {
         /* UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("sdk_gphone_x86");
         options.setApp("C:\\Users\\msi\\IdeaProjects\\WattzHubCPO_MobileAutomation\\resources\\beta-cpo-v2.1.1 (1).apk");
-
         // create object for AndroidDriver/IosDriver
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));*/
@@ -64,6 +63,8 @@ class BaseTests extends AbstractTestNGCucumberTests {
         capabilities.setCapability ( "appPackage" , "com.wattzhub.cpo" );
         capabilities.setCapability ( "appActivity" , "com.wattzhub.cpo.MainActivity" );
         capabilities.setCapability ( "noReset" , true );
+        capabilities.setCapability("autoGrantPermissions", true);
+        capabilities.setCapability("autoDismissAlerts", true);
 
         driver = new AndroidDriver ( new URL ( "http://127.0.0.1:4723" ) , capabilities );
         driver.manage ( ).timeouts ( ).implicitlyWait ( Duration.ofSeconds ( 5 ) );
@@ -91,7 +92,7 @@ class BaseTests extends AbstractTestNGCucumberTests {
 
         driver.quit ( );
 
-       // service.stop ( );
+        // service.stop ( );
     }
 
 

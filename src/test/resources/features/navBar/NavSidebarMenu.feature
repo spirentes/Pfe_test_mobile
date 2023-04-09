@@ -9,7 +9,7 @@ Feature: Navigation Sidebar Menu
     Given the user is on the navigation sidebar menu page
     When the user clicks the sites button
     Then User should be taken to the sites page
-@openCS
+  @openCS
   Scenario: User clicks the charging stations button
     Given the user is on the navigation sidebar menu page
     When the user clicks the charging stations button
@@ -39,6 +39,10 @@ Feature: Navigation Sidebar Menu
     Given the user is on the navigation sidebar menu page
     When the user clicks the RFID cards button
     Then User should be taken to the RFID cards page
+  Scenario: User clicks the Cars button
+    Given the user is on the navigation sidebar menu page
+    When the user clicks the Cars button
+    Then User should be taken to the Cars page
 
   Scenario: User clicks the payment methods button
     Given the user is on the navigation sidebar menu page
@@ -54,7 +58,8 @@ Feature: Navigation Sidebar Menu
     Given the user is on the navigation sidebar menu page
     When the user clicks the report error button
     Then User should be taken to the report error  page
-@logOUT
+
+  @logOUT
   Scenario: User clicks the log out button
     Given the user is on the navigation sidebar menu page
     When the user clicks the log out button

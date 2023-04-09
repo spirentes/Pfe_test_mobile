@@ -14,15 +14,15 @@ class SearchChargingStationsMapPage extends  BasePage{
 
     private
     AndroidDriver driver;
-    @AndroidFindBy (xpath= "//android.view.ViewGroup[1]/android.widget.TextView[@index='1'][@bounds='[122,116][400,163]']")
-    private  WebElement pageTitle;
     @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.EditText\").text(\"Search\")")
+    private  WebElement pageTitle;
+    @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Charging Stations\")")
     private        WebElement searchField;
     @AndroidFindBy (xpath= "//android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.widget.TextView")
     private WebElement filterIcon;
     @AndroidFindBy (xpath= "//android.view.ViewGroup[4]/android.view.ViewGroup[2]/android.widget.TextView")
     private WebElement listViewIcon;
-    @AndroidFindBy (xpath= "//android.view.ViewGroup[1]/android.widget.TextView[@bounds='[13,105][75,174]']")
+    @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uF19C\")")
     private WebElement navBarIcon;
 
 
@@ -44,9 +44,9 @@ class SearchChargingStationsMapPage extends  BasePage{
             return false;
         }
     }
-public void clickNavBarBtn(){
+    public void clickNavBarBtn(){
         click ( navBarIcon );
-}
+    }
 
 
 

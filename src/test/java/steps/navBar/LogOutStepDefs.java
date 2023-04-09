@@ -1,16 +1,10 @@
 package steps.navBar;
 
 import PageObjects.LoginPage;
-import PageObjects.NavSidebarMenuPage;
-import PageObjects.SearchChargingStationsMapPage;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.en.Given;
+import PageObjects.navbar.NavSidebarMenuPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import tests.base.BaseTests;
-
-import java.net.MalformedURLException;
 
 import static org.testng.Assert.assertTrue;
 

@@ -4,18 +4,18 @@ import tests.base.BaseTests;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import PageObjects.AddOrganizationPage;
+import PageObjects.organization.ManageOrganizationPage;
 
 import java.net.MalformedURLException;
 
 public class AddOrganizationTests extends BaseTests {
 
-    AddOrganizationPage addOrganizationPage;
+    ManageOrganizationPage addOrganizationPage;
 
     @BeforeClass
     public void setUp() throws MalformedURLException {
         configureAppium();
-        addOrganizationPage = new AddOrganizationPage(driver);
+        addOrganizationPage = new ManageOrganizationPage(driver);
     }
 
     @Test

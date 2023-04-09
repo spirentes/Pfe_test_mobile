@@ -35,4 +35,5 @@ class StatisticsPage extends BasePage {
             return false;
         }
     }
+
 }

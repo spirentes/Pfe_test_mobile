@@ -1,6 +1,7 @@
 package steps.chargingStationList;
 
 import PageObjects.*;
+import PageObjects.navbar.NavSidebarMenuPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -15,8 +16,8 @@ public class ChargingStationsListPageSteps extends BaseTests {
 
     private AndroidDriver            driver;
     private ChargingStationsListPage chargingStationsListPage;
-    private NavSidebarMenuPage   navigationMenuPage;
-    private ScanChargingStations        scanChargingStationsPage;
+    private NavSidebarMenuPage       navigationMenuPage;
+    private ScanChargingStations     scanChargingStationsPage;
     private FiltersPage                 filtersPage;
     private ActionsChargingStationsPage actionsChargingStationsPage;
     private ChargePointCSPage         chargePointCSPage;

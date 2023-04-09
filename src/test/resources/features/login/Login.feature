@@ -1,25 +1,41 @@
 Feature: User can login to the app
-
-  Scenario: Successful login
+  @Successful_login
+  Scenario Outline: Successful login
     Given User is on the login page
-    When User enters valid credentials and accepts the terms
+    When User enters "<Email>" and "<Password>"
+    And User accepts the terms
     And User clicks on the login button
     Then User should be redirected to the search charging stations map page
-
-  Scenario: Login without accepting terms
+    Examples:
+      |Email                          |Password     |
+      |sabri.mejri@internship.continuousnet.com	 | Sabri1234* |
+  Scenario Outline: Login without accepting terms
     Given User is on the login page
-    When User enters valid credentials without accepting the terms
+    When User enters "<Email>" and "<Password>"
+    And User does not accepts the terms
     And User clicks on the login button
-    Then User should see a message to accept the terms
+    Then User should see an error message indicating that he must accept terms and conditions
+    Examples:
+      |Email                          |Password     |
+      |sabri.mejri@internship.continuousnet.com	 | Sabri1234* |
 
-  Scenario: Login with invalid password
-    Given User is on the login page
-    When User enters a valid email and an invalid password
-    And User accepts the terms and clicks on the login button
-    Then User should see an error message for invalid email or password
 
-  Scenario: Login with invalid email
+  Scenario Outline: Login with invalid password
     Given User is on the login page
-    When User enters an invalid email and a valid password
-    And User accepts the terms and clicks on the login button
-    Then User should see an error message for invalid email or password
+    When User enters "<Email>" and "<invalidPassword>"
+    And User accepts the terms
+    And User clicks on the login button
+    Then User should see an error message for Wrong email or password
+    Examples:
+      |Email                          |invalidPassword    |
+      |sabri.mejri@internship.continuousnet.com	 | invalidPassword |
+
+  Scenario Outline: Login with invalid email
+    Given User is on the login page
+    When User enters "<invalidEmail>" and "<Password>"
+    And User does not accepts the terms
+    And User clicks on the login button
+    Then User should see an error message for indicating that the email is invalid
+    Examples:
+      |invalidEmail                        |Password    |
+      |sabri.mejriinternship.continuousnet.com	 | invalidPassword |
