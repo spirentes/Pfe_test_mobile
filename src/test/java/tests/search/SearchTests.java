@@ -4,7 +4,7 @@ import tests.base.BaseTests;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import PageObjects.SearchChargingStationsMapPage;
+import PageObjects.charging_stations.SearchChargingStationsMapPage;
 
 import java.net.MalformedURLException;
 

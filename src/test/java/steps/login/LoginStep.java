@@ -1,7 +1,7 @@
 package steps.login;
 import PageObjects.login.LoginPage;
-import PageObjects.NavSidebarMenuPage;
-import PageObjects.SearchChargingStationsMapPage;
+import PageObjects.navBar.NavSidebarMenuPage;
+import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

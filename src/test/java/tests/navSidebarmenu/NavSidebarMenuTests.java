@@ -3,7 +3,7 @@ package tests.navSidebarmenu;
 import tests.base.BaseTests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import PageObjects.NavSidebarMenuPage;
+import PageObjects.navBar.NavSidebarMenuPage;
 
 import java.net.MalformedURLException;
 

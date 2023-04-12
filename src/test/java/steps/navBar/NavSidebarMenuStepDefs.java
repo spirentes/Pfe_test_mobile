@@ -1,7 +1,9 @@
 package steps.navBar;
 
 import PageObjects.*;
+import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import PageObjects.login.LoginPage;
+import PageObjects.navBar.NavSidebarMenuPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;

@@ -31,7 +31,6 @@ public  void move_to_organization_page()
 public void go_back_to_login()
     {   System.out.println("i m going back");
         driver.navigate().back();
-
     }
     @Given("User is on the the Add Organization Page")
     public void userIsOnTheTheAddOrganizationPage()  {

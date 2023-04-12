@@ -1,5 +1,7 @@
-package PageObjects;
+package PageObjects.navBar;
 
+import PageObjects.*;
+import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import PageObjects.login.LoginPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -9,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public
-class NavSidebarMenuPage extends  BasePage{
+class NavSidebarMenuPage extends BasePage {
     private AndroidDriver driver;
 
     @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Log Out\")")
@@ -62,32 +64,27 @@ class NavSidebarMenuPage extends  BasePage{
         PageFactory.initElements ( new AppiumFieldDecorator ( driver), this );
     }
 
-    public
-    ScanChargingStations clickQRCodeScanner ( ) {
+    public ScanChargingStations clickQRCodeScanner ( ) {
         click (qrcodeScanner );
         return new ScanChargingStations ( driver );
     }
 
-    public
-    SitesListPage clickSites ( ) {
+    public SitesListPage clickSites ( ) {
         click ( sites);
         return new SitesListPage ( driver );
     }
 
-    public
-    SearchChargingStationsMapPage clickChargingStations ( ) {
+    public SearchChargingStationsMapPage clickChargingStations ( ) {
         click ( chargingStations );
         return new SearchChargingStationsMapPage ( driver );
     }
 
-    public
-    SessionsHistoryListPage clickSessionsHistory ( ) {
+    public SessionsHistoryListPage clickSessionsHistory ( ) {
         click ( sessionsHistory );
         return new SessionsHistoryListPage ( driver );
     }
 
-    public
-    SessionsInProgressListPage clickSessionsInProgress ( ) {
+    public SessionsInProgressListPage clickSessionsInProgress ( ) {
         click (sessionsInProgress );
         return new SessionsInProgressListPage ( driver );
     }
