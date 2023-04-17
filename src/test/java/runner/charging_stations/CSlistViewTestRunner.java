@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 
 @org.testng.annotations.Test
 @CucumberOptions(features="src/test/resources/features/Charging_stations/CSLIst.feature"
-        ,glue= {"steps.charging_stations"}
+        ,glue= {"steps.charging_stations.listView"}
        ,tags = "@tag"
         ,plugin= {"pretty","html:target/cucumber-html-report.html"})
 public class CSlistViewTestRunner extends BaseTests {

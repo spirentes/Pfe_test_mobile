@@ -4,6 +4,7 @@ import PageObjects.charging_stations.ActionsChargingStationsPage;
 import PageObjects.charging_stations.ChargingStationsListPage;
 import PageObjects.charging_stations.InfoChargingStationsPage;
 import PageObjects.charging_stations.SearchChargingStationsMapPage;
+import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -19,6 +20,22 @@ public class ChargingstationsMapPageSteps extends BaseTests {
     ChargingStationsListPage chargingStationsListPage = new ChargingStationsListPage(driver);
     ActionsChargingStationsPage actionsChargingStationsPage= new ActionsChargingStationsPage(driver);
     InfoChargingStationsPage infoChargingStationsPage=new InfoChargingStationsPage(driver);
+    @After("@properties")
+    public void goBackFromProperties(){
+        driver.navigate().back();
+        driver.navigate().back();
+    }
+
+    @After("@ocpp")
+    public void goBackFromOcpp(){
+        driver.navigate().back();
+        driver.navigate().back();
+    }
+    @After("@inactive")
+    public  void goBacktoMappage(){
+        driver.navigate().back();
+
+    }
     @Given("user is  on the Charging Stations map page")
     public void userIsOnTheChargingStationsMapPage() {
      assertTrue(searchChargingStationsMapPage.mapViewIsOnPage());
@@ -80,7 +97,7 @@ public class ChargingstationsMapPageSteps extends BaseTests {
         assertTrue(searchChargingStationsMapPage.ConnectorAvailability_is_displayed());
         assertTrue(searchChargingStationsMapPage.connector_type_is_displayed());
         assertTrue(searchChargingStationsMapPage.heartbeat_is_displayed());
-        searchChargingStationsMapPage.clcikMoreInfoButton(csName);
+        searchChargingStationsMapPage.click_more_info_btn();
         assertFalse(actionsChargingStationsPage.areActionsEnabled());
 
     }
@@ -97,13 +114,16 @@ public class ChargingstationsMapPageSteps extends BaseTests {
         assertTrue(searchChargingStationsMapPage.ConnectorAvailability_is_displayed());
         assertTrue(searchChargingStationsMapPage.connector_type_is_displayed());
         assertTrue(searchChargingStationsMapPage.heartbeat_is_displayed());
-        searchChargingStationsMapPage.clcikMoreInfoButton(csName);
+        searchChargingStationsMapPage.click_more_info_btn();
         assertTrue(actionsChargingStationsPage.areActionsEnabled());
     }
+    @And("user clicks more info button")
+    public void userClicksMoreInfoButton() {
+        searchChargingStationsMapPage.click_more_info_btn();
+    }
+    @And("user clicks on ocpp icon")
+    public void userClicksOnOcppIcon() {
 
-    @And("user clicks on ocpp icon of {string}")
-    public void userClicksOnOcppIcon(String csName) {
-        searchChargingStationsMapPage.clcikMoreInfoButton(csName);
         actionsChargingStationsPage.clickMoveToOCPP();
     }
 
@@ -111,15 +131,15 @@ public class ChargingstationsMapPageSteps extends BaseTests {
     public void theChargingStationsOcppParametersShouldBeDisplayed() {
 assertTrue(actionsChargingStationsPage.ocpp_param_are_displayed());
     }
-
-    @And("user clicks on properties icon of {string}")
-    public void userClicksOnPropertiesIconOf(String csName) {
-        searchChargingStationsMapPage.clcikMoreInfoButton(csName);
+    @And("user clicks on properties icon")
+    public void userClicksOnPropertiesIcon() {
         actionsChargingStationsPage.clickMoveToProperties();
     }
-
     @Then("the charging stations  properties should be displayed")
     public void theChargingStationsPropertiesShouldBeDisplayed() {
         assertTrue(infoChargingStationsPage.properties_are_displayed());
     }
+
+
+
 }

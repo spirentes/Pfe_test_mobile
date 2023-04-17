@@ -1,23 +1,16 @@
 package PageObjects.charging_stations;
 import org.openqa.selenium.*;
 import PageObjects.BasePage;
-import PageObjects.FiltersPage;
-import PageObjects.charging_stations.ChargingStationsListPage;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
 
 public
 class SearchChargingStationsMapPage extends BasePage {
@@ -29,7 +22,9 @@ class SearchChargingStationsMapPage extends BasePage {
     @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Charging Stations\")")
     private        WebElement searchField;
     @AndroidFindBy (uiAutomator= "new UiSelector().className(\"android.widget.TextView\").text(\"\uDB80\uDE33\")")
-    private WebElement filterIcon;
+    private WebElement  emptyFilterIcon;
+    @AndroidFindBy (uiAutomator= "new UiSelector().className(\"android.widget.TextView\").text(\"\uDB80\uDE32\")")
+    private WebElement  fullFilterIcon;
     @AndroidFindBy (uiAutomator= "new UiSelector().className(\"android.widget.TextView\").text(\"\uDB80\uDE79\")")
     private WebElement listViewIcon;
     @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uF19C\")")
@@ -42,6 +37,8 @@ class SearchChargingStationsMapPage extends BasePage {
     WebElement clearSearchField;
     @AndroidFindBy ( uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uF21E\")")
     WebElement heartbeatIcon;
+    @AndroidFindBy ( uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uE429\")")
+    WebElement moreInfoIcon;
      static WebElement CSIcon;
     WebElement availability_message;
 
@@ -77,15 +74,19 @@ class SearchChargingStationsMapPage extends BasePage {
     public void clickNavBarBtn(){
         click ( navBarIcon );
     }
-
+    public void click_more_info_btn(){
+        click(moreInfoIcon);
+    }
 
 
     public void setSearchField(){
         sendText ( searchField,"mycompany101" );
     }
-    public FiltersPage clickFilterIcon(){
-        click (filterIcon);
-        return new FiltersPage ( driver );
+    public void clickFilterIcon() throws TimeoutException{
+        click (emptyFilterIcon);
+    }
+    public void clickFullFilterIcon(){
+        click (fullFilterIcon);
     }
     public void  clickListViewIcon(){
         click (listViewIcon);
@@ -150,7 +151,7 @@ public boolean CS_is_available(String CSname) throws IOException{
         System.out.println("CS is not available ");
         return false;
     }
-    else {
+    else  {
         System.out.println("CS is available ");
         return true;
     }
@@ -171,17 +172,7 @@ public boolean CS_is_available(String CSname) throws IOException{
         }
         return false;
     }
-    public void clcikMoreInfoButton(String CsName)
-    {
 
-        String xpath ="//android.widget.TextView[@text='"+CsName+"']";
-        System.out.println(xpath);
-        WebElement parent_element= driver.findElement(By.xpath(xpath+"/.."));
-        WebElement moreInfoBtn =parent_element.findElement(By.xpath("//android.widget.TextView[@text='\uE429']"));
-        click(moreInfoBtn);
-
-
-    }
    public boolean heartbeat_is_displayed()
    {
        return  heartbeatIcon.isDisplayed();

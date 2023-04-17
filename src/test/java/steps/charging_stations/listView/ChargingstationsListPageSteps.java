@@ -1,18 +1,24 @@
 package steps.charging_stations.listView;
 
+import PageObjects.charging_stations.ActionsChargingStationsPage;
 import PageObjects.charging_stations.ChargingStationsListPage;
 import PageObjects.charging_stations.SearchChargingStationsMapPage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.checkerframework.checker.units.qual.C;
 import tests.base.BaseTests;
 
+import java.io.IOException;
+
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class ChargingstationsListPageSteps extends BaseTests {
     SearchChargingStationsMapPage searchChargingStationsMapPage= new SearchChargingStationsMapPage(driver);
     ChargingStationsListPage chargingStationsListPage = new ChargingStationsListPage(driver);
+    ActionsChargingStationsPage actionsChargingStationsPage=new ActionsChargingStationsPage(driver);
 
     @Given("User is  on the Charging Stations List Page")
     public void userIsOnTheChargingStationsListPage() {
@@ -68,9 +74,9 @@ public class ChargingstationsListPageSteps extends BaseTests {
         chargingStationsListPage.clcikMoreInfoButton(csName);
     }
 
-    @Then("the Charge Point Charging Station page should be opened")
+    @Then("the  Charging Station actions page should be opened")
     public void theChargePointChargingStationPageShouldBeOpened() {
-
+       assertTrue(actionsChargingStationsPage.isOnPage());
     }
 
 
@@ -82,6 +88,22 @@ public class ChargingstationsListPageSteps extends BaseTests {
     @Then("the Charging Station status should be displayed")
     public void theChargingStationStatusShouldBeDisplayed() {
         assertTrue(chargingStationsListPage.heartBeatIsOnPage());
+        driver.navigate().back();
 
+    }
+
+    @When("Charging Station {string} is not  active")
+    public void chargingStationIsNotActive(String csName) throws IOException {
+       // assertFalse(chargingStationsListPage.CS_is_available(csName));
+    }
+
+    @And("User clicks on more info button {string}")
+    public void userClicksOnMoreInfoButton(String csName) {
+        chargingStationsListPage.clcikMoreInfoButton(csName);
+    }
+
+    @Then("user can not perform any action on {string}")
+    public void userCanNotPerformAnyActionOn(String arg0) {
+        System.out.println("taw nekdemha baed");
     }
 }

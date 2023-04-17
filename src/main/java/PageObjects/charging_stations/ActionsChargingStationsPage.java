@@ -32,7 +32,8 @@ class ActionsChargingStationsPage extends BasePage {
     @AndroidFindBy (xpath = "//android.widget.TextView[@text='Clear Cache']/..")
     private WebElement    clearCacheBtn;
 
-
+    @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uE869\")")
+    private WebElement    actionsIcon;
     @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uE241\")")
     private WebElement    moveToOCPP;
     @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uE88E\")")
@@ -47,10 +48,18 @@ class ActionsChargingStationsPage extends BasePage {
         this.driver = driver;
         PageFactory.initElements ( new AppiumFieldDecorator ( driver), this );
     }
-    public boolean isOnPage(String Csname) {
+    public boolean isOnPage1(String Csname) {
         try {
             CsName=driver.findElement(MobileBy.androidUIAutomator("new UiSelector().className(\"android.widget.TextView\").text(\""+Csname+"\")"));
             return CsName.isDisplayed();
+        } catch (NoSuchElementException e) {
+            // The element is not present, so the page is not displayed
+            return false;
+        }
+    }
+    public boolean isOnPage() {
+        try {
+            return actionsIcon.isDisplayed();
         } catch (NoSuchElementException e) {
             // The element is not present, so the page is not displayed
             return false;

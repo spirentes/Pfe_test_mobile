@@ -8,15 +8,16 @@ import tests.base.BaseTests;
 import java.net.MalformedURLException;
 
 @org.testng.annotations.Test
-@CucumberOptions(features="src/test/resources/features/Charging_stations/CSMap.feature"
-        ,glue= {"steps.charging_stations.mapView"}
-       //,tags = "@tag"
+@CucumberOptions(features="src/test/resources/features/Charging_stations/FilterPage.feature"
+        ,glue= {"steps.charging_stations.filterPage"}
+       ,tags = "@Multiple_type"
         ,plugin= {"pretty","html:target/cucumber-html-report.html"})
-public class CSmapViewTestRunner extends BaseTests {
+public class FilterPageTestRunner extends BaseTests {
     @BeforeClass
     @BeforeAll
     public  static void setup_driver () throws MalformedURLException {
         System.out.println("setting appium driver.....");
         configureAppium();
+
     }
 }

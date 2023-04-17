@@ -5,14 +5,15 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -21,27 +22,15 @@ class ChargingStationsListPage extends BasePage {
     private AndroidDriver driver;
     @AndroidFindBy ( uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uF19C\")")
     WebElement navMenuIcon;
-//    @AndroidFindBy ( xpath = "")
-//    WebElement chargingStation;
-//
+
 //    @AndroidFindBy ( xpath = "")
 //    WebElement scanChargingStation;
-//
     @AndroidFindBy ( xpath = "//android.view.ViewGroup[1]/android.widget.EditText")
     WebElement searchField;
     @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uDB80\uDE33\")")
     WebElement filterIcon;
     @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uDB80\uDD59\")")
     WebElement clearSearchField;
-//
-//    @AndroidFindBy ( )
-//    WebElement actionBtn;
-
-//    @AndroidFindBy ( uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uF21E\")")
-//    WebElement heartbeatIcon;
-
-//    @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uE429\")")
-//    WebElement moreInfo;
     @AndroidFindBy ( uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uDB80\uDF4D\")")
     WebElement mapViewIcon;
     @AndroidFindBy ( uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"HEARTBEAT\")")
@@ -49,6 +38,7 @@ class ChargingStationsListPage extends BasePage {
     @AndroidFindBy ( uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"No Charging Station found\")")
     public WebElement noCsFound;
     WebElement CSname;
+    WebElement heartbeatIcon;
     List<WebElement> CSnames;
 
     public
@@ -62,23 +52,14 @@ class ChargingStationsListPage extends BasePage {
     void openNavMenu ( ) {
         click ( navMenuIcon );
     }
-//
-//    public ScanChargingStations openScanCS ( ) {
-//        click ( scanChargingStation );
-//        return new ScanChargingStations ( driver );
-//
-//    }
-//
     public
     void searchForCS ( String nameCS ) {
         clear ( searchField );
         sendText ( searchField , nameCS );
     }
 
-    public FiltersPage openFilterPage ( ) {
+    public void openFilterPage ( ) {
         click ( filterIcon );
-        return new FiltersPage ( driver );
-
     }
 
     public
@@ -86,22 +67,6 @@ class ChargingStationsListPage extends BasePage {
         click ( clearSearchField );
 
     }
-
-//    public ActionsChargingStationsPage openActionPage ( ) {
-//        click ( actionBtn );
-//        return new ActionsChargingStationsPage ( driver );
-//    }
-//
-//    public
-//    void StatusCS ( ) {
-//        click ( heartbeatIcon );
-//    }
-//
-//    public ChargePointCSPage seeMoreInfo ( )
-//    {
-//        click ( moreInfo );
-//        return new ChargePointCSPage ( driver );
-//    }
 
     public
     SearchChargingStationsMapPage mapView ( )
@@ -169,8 +134,8 @@ class ChargingStationsListPage extends BasePage {
         String xpath ="//android.widget.TextView[@text='"+CsName+"']";
         System.out.println(xpath);
         WebElement parent_element= driver.findElement(By.xpath(xpath+"/.."));
-        WebElement moreInfoBtn =parent_element.findElement(By.xpath("//android.widget.TextView[@text='\uF21E']"));
-        click(moreInfoBtn);
+        WebElement heartBeatIcon =parent_element.findElement(By.xpath("//android.widget.TextView[@text='\uF21E']"));
+        click(heartBeatIcon);
 
 
     }
@@ -179,5 +144,35 @@ class ChargingStationsListPage extends BasePage {
         String searchFieldText = searchField.getText();
         return searchFieldText!="Search";
     }
+    //!!!!!! not working with heart beat icon
+//    public boolean CS_is_available(String CSname) throws IOException {
+//       try {
+//           String xpath ="//android.widget.TextView[@text='"+CSname+"']";
+//           WebElement parent_element= driver.findElement(By.xpath(xpath+"/.."));
+//            heartbeatIcon =parent_element.findElement(By.xpath("//android.widget.TextView[@text='\uF21E']"));
+//       }
+//       catch (NoSuchElementException e)
+//       {System.out.println("cant find cs icon");}
+//        int centerX = (int) (heartbeatIcon.getLocation().getX() + heartbeatIcon.getSize().getWidth() / 1.5);
+//        int centerY = (int) (heartbeatIcon.getLocation().getY() + heartbeatIcon.getSize().getHeight() / 1.5);
+//        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//        BufferedImage image = ImageIO.read(scrFile);
+//        // Getting pixel color by position x and y
+//        int clr=  image.getRGB(centerX,centerY);
+//        int  red   = (clr & 0x00ff0000) >> 16;
+//        int  green = (clr & 0x0000ff00) >> 8;
+//        int  blue  =  clr & 0x000000ff;
+//        String RGB ="("+red+","+green+","+blue+")";
+//        System.out.println(RGB);
+//        if(RGB.equals("(139,139,139)"))
+//        {
+//            System.out.println("CS is not available ");
+//            return false;
+//        }
+//        else {
+//            System.out.println("CS is available ");
+//            return true;
+//        }
+//    }
 
 }

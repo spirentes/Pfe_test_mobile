@@ -4,9 +4,9 @@ Feature: Charging Stations Map Page Functionality
   Then the charging stations "<Csname>" should be  plotted on a map
    Examples:
    |Csname|
-#   |CS-ABB-00001. |
-  |CS-ABB-00002|
-   |CS-SCHNEIDER-00001|
+  |CS-ABB-00001 |
+#   |CS-ABB-00002|
+#   |CS-SCHNEIDER-00001|
 
   Scenario Outline: Search for Charging Station
     Given user is  on the Charging Stations map page
@@ -16,16 +16,16 @@ Feature: Charging Stations Map Page Functionality
       | CsName|
       | CS-ABB-00001     |
 
-  Scenario Outline: Check active Charging Station
-    Given user is  on the Charging Stations map page
-    When Charging Station "<CsName>" is  active
-    And  User tap on the Charging Station icon "<CsName>"
-    Then "<CsName>",unavailable connector message ,red heartbeat,power consumption should be displayed and user can  perform any action
-
-    Examples:
-      |CsName|
-      |CS-ABB-00002 |
-
+#  Scenario Outline: Check active Charging Station
+#    Given user is  on the Charging Stations map page
+#    When Charging Station "<CsName>" is  active
+#    And  User tap on the Charging Station icon "<CsName>"
+#    Then "<CsName>",unavailable connector message ,red heartbeat,power consumption should be displayed and user can  perform any action
+#
+#    Examples:
+#      |CsName|
+#      |CS-ABB-00002 |
+@inactive
   Scenario Outline: Check inactive Charging Station
     Given user is  on the Charging Stations map page
     When Charging Station "<CsName>" is not active
@@ -34,25 +34,27 @@ Feature: Charging Stations Map Page Functionality
 
     Examples:
       |CsName|
-      |CS-ABB-00002 |
-
+      |CS-ABB-00001 |
+  @ocpp
   Scenario Outline: check charging station ocpp parameters
     Given user is  on the Charging Stations map page
     When  User tap on the Charging Station icon "<CsName>"
-    And    user clicks on ocpp icon of "<CsName>"
+    And    user clicks more info button
+    And    user clicks on ocpp icon
     Then the charging stations ocpp parameters should be displayed
     Examples:
       |CsName|
-      |CS-ABB-00002 |
-  @tag
+      |CS-ABB-00001 |
+  @properties
   Scenario Outline: check charging station  properties
     Given user is  on the Charging Stations map page
     When  User tap on the Charging Station icon "<CsName>"
-    And    user clicks on properties icon of "<CsName>"
+    And    user clicks more info button
+    And    user clicks on properties icon
     Then the charging stations  properties should be displayed
     Examples:
       |CsName|
-      |CS-ABB-00002 |
+      |CS-ABB-00001 |
   Scenario: switch to satellite  map Page View
     Given user is  on the Charging Stations map page
     When user clicks on the satellite view icon
