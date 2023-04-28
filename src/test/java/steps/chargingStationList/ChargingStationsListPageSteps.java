@@ -6,6 +6,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 import java.net.MalformedURLException;
@@ -96,5 +97,12 @@ public class ChargingStationsListPageSteps extends BaseTests {
     @When("I click on the Heartbeat icon of a Charging Station")
     public void whenIClickOnTheHeartbeatIconOfAChargingStation() {
         chargingStationsListPage.StatusCS();
-    }}
+    }
+
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
+    }
+}
 

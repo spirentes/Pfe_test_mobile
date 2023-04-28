@@ -3,6 +3,7 @@ package runner.navBar;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.testng.CucumberOptions;
 
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import tests.base.BaseTests;
@@ -23,4 +24,9 @@ public class TestRunner extends BaseTests {
 
         }
 
+        @Override
+        public
+        void onStart ( ITestContext context ) {
+
+        }
 }

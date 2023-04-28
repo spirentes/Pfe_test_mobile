@@ -1,5 +1,6 @@
 package tests.navSidebarmenu;
 
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -68,4 +69,9 @@ class NavSidebarMenuTests extends BaseTests {
         NavSidebarMenuPage.clickInvoices ();
     }
 
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
+    }
 }

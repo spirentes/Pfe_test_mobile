@@ -9,6 +9,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 import java.net.MalformedURLException;
@@ -16,7 +17,7 @@ import java.net.MalformedURLException;
 import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.assertFalse;
 
-public class SuccessfulRegistrationSteps extends BaseTests {
+public class RegistrationSteps extends BaseTests {
     RegistrationPage registrationPage = new RegistrationPage(driver);;
     LoginPage loginPage;
     SearchChargingStationsMapPage searchChargingStationsMapPage ;
@@ -99,5 +100,11 @@ public class SuccessfulRegistrationSteps extends BaseTests {
     @Then("User should see an error message indicating that the email already exists")
     public void userShouldSeeAnErrorMessageIndicatingThatTheEmailAlreadyExists() {
         assertTrue(registrationPage.isOnPage());
+    }
+
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
     }
 }

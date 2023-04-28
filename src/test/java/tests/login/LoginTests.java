@@ -1,5 +1,6 @@
 package tests.login;
 
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
@@ -84,4 +85,9 @@ class LoginTests extends BaseTests {
     }
 
 
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
+    }
 }

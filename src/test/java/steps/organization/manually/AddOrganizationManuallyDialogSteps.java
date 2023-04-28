@@ -9,6 +9,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 import java.net.MalformedURLException;
@@ -70,4 +71,9 @@ public class AddOrganizationManuallyDialogSteps extends BaseTests {
         assertTrue(actual.equals(expected1) || actual.equals(expected2),"does not match ");
     }
 
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
+    }
 }

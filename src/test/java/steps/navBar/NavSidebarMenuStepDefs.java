@@ -13,6 +13,7 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 
 
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 import java.net.MalformedURLException;
@@ -185,5 +186,11 @@ public class NavSidebarMenuStepDefs  extends BaseTests {
     void userShouldBeTakenToTheReportErrorPage ( ) {
         reportErrorPage=new ReportErrorPage ( driver );
         assertTrue ( reportErrorPage.isOnPage());
+    }
+
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
     }
 }

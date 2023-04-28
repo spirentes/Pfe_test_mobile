@@ -1,6 +1,7 @@
 package tests.registration;
 
 import Utils.JsonReader;
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
@@ -77,6 +78,12 @@ class RegistrationTests extends BaseTests {
     void tearDown ( ) {
         driver.quit ( );
         service.stop ( );
+    }
+
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
     }
 }
 

@@ -4,6 +4,7 @@ import PageObjects.LoginPage;
 import PageObjects.navbar.NavSidebarMenuPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 import static org.testng.Assert.assertTrue;
@@ -25,5 +26,11 @@ class LogOutStepDefs  extends BaseTests {
     void userShouldBeTakenToTheLoginPage ( ) {
         loginPage = new LoginPage ( driver );
         assertTrue ( loginPage.isOnPage());
+    }
+
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
     }
 }

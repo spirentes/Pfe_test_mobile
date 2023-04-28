@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -24,7 +25,7 @@ import java.net.URL;
 import java.time.Duration;
 
 
-public
+public abstract
 class BaseTests extends AbstractTestNGCucumberTests {
     public static AndroidDriver            driver;
     public        AppiumDriverLocalService service;
@@ -64,7 +65,9 @@ class BaseTests extends AbstractTestNGCucumberTests {
         capabilities.setCapability ( "appActivity" , "com.wattzhub.cpo.MainActivity" );
         capabilities.setCapability ( "noReset" , true );
         capabilities.setCapability("autoGrantPermissions", true);
+        capabilities.setCapability("gpsEnabled", true);
         capabilities.setCapability("autoDismissAlerts", true);
+        capabilities.setCapability("permissions", "{\"android.webkit.resource.VIDEO_CAPTURE\": \"grant\", \"android.webkit.resource.AUDIO_CAPTURE\": \"grant\", \"android.permission.ACCESS_FINE_LOCATION\": \"grant\"}");
 
         driver = new AndroidDriver ( new URL ( "http://127.0.0.1:4723" ) , capabilities );
         driver.manage ( ).timeouts ( ).implicitlyWait ( Duration.ofSeconds ( 5 ) );
@@ -96,4 +99,6 @@ class BaseTests extends AbstractTestNGCucumberTests {
     }
 
 
+    public abstract
+    void onStart ( ITestContext context );
 }

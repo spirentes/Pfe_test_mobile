@@ -18,6 +18,8 @@ class SitesListPage extends BasePage {
     private        AndroidDriver driver;
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"No Site found\")")
     private WebElement noSitesMsg;
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uDB80\uDF4D\")")
+    private WebElement btnSwitchToMapPage;
     @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Sites\")")
     private  WebElement    pageTitle;
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uDB80\uDE33\")")
@@ -77,6 +79,9 @@ public void clickBtnOpenSiteArea(){
     }
     public void clickBackBtn()
     {click ( backBtn );}
+    public void clickBtnSwitchToMapPage(){
+        click(btnSwitchToMapPage);
+    }
 
     public
     boolean isOnPage ( ) {

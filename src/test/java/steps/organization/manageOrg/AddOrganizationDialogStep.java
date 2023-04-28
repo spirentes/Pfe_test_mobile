@@ -7,6 +7,7 @@ import PageObjects.ScanOraganizationPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 import java.net.MalformedURLException;
@@ -78,5 +79,11 @@ public class AddOrganizationDialogStep extends BaseTests {
         addOrganizationPage  = new ManageOrganizationPage(driver);
         //assertFalse(addAnOrganizationDialog.isOnPage());
         assertTrue(addOrganizationPage.isOnPage());
+    }
+
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
     }
 }

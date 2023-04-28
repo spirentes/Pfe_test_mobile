@@ -43,3 +43,9 @@ Feature: Sites Functionality
     Examples:
       |sitesName|
       |Mare-Jodoin|
+
+
+  Scenario:open sites in the map view page :
+    Given  User is  on the Sites List Page
+    When user switch to the sites map page
+    Then User  should be redirected to the Sites Map Page

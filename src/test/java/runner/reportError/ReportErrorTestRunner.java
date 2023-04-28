@@ -2,6 +2,7 @@ package runner.reportError;
 
 import io.cucumber.java.BeforeAll;
 import io.cucumber.testng.CucumberOptions;
+import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import tests.base.BaseTests;
 import java.net.MalformedURLException;
@@ -19,5 +20,11 @@ class ReportErrorTestRunner extends BaseTests {
     public  static void setup_driver () throws MalformedURLException {
         System.out.println("setting appium driver.....");
         configureAppium();
+    }
+
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
     }
 }

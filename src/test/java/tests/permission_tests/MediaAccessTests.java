@@ -1,5 +1,6 @@
 package tests.permission_tests;
 
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 import org.testng.annotations.Test;
 import PageObjects.permissions.MediaAccessPermission;
@@ -28,6 +29,12 @@ class MediaAccessTests extends BaseTests {
 
         // Assert that the permission message disappears and the action fails
         // ...
+    }
+
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
     }
 }
 

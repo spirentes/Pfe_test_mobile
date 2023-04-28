@@ -5,6 +5,7 @@ import PageObjects.navbar.NavSidebarMenuPage;
 import PageObjects.sites.SitesAreaPage;
 import PageObjects.sites.SitesFilterPage;
 import PageObjects.sites.SitesListPage;
+import PageObjects.sites.SitesMapViewPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -12,6 +13,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.NoSuchElementException;
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 
@@ -23,6 +25,7 @@ class SitesStepdefs extends BaseTests {
     SitesListPage   sitesListPage   = new SitesListPage ( driver );
     SitesFilterPage sitesFilterPage = new SitesFilterPage ( driver );
     SitesAreaPage   sitesAreaPage   = new SitesAreaPage ( driver );
+    SitesMapViewPage sitesMapViewPage=new SitesMapViewPage ( driver );
 
     @Before
     public
@@ -144,5 +147,23 @@ class SitesStepdefs extends BaseTests {
     public
     void userShouldBeRedirectedToTheSiteAreaListPage ( String siteName ) {
         assertTrue ( sitesAreaPage.isSiteDisplayed ( siteName ) );
+    }
+
+    @When ("user switch to the sites map page")
+    public
+    void userSwitchToTheSitesMapPage ( ) {
+        sitesListPage.clickBtnSwitchToMapPage ();
+    }
+
+    @Then ("User  should be redirected to the Sites Map Page")
+    public
+    void userShouldBeRedirectedToTheSitesMapPage ( ) {
+        assertTrue ( sitesMapViewPage.isOnPage ());
+    }
+
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
     }
 }

@@ -1,5 +1,6 @@
 package tests.organizations;
 
+import org.testng.ITestContext;
 import tests.base.BaseTests;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -28,5 +29,11 @@ public class AddOrganizationTests extends BaseTests {
     public void tearDown() {
         driver.quit();
         service.stop();
+    }
+
+    @Override
+    public
+    void onStart ( ITestContext context ) {
+
     }
 }
