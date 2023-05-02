@@ -20,4 +20,25 @@ Feature: RFID Functionality
       |Badge virtuel|
 
 
+  @useTheUserFilter
 
+  Scenario Outline: Search for the users by their name
+    Given User is  on the RFID List Page
+    When User is on the User Selection Page
+    And User enters "<userName>" in the search field
+    Then A list of users containing "<userNames>" should be displayed
+    Examples:
+      | userName |userNames  |
+      | ADMIN    |ADMIN Admin   |
+      | OUMAIMA  |OUMAIMA kalboussi |
+
+  Scenario Outline: Select user by name
+    Given User is  on the RFID List Page
+    When User is on the User Selection Page
+    And User enters "<userName>" in the search field
+    And User selects the user "<selectedUserName>"
+    Then The user "<selectedUserName>" should be selected
+    Examples:
+      |userName|selectedUserName|
+      | ADMIN    |ADMIN Admin   |
+      | OUMAIMA  |OUMAIMA kalboussi |

@@ -9,10 +9,12 @@ import PageObjects.sites.SitesFilterPage;
 import PageObjects.sites.SitesListPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 
 import static org.testng.Assert.assertTrue;
 import static tests.base.BaseTests.driver;
@@ -41,12 +43,20 @@ class RFIDStepdefs {
         }
 
     }
-        @After
+        @After("not @useTheUserFilter")
         public
         void clickBack ( ) {
             System.out.println ( "im going back !!!!!!!!!!!" );
             driver.navigate ( ).back ( );
         }
+        @After("@useTheUserFilter")
+        public void returnToCSPage(){
+            selectUsersPage.clickExit ();
+            driver.navigate().back();
+            driver.navigate().back();
+            System.out.println ( "Return to the home page" );
+        }
+
     @Given ("User is  on the RFID List Page")
     public
     void userIsOnTheRFIDListPage ( ) {
@@ -56,7 +66,7 @@ class RFIDStepdefs {
     @Then ("A list of  rfids should be displayed {string}")
     public
     void aListOfRfidsShouldBeDisplayed ( String rfidName ) {
-        assertTrue ( RFIDCardsListPage.isSiteDisplayed ( rfidName ) );
+        assertTrue ( RFIDCardsListPage.isRfidCardDisplayed( rfidName ) );
     }
 
     @When ("User search for the rfid by {string}")
@@ -70,7 +80,48 @@ class RFIDStepdefs {
     @Then ("the rfid {string} should be displayed")
     public
     void theRfidShouldBeDisplayed ( String rfidName) {
-        assertTrue (RFIDCardsListPage.isSiteDisplayed ( rfidName )  );
+        assertTrue (RFIDCardsListPage.isRfidCardDisplayed( rfidName )  );
         RFIDCardsListPage.setBtnClearSearchField ();
+    }
+
+    @When ("User is on the User Selection Page")
+    public
+    void userIsOnTheUserSelectionPage ( ) {
+        RFIDCardsListPage.openFilterPage ( );
+        selectUsersPage = RfidFilterPage.selectUsers ( );
+        assertTrue ( selectUsersPage.isOnPage ( ) );
+
+
+    }
+
+
+    @And ("User enters {string} in the search field")
+    public
+    void userEntersInTheSearchField ( String userName) {
+        selectUsersPage.setBtnClearSearchField ();
+        selectUsersPage.searchForUser ( userName );
+        driver.hideKeyboard ();
+    }
+
+    @Then ("A list of users containing {string} should be displayed")
+    public
+    void aListOfUsersContainingShouldBeDisplayed ( String userNames ) {
+        assertTrue (selectUsersPage.isRFIDDisplayed ( userNames )  );
+    }
+
+    @And ("User selects the user {string}")
+    public
+    void userSelectsTheUser ( String userName) {
+        selectUsersPage.selectUser(userName);
+        selectUsersPage.clickValidate ();
+    }
+
+    @Then ("The user {string} should be selected")
+    public
+    void theUserShouldBeSelected ( String userNames) {
+       assertTrue( RfidFilterPage.isUserDisplayed ( userNames ),"user not selected");
+       RfidFilterPage.clickApply ();
+        assertTrue (  RFIDCardsListPage.isRfidCardDisplayed ( userNames ));
+
     }
 }

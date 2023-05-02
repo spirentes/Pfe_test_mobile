@@ -72,7 +72,7 @@ class RFIDCardsListPage extends BasePage {
         return new RfidFilterPage ( driver );
 
     }
-    public boolean isSiteDisplayed(String RFIDNameTxt) {
+    public boolean isRfidCardDisplayed(String RFIDNameTxt) {
 
         try {
             RFIDName = driver.findElement (
@@ -81,7 +81,7 @@ class RFIDCardsListPage extends BasePage {
             RFIDNames.add ( RFIDName );
             return true;
         } catch ( NoSuchElementException e ) {
-            System.out.println ( "Site not found " );
+            System.out.println ( "rfid not found " );
             return false;
         }
 

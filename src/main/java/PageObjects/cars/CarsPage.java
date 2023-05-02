@@ -1,5 +1,6 @@
-package PageObjects;
+package PageObjects.cars;
 
+import PageObjects.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -8,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public
-class CarsPage extends BasePage{
+class CarsPage extends BasePage {
 
 
 
