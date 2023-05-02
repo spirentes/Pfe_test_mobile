@@ -80,10 +80,10 @@ class RegistrationTests extends BaseTests {
         service.stop ( );
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }
 

@@ -96,9 +96,9 @@ class BaseTests extends AbstractTestNGCucumberTests {
         driver.quit ( );
 
         // service.stop ( );
-    }
+    }}
 
 
-    public abstract
-    void onStart ( ITestContext context );
-}
+//    public abstract
+//    void onStart ( ITestContext context );
+//}

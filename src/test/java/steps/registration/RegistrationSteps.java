@@ -102,9 +102,9 @@ public class RegistrationSteps extends BaseTests {
         assertTrue(registrationPage.isOnPage());
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }

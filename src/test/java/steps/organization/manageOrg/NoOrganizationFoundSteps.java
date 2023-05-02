@@ -69,15 +69,14 @@ public class NoOrganizationFoundSteps extends BaseTests {
         }
     @Then("the alert is dismissed and the user redirected to login page")
     public void TheUserRedirectedToTheLoginPage() {
-
         //assertFalse(noOrganizationFound.isOnPage());
-        assertTrue(LoginPage.isOnPage());
+         assertTrue(LoginPage.isOnPage());
 //        throw new io.cucumber.java.PendingException();
     }
-
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }

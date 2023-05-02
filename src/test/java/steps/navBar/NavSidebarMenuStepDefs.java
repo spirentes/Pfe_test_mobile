@@ -1,6 +1,7 @@
 package steps.navBar;
 
 import PageObjects.*;
+import PageObjects.RFID.RFIDCardsListPage;
 import PageObjects.login.LoginPage;
 import PageObjects.navbar.NavSidebarMenuPage;
 import PageObjects.reportError.ReportErrorPage;
@@ -13,7 +14,6 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 
 
-import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 import java.net.MalformedURLException;
@@ -31,7 +31,7 @@ public class NavSidebarMenuStepDefs  extends BaseTests {
     StatisticsPage    statisticsPage ;
     UsersListPage     usersListPage ;
     RFIDCardsListPage rfidCardsListPage;
-    CarsPage carsPage ;
+    CarsPage          carsPage ;
     PaymentMethodsPage paymentMethodsPage;
 
     InvoicesPage    invoicesPage ;
@@ -188,9 +188,9 @@ public class NavSidebarMenuStepDefs  extends BaseTests {
         assertTrue ( reportErrorPage.isOnPage());
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }

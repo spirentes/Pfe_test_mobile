@@ -22,11 +22,11 @@ class usersTestRunner extends BaseTests {
         configureAppium();
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }
 
 

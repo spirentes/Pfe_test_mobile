@@ -7,7 +7,9 @@ import tests.base.BaseTests;
 
 import java.net.MalformedURLException;
 
-public class TestSuiteSetup extends BaseTests implements ITestNGListener {
+public class TestSuiteSetup extends BaseTests
+//        implements ITestNGListener
+{
     @BeforeSuite
     public void setup() throws MalformedURLException {
         System.out.println("setup function");
@@ -16,9 +18,9 @@ public class TestSuiteSetup extends BaseTests implements ITestNGListener {
     }
 
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-        System.out.println("Staaart");
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//        System.out.println("Staaart");
+//    }
 }

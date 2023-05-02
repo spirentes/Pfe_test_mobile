@@ -5,9 +5,9 @@ import tests.base.BaseTests;
 
 public
 class RegitreOrganizationTests extends BaseTests {
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }

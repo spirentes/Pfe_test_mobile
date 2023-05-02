@@ -23,9 +23,9 @@ public class NavBarTestRunner extends BaseTests {
 
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }

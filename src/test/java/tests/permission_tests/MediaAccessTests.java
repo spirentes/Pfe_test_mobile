@@ -31,11 +31,11 @@ class MediaAccessTests extends BaseTests {
         // ...
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }
 
 

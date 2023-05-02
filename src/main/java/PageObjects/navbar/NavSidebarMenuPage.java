@@ -1,6 +1,7 @@
 package PageObjects.navbar;
 
 import PageObjects.*;
+import PageObjects.RFID.RFIDCardsListPage;
 import PageObjects.login.LoginPage;
 import PageObjects.reportError.ReportErrorPage;
 import PageObjects.sites.SitesListPage;

@@ -81,9 +81,9 @@ public class AddOrganizationDialogStep extends BaseTests {
         assertTrue(addOrganizationPage.isOnPage());
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }

@@ -15,16 +15,16 @@ import java.net.MalformedURLException;
         ,glue= {"steps.login"}
        // ,tags = "@Successful_login"
         ,plugin= {"pretty","html:target/cucumber-html-report.html"})
-@Listeners (TestSuiteSetup.class)
+//@Listeners (TestSuiteSetup.class)
 public class LoginTestRunner extends BaseTests {
-    @Override
-    public void onStart ( ITestContext context ) {
-        System.out.println("Test suite started");
-    }
-//    @BeforeClass
-//    @BeforeAll
-//    public  static void setup_driver () throws MalformedURLException {
-//        System.out.println("setting appium driver.....");
-//        configureAppium();
+//    @Override
+//    public void onStart ( ITestContext context ) {
+//        System.out.println("Test suite started");
 //    }
+    @BeforeClass
+    @BeforeAll
+    public  static void setup_driver () throws MalformedURLException {
+        System.out.println("setting appium driver.....");
+        configureAppium();
+    }
 }

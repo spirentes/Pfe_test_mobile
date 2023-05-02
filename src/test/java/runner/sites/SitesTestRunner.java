@@ -21,9 +21,5 @@ class SitesTestRunner extends BaseTests {
         configureAppium();
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
 
-    }
 }

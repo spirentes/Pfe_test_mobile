@@ -99,10 +99,10 @@ public class ChargingStationsListPageSteps extends BaseTests {
         chargingStationsListPage.StatusCS();
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }
 

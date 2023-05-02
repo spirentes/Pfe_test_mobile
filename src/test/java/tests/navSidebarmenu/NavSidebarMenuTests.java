@@ -69,9 +69,9 @@ class NavSidebarMenuTests extends BaseTests {
         NavSidebarMenuPage.clickInvoices ();
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }

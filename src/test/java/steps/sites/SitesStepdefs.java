@@ -161,9 +161,5 @@ class SitesStepdefs extends BaseTests {
         assertTrue ( sitesMapViewPage.isOnPage ());
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
 
-    }
 }

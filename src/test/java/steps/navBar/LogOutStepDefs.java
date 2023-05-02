@@ -28,9 +28,9 @@ class LogOutStepDefs  extends BaseTests {
         assertTrue ( loginPage.isOnPage());
     }
 
-    @Override
-    public
-    void onStart ( ITestContext context ) {
-
-    }
+//    @Override
+//    public
+//    void onStart ( ITestContext context ) {
+//
+//    }
 }
