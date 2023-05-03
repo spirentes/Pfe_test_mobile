@@ -43,19 +43,14 @@ class RFIDStepdefs {
         }
 
     }
-        @After("not @useTheUserFilter")
+        @After
         public
         void clickBack ( ) {
             System.out.println ( "im going back !!!!!!!!!!!" );
             driver.navigate ( ).back ( );
         }
-        @After("@useTheUserFilter")
-        public void returnToCSPage(){
-            selectUsersPage.clickExit ();
-            driver.navigate().back();
-            driver.navigate().back();
-            System.out.println ( "Return to the home page" );
-        }
+
+
 
     @Given ("User is  on the RFID List Page")
     public
@@ -103,7 +98,7 @@ class RFIDStepdefs {
         driver.hideKeyboard ();
     }
 
-    @Then ("A list of users containing {string} should be displayed")
+    @And ("A list of users containing {string} should be displayed")
     public
     void aListOfUsersContainingShouldBeDisplayed ( String userNames ) {
         assertTrue (selectUsersPage.isRFIDDisplayed ( userNames )  );
