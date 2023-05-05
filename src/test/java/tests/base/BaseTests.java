@@ -66,7 +66,7 @@ class BaseTests extends AbstractTestNGCucumberTests {
         capabilities.setCapability ( "appPackage" , "com.wattzhub.cpo" );
         capabilities.setCapability ( "appActivity" , "com.wattzhub.cpo.MainActivity" );
         capabilities.setCapability ( "noReset" , true );
-
+       // capabilities.setCapability("location", "{\"latitude\":40.7128,\"longitude\":-74.0060,\"altitude\":0}");
         driver = new AndroidDriver ( new URL ( "http://127.0.0.1:4723" ) , capabilities );
         driver.manage ( ).timeouts ( ).implicitlyWait ( Duration.ofSeconds ( 5 ) );
 

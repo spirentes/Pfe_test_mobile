@@ -117,6 +117,7 @@ class FiltersPage extends BasePage {
         }
 
     }
+
 }
 
 

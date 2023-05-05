@@ -1,6 +1,8 @@
 package steps.navBar;
 
 import PageObjects.*;
+import PageObjects.Paymentmethod.PaymentMethodsPage;
+import PageObjects.charging_stations.ScanChargingStations;
 import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import PageObjects.login.LoginPage;
 import PageObjects.navBar.NavSidebarMenuPage;

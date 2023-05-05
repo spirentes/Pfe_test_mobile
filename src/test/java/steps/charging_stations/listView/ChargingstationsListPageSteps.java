@@ -2,12 +2,18 @@ package steps.charging_stations.listView;
 
 import PageObjects.charging_stations.ActionsChargingStationsPage;
 import PageObjects.charging_stations.ChargingStationsListPage;
+import PageObjects.charging_stations.ScanChargingStations;
 import PageObjects.charging_stations.SearchChargingStationsMapPage;
+import com.google.zxing.ChecksumException;
+import com.google.zxing.FormatException;
+import com.google.zxing.NotFoundException;
+import com.google.zxing.WriterException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.checkerframework.checker.units.qual.C;
+import org.json.simple.parser.ParseException;
 import tests.base.BaseTests;
 
 import java.io.IOException;
@@ -19,6 +25,7 @@ public class ChargingstationsListPageSteps extends BaseTests {
     SearchChargingStationsMapPage searchChargingStationsMapPage= new SearchChargingStationsMapPage(driver);
     ChargingStationsListPage chargingStationsListPage = new ChargingStationsListPage(driver);
     ActionsChargingStationsPage actionsChargingStationsPage=new ActionsChargingStationsPage(driver);
+    ScanChargingStations scanChargingStations = new ScanChargingStations(driver);
 
     @Given("User is  on the Charging Stations List Page")
     public void userIsOnTheChargingStationsListPage() {
@@ -94,7 +101,7 @@ public class ChargingstationsListPageSteps extends BaseTests {
 
     @When("Charging Station {string} is not  active")
     public void chargingStationIsNotActive(String csName) throws IOException {
-       // assertFalse(chargingStationsListPage.CS_is_available(csName));
+        assertFalse(chargingStationsListPage.CS_is_available(csName));
     }
 
     @And("User clicks on more info button {string}")
@@ -104,6 +111,21 @@ public class ChargingstationsListPageSteps extends BaseTests {
 
     @Then("user can not perform any action on {string}")
     public void userCanNotPerformAnyActionOn(String arg0) {
-        System.out.println("taw nekdemha baed");
+        assertFalse(chargingStationsListPage.areActionsEnabled());
+    }
+
+    @When("User click on the Scan Charging Stations button")
+    public void userClickOnTheScanChargingStationsButton() {
+        chargingStationsListPage.scanChargingStation();
+    }
+
+    @And("user scan a valid {string}")
+    public void userScanAValid(String path) throws ChecksumException, NotFoundException, IOException, FormatException, WriterException, ParseException {
+        //String CSID =scanChargingStations.qrCodeContent(path);
+        scanChargingStations.getChargingStationById("dv");
+    }
+    @Then("a news charging station")
+    public void aNewsChargingStation() {
+        System.out.println("point charge should be opened");
     }
 }

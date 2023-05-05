@@ -11,6 +11,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public
 class SearchChargingStationsMapPage extends BasePage {
@@ -39,7 +40,10 @@ class SearchChargingStationsMapPage extends BasePage {
     WebElement heartbeatIcon;
     @AndroidFindBy ( uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uE429\")")
     WebElement moreInfoIcon;
+    @AndroidFindBy ( uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uF110\")")
+    WebElement exitBtn;
      static WebElement CSIcon;
+
     WebElement availability_message;
 
 
@@ -74,6 +78,9 @@ class SearchChargingStationsMapPage extends BasePage {
     public void clickNavBarBtn(){
         click ( navBarIcon );
     }
+    public void clickExitBtn(){
+        click ( exitBtn );
+    }
     public void click_more_info_btn(){
         click(moreInfoIcon);
     }
@@ -106,6 +113,10 @@ class SearchChargingStationsMapPage extends BasePage {
 //       CSIcon = driver.findElement(By.xpath(xpath2));
         CSIcon= driver.findElement(MobileBy.accessibilityId(CSname+". "));
         return CSIcon.isDisplayed();
+    }
+    public List<WebElement>  ChargingStationsOnMap(){
+        return googleMap.findElements(MobileBy.androidUIAutomator("className(\"android.view.View\")"));
+
     }
     public void tap_on_cs(String CSname)  {
         CSIcon= driver.findElement(MobileBy.accessibilityId(CSname+". "));

@@ -2,7 +2,7 @@ package steps.organization;
 
 import PageObjects.AlertDialogs.NoOrganizationFound;
 import PageObjects.login.LoginPage;
-import PageObjects.ScanOraganizationPage;
+import PageObjects.organization.ScanOraganizationPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

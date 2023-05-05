@@ -5,20 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d470034b-f243-42b1-8a48-36c7b85c8fca" name="Changes" comment="CS commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/runner/charging_stations/FilterPageTestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/charging_stations/filterPage/FilterPageSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Charging_stations/FilterPage.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/cs_qr_codes/qr_code.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/disabled_start_session_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/heartbeat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/heartbeaticon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/pyAddFailed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/pyAddedSuccessfully.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/pyRemovedSuccessfully.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/AddCarPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runner/TestSuiteSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runner/charging_stations/ChargePointTestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runner/paymentMthod/PaymentmethodRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/steps/charging_stations/csPoint/CsPointSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/steps/charging_stations/csPoint/MyStepdefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/steps/paymentMethod/PaymentMethodSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Charging_stations/ChargePoint.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Charging_stations/ScanCS.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/paymentMethods/paymentMethod.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/FiltersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/FiltersPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/ActionsChargingStationsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/ActionsChargingStationsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ChargePointCSPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/ChargePointCSPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/Paymentmethod/PaymentMethodsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ScanChargingStations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/ScanChargingStations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ScanOraganizationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/organization/ScanOraganizationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SessionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SessionPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/ChargingStationsListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/ChargingStationsListPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/FiltersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/FiltersPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/SearchChargingStationsMapPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/charging_stations/SearchChargingStationsMapPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/charging_stations/CSlistViewTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/charging_stations/CSlistViewTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/navBar/NavSidebarMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/navBar/NavSidebarMenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runner/charging_stations/CSmapViewTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/charging_stations/CSmapViewTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/charging_stations/FilterPageTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/charging_stations/FilterPageTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/charging_stations/filterPage/FilterPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/charging_stations/filterPage/FilterPageSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/charging_stations/listView/ChargingstationsListPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/charging_stations/listView/ChargingstationsListPageSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/charging_stations/mapView/ChargingstationsMapPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/charging_stations/mapView/ChargingstationsMapPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/navBar/NavSidebarMenuStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/navBar/NavSidebarMenuStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/organization/AddOrganizationDialogStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/organization/AddOrganizationDialogStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/organization/NoOrganizationFoundSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/organization/NoOrganizationFoundSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/base/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/base/BaseTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Charging_stations/CSLIst.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Charging_stations/CSLIst.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Charging_stations/CSMap.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Charging_stations/CSMap.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Charging_stations/FilterPage.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Charging_stations/FilterPage.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,42 +87,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/Downloads/pfe-test-mobile-master/src/test/java/steps/charging_stations/filterPageSteps&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Asus/Downloads/pfe-test-mobile-master/resources",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\resources" />
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\resources\features\Charging_stations" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\resources" />
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\java\runner\charging_stations" />
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\java\steps" />
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\resources\cs_qr_codes" />
       <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\resources\features\Charging stations" />
-      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\resources\features\navBar" />
-      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\resources\features\login" />
-      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\resources\features\registration" />
-      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\resources\features\organization" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="runner.charging_stations" />
       <recent name="steps.charging_stations" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FilterPageTestRunner">
-    <configuration name="Scenario: Open Filter Page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.PaymentmethodRunner">
+    <configuration name="Scenario: delete a payment Method" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Charging_stations/FilterPage.feature" />
-      <option name="GLUE" value="steps.charging_stations.mapView steps.charging_stations.filterPage steps.organization steps.navBar steps.login steps.registration" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/paymentMethods/paymentMethod.feature" />
+      <option name="GLUE" value="steps.charging_stations.mapView steps.paymentMethod steps.charging_stations.filterPage steps.navBar steps.organization steps.login steps.registration" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="WattzHubCPO_MobileAutomation" />
-      <option name="NAME_FILTER" value="^Open Filter Page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Open Filter Page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Open Filter Page" />
+      <option name="NAME_FILTER" value="^delete a payment Method$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^delete a payment Method$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: delete a payment Method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -140,7 +172,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CSmapViewTestRunner.runScenario (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ChargePointTestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
       <extension name="coverage">
         <pattern>
@@ -149,26 +181,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="runner.charging_stations" />
-      <option name="MAIN_CLASS_NAME" value="runner.charging_stations.CSmapViewTestRunner" />
-      <option name="METHOD_NAME" value="runScenario" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="4" />
+      <option name="MAIN_CLASS_NAME" value="runner.charging_stations.ChargePointTestRunner" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FilterPageTestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentmethodRunner" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runner.charging_stations.*" />
+          <option name="PATTERN" value="runner.paymentMthod.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runner.charging_stations" />
-      <option name="MAIN_CLASS_NAME" value="runner.charging_stations.FilterPageTestRunner" />
+      <option name="PACKAGE_NAME" value="runner.paymentMthod" />
+      <option name="MAIN_CLASS_NAME" value="runner.paymentMthod.PaymentmethodRunner" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -252,20 +282,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cucumber Java.Scenario: Open Filter Page" />
+      <item itemvalue="Cucumber Java.Scenario: delete a payment Method" />
       <item itemvalue="TestNG.TestRunner" />
-      <item itemvalue="TestNG.FilterPageTestRunner" />
-      <item itemvalue="TestNG.CSmapViewTestRunner.runScenario (1)" />
-      <item itemvalue="TestNG.CSlistViewTestRunner" />
+      <item itemvalue="TestNG.PaymentmethodRunner" />
       <item itemvalue="TestNG.CSmapViewTestRunner" />
+      <item itemvalue="TestNG.ChargePointTestRunner" />
+      <item itemvalue="TestNG.CSlistViewTestRunner" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FilterPageTestRunner" />
-        <item itemvalue="Cucumber Java.Scenario: Open Filter Page" />
-        <item itemvalue="TestNG.CSmapViewTestRunner" />
+        <item itemvalue="TestNG.PaymentmethodRunner" />
+        <item itemvalue="Cucumber Java.Scenario: delete a payment Method" />
+        <item itemvalue="TestNG.ChargePointTestRunner" />
         <item itemvalue="TestNG.CSlistViewTestRunner" />
-        <item itemvalue="TestNG.CSmapViewTestRunner.runScenario (1)" />
+        <item itemvalue="TestNG.CSmapViewTestRunner" />
       </list>
     </recent_temporary>
   </component>

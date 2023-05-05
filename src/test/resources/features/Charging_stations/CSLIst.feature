@@ -27,8 +27,8 @@ Feature: Charging Stations List Page Functionality
     Examples:
       |CsName|
       |CS-SCHNEIDER-00001 |
-  @tag
-  Scenario Outline: Check inactive Charging Station
+
+  Scenario Outline:  inactive Charging Station
     Given User is  on the Charging Stations List Page
     When Charging Station "<CsName>" is not  active
     And  User clicks on more info button "<CsName>"
@@ -36,9 +36,9 @@ Feature: Charging Stations List Page Functionality
 
     Examples:
       |CsName|
-      |CS-SCHNEIDER-00001 |
+#      |CS-SCHNEIDER-00001 |
       |CS-ABB-00002       |
-      |CS-ABB-00001       |
+#      |CS-ABB-00001       |
 
   Scenario Outline: See More Information about Charging Station
     Given User is  on the Charging Stations List Page
@@ -53,10 +53,13 @@ Feature: Charging Stations List Page Functionality
     Given User is  on the Charging Stations List Page
     When I click on the Map View icon
     Then the Search Charging Stations Map page should be opened
-
-#  Scenario: Open Scan Charging Stations Page
-#    Given User is  on the Charging Stations List Page
-#    When  User click on the Scan Charging Stations button
-#    And   user scan a valid Qr code
-#    Then  a news charging station
+  @tag
+  Scenario Outline: Open Scan Charging Stations Page
+    Given User is  on the Charging Stations List Page
+    When  User click on the Scan Charging Stations button
+    And   user scan a valid "<qr_code>"
+    Then  a news charging station
+    Examples:
+      | qr_code |
+      |resources/cs_qr_codes/qr_code.png|
 

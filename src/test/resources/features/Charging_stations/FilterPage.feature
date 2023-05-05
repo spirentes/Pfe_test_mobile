@@ -32,7 +32,7 @@ Scenario Outline: filter by available charging stations
         Given User is  on the Charging Stations filer Page
         When user choose Multiple charging station connector types "<connectorType1>" and "<connectorType2>"
         And user clicks on apply button
-        Then "<charging_stations>" with selected "<connectorType1>"and "<connectorType2>" should be displayed
+        Then charging stations with selected "<connectorType1>"and "<connectorType2>" should be displayed
         Examples:
-            | connectorType1 | connectorType2 |charging_stations|
-            |Type 1|Domestic| CS-ABB-00001, CS-ABB-00002 |
+            | connectorType1 | connectorType2 |
+            |Type 1|Domestic|

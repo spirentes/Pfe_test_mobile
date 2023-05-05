@@ -14,7 +14,9 @@ import tests.base.BaseTests;
 import java.io.IOException;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
-
+import org.sikuli.script.FindFailed;
+import org.sikuli.script.Pattern;
+import org.sikuli.script.Screen;
 public class ChargingstationsMapPageSteps extends BaseTests {
     SearchChargingStationsMapPage searchChargingStationsMapPage= new SearchChargingStationsMapPage(driver);
     ChargingStationsListPage chargingStationsListPage = new ChargingStationsListPage(driver);
@@ -31,13 +33,12 @@ public class ChargingstationsMapPageSteps extends BaseTests {
         driver.navigate().back();
         driver.navigate().back();
     }
-    @After("@inactive")
-    public  void goBacktoMappage(){
-        driver.navigate().back();
-
-    }
+//    @After("@inactive , @active")
+//    public  void goBacktoMappage(){
+//        driver.navigate().back();
+//    }
     @Given("user is  on the Charging Stations map page")
-    public void userIsOnTheChargingStationsMapPage() {
+    public void userIsOnTheChargingStationsMapPage() throws FindFailed {
      assertTrue(searchChargingStationsMapPage.mapViewIsOnPage());
     }
     @Then("the charging stations {string} should be  plotted on a map")
@@ -139,7 +140,6 @@ assertTrue(actionsChargingStationsPage.ocpp_param_are_displayed());
     public void theChargingStationsPropertiesShouldBeDisplayed() {
         assertTrue(infoChargingStationsPage.properties_are_displayed());
     }
-
 
 
 }
