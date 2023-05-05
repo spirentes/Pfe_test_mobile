@@ -1,11 +1,12 @@
-package PageObjects;
+package PageObjects.charging_stations;
 
+import PageObjects.base.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
 public
-class ChartCSPage extends BasePage{
+class ChartCSPage extends BasePage {
     AndroidDriver driver;
     public
     ChartCSPage( AndroidDriver driver ) {

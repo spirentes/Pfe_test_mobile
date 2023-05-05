@@ -1,5 +1,6 @@
-package PageObjects;
+package PageObjects.session;
 
+import PageObjects.base.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -8,17 +9,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public
-class StatisticsPage extends BasePage {
+class SessionsHistoryListPage extends BasePage {
     private        AndroidDriver driver;
 
-    @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Statistics\")")
+    @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Sessions History\")")
     private  WebElement    pageTitle;
     @AndroidFindBy (xpath= "//android.view.ViewGroup[1]/android.widget.TextView[@index='0'][@bounds='[13,93][75,162]']")
-
     WebElement backBtn  ;
-
-    public
-    StatisticsPage ( AndroidDriver driver ) {
+    public SessionsHistoryListPage( AndroidDriver driver ) {
         super(driver);
         this.driver = driver;
         PageFactory.initElements ( new AppiumFieldDecorator ( driver), this );
@@ -35,5 +33,4 @@ class StatisticsPage extends BasePage {
             return false;
         }
     }
-
 }

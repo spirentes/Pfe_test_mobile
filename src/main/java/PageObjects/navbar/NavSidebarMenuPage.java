@@ -1,15 +1,18 @@
 package PageObjects.navbar;
 
-import PageObjects.*;
 import PageObjects.Paymentmethod.PaymentMethodsPage;
 import PageObjects.RFID.RFIDCardsListPage;
+import PageObjects.base.BasePage;
 import PageObjects.cars.CarsPage;
 import PageObjects.charging_stations.ScanChargingStations;
 import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import PageObjects.invoices.InvoicesPage;
 import PageObjects.login.LoginPage;
 import PageObjects.reportError.ReportErrorPage;
+import PageObjects.session.SessionsHistoryListPage;
+import PageObjects.session.SessionsInProgressListPage;
 import PageObjects.sites.SitesListPage;
+import PageObjects.statistics.StatisticsPage;
 import PageObjects.users.UsersListPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;

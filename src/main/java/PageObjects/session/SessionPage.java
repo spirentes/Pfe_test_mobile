@@ -1,15 +1,15 @@
-package PageObjects;
+package PageObjects.session;
 
+import PageObjects.base.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import io.cucumber.java.en.And;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public
-class SessionPage extends BasePage{
+class SessionPage extends BasePage {
     AndroidDriver driver;
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Session\")")
     WebElement pageTitle;

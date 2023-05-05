@@ -1,6 +1,6 @@
 package PageObjects.AlertDialogs;
 
-import PageObjects.BasePage;
+import PageObjects.base.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;

@@ -1,5 +1,6 @@
-package PageObjects;
+package PageObjects.session;
 
+import PageObjects.base.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;

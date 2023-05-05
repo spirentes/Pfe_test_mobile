@@ -1,11 +1,10 @@
 package steps.charging_stations.csPoint;
 
 import PageObjects.reportError.ReportErrorPage;
-import PageObjects.SessionPage;
+import PageObjects.session.SessionPage;
 import PageObjects.charging_stations.AddCarPage;
 import PageObjects.charging_stations.ChargePointCSPage;
 import PageObjects.charging_stations.ChargingStationsListPage;
-import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

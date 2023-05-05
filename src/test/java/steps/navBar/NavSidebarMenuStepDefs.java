@@ -1,6 +1,5 @@
 package steps.navBar;
 
-import PageObjects.*;
 import PageObjects.Paymentmethod.PaymentMethodsPage;
 import PageObjects.RFID.RFIDCardsListPage;
 import PageObjects.cars.CarsPage;
@@ -10,7 +9,10 @@ import PageObjects.invoices.InvoicesPage;
 import PageObjects.login.LoginPage;
 import PageObjects.navbar.NavSidebarMenuPage;
 import PageObjects.reportError.ReportErrorPage;
+import PageObjects.session.SessionsHistoryListPage;
+import PageObjects.session.SessionsInProgressListPage;
 import PageObjects.sites.SitesListPage;
+import PageObjects.statistics.StatisticsPage;
 import PageObjects.users.UsersListPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -30,11 +32,11 @@ public class NavSidebarMenuStepDefs  extends BaseTests {
     NavSidebarMenuPage            navSidebarMenuPage;
     SitesListPage                 sitesListPage;
     SearchChargingStationsMapPage searchChargingStationsMapPage;
-    ScanChargingStations          scanChargingStations;
-    SessionsInProgressListPage    sessionsInProgressListPage;
+    ScanChargingStations       scanChargingStations;
+    SessionsInProgressListPage sessionsInProgressListPage;
     SessionsHistoryListPage sessionsHistoryListPage ;
-    StatisticsPage    statisticsPage ;
-    UsersListPage     usersListPage ;
+    StatisticsPage          statisticsPage ;
+    UsersListPage           usersListPage ;
     RFIDCardsListPage  rfidCardsListPage;
     CarsPage           carsPage ;
     PaymentMethodsPage paymentMethodsPage;

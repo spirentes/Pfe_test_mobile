@@ -1,8 +1,7 @@
 package PageObjects.sites;
 
-import PageObjects.BasePage;
+import PageObjects.base.BasePage;
 
-import PageObjects.sites.SitesFilterPage;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;

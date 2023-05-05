@@ -1,6 +1,6 @@
 package PageObjects.charging_stations;
 
-import PageObjects.BasePage;
+import PageObjects.base.BasePage;
 import com.google.zxing.*;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.common.BitMatrix;
@@ -8,7 +8,6 @@ import com.google.zxing.qrcode.QRCodeWriter;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import io.cucumber.core.internal.com.fasterxml.jackson.databind.JsonNode;
 import io.cucumber.core.internal.com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -25,8 +24,6 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.*;
 
 public

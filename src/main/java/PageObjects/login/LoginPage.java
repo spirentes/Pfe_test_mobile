@@ -1,6 +1,6 @@
 package PageObjects.login;
 
-import PageObjects.BasePage;
+import PageObjects.base.BasePage;
 import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;

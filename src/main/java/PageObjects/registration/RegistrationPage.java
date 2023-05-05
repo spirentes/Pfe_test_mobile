@@ -1,6 +1,6 @@
 package PageObjects.registration;
 
-import PageObjects.BasePage;
+import PageObjects.base.BasePage;
 import PageObjects.login.LoginPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;

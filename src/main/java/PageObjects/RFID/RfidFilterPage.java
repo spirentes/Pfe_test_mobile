@@ -1,14 +1,12 @@
 package PageObjects.RFID;
 
-import PageObjects.BasePage;
-import PageObjects.sites.SitesListPage;
+import PageObjects.base.BasePage;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
