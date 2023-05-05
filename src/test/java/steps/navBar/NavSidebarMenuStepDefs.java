@@ -1,8 +1,11 @@
 package steps.navBar;
 
 import PageObjects.*;
+import PageObjects.Paymentmethod.PaymentMethodsPage;
 import PageObjects.RFID.RFIDCardsListPage;
 import PageObjects.cars.CarsPage;
+import PageObjects.charging_stations.ScanChargingStations;
+import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import PageObjects.invoices.InvoicesPage;
 import PageObjects.login.LoginPage;
 import PageObjects.navbar.NavSidebarMenuPage;
@@ -27,8 +30,8 @@ public class NavSidebarMenuStepDefs  extends BaseTests {
     NavSidebarMenuPage            navSidebarMenuPage;
     SitesListPage                 sitesListPage;
     SearchChargingStationsMapPage searchChargingStationsMapPage;
-    ScanChargingStations scanChargingStations;
-    SessionsInProgressListPage sessionsInProgressListPage;
+    ScanChargingStations          scanChargingStations;
+    SessionsInProgressListPage    sessionsInProgressListPage;
     SessionsHistoryListPage sessionsHistoryListPage ;
     StatisticsPage    statisticsPage ;
     UsersListPage     usersListPage ;

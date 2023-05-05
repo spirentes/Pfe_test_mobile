@@ -2,14 +2,13 @@ package steps.registration;
 
 import PageObjects.login.LoginPage;
 import PageObjects.registration.RegistrationPage;
-import PageObjects.SearchChargingStationsMapPage;
+import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 import java.net.MalformedURLException;

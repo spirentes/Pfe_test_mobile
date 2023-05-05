@@ -2,13 +2,12 @@ package steps.organization.manageOrg;
 
 import PageObjects.AlertDialogs.NoOrganizationFound;
 import PageObjects.login.LoginPage;
-import PageObjects.ScanOraganizationPage;
+import PageObjects.organization.ScanOraganizationPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 import java.net.MalformedURLException;

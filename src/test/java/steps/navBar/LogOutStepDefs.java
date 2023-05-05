@@ -1,17 +1,16 @@
 package steps.navBar;
 
-import PageObjects.LoginPage;
+import PageObjects.login.LoginPage;
 import PageObjects.navbar.NavSidebarMenuPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 import static org.testng.Assert.assertTrue;
 
 public
 class LogOutStepDefs  extends BaseTests {
-    LoginPage loginPage ;
+    LoginPage          loginPage ;
     NavSidebarMenuPage navSidebarMenuPage;
 
 

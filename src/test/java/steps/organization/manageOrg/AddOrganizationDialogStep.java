@@ -3,11 +3,10 @@ package steps.organization.manageOrg;
 import PageObjects.organization.ManageOrganizationPage;
 import PageObjects.AlertDialogs.AddAnOrganizationDialog;
 import PageObjects.AlertDialogs.AddOrganizationManuallyDialog;
-import PageObjects.ScanOraganizationPage;
+import PageObjects.organization.ScanOraganizationPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 import java.net.MalformedURLException;

@@ -1,15 +1,8 @@
 package runner.login;
 
-import io.cucumber.java.BeforeAll;
 import io.cucumber.testng.CucumberOptions;
-import org.testng.ITestContext;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import runner.TestSuiteSetup;
 import tests.base.BaseTests;
-import java.net.MalformedURLException;
 
-import java.net.MalformedURLException;
 @org.testng.annotations.Test
 @CucumberOptions(features="src/test/resources/features/login/Login.feature"
         ,glue= {"steps.login"}
@@ -21,10 +14,10 @@ public class LoginTestRunner extends BaseTests {
 //    public void onStart ( ITestContext context ) {
 //        System.out.println("Test suite started");
 //    }
-    @BeforeClass
-    @BeforeAll
-    public  static void setup_driver () throws MalformedURLException {
-        System.out.println("setting appium driver.....");
-        configureAppium();
-    }
+//    @BeforeClass
+//    @BeforeAll
+//    public  static void setup_driver () throws MalformedURLException {
+//        System.out.println("setting appium driver.....");
+//        configureAppium();
+//    }
 }

@@ -1,6 +1,5 @@
 package tests.login;
 
-import org.testng.ITestContext;
 import tests.base.BaseTests;
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
@@ -8,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import PageObjects.login.LoginPage;
 
-import PageObjects.SearchChargingStationsMapPage;
+import PageObjects.charging_stations.SearchChargingStationsMapPage;
 
 import java.net.MalformedURLException;
 

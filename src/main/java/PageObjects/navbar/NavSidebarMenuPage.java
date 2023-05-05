@@ -1,8 +1,11 @@
 package PageObjects.navbar;
 
 import PageObjects.*;
+import PageObjects.Paymentmethod.PaymentMethodsPage;
 import PageObjects.RFID.RFIDCardsListPage;
 import PageObjects.cars.CarsPage;
+import PageObjects.charging_stations.ScanChargingStations;
+import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import PageObjects.invoices.InvoicesPage;
 import PageObjects.login.LoginPage;
 import PageObjects.reportError.ReportErrorPage;

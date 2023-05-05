@@ -1,6 +1,6 @@
 package steps.users;
 
-import PageObjects.SearchChargingStationsMapPage;
+import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import PageObjects.users.UsersFilterPage;
 import PageObjects.users.UsersListPage;
 import PageObjects.navbar.NavSidebarMenuPage;

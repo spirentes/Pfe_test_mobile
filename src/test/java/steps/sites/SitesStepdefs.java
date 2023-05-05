@@ -1,6 +1,6 @@
 package steps.sites;
 
-import PageObjects.SearchChargingStationsMapPage;
+import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import PageObjects.navbar.NavSidebarMenuPage;
 import PageObjects.sites.SitesAreaPage;
 import PageObjects.sites.SitesFilterPage;
@@ -13,7 +13,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.NoSuchElementException;
-import org.testng.ITestContext;
 import tests.base.BaseTests;
 
 

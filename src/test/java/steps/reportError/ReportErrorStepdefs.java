@@ -1,6 +1,6 @@
 package steps.reportError;
 
-import PageObjects.SearchChargingStationsMapPage;
+import PageObjects.charging_stations.SearchChargingStationsMapPage;
 import PageObjects.navbar.NavSidebarMenuPage;
 import PageObjects.reportError.ReportErrorPage;
 import io.cucumber.java.After;
@@ -9,7 +9,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.testng.Assert.assertTrue;
 import static tests.base.BaseTests.driver;

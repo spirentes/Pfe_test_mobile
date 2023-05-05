@@ -1,5 +1,6 @@
 package PageObjects;
 
+import PageObjects.login.LoginPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
