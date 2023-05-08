@@ -61,5 +61,9 @@ public class AddCarPage extends BasePage {
         WebElement cartype =driver.findElement(MobileBy.androidUIAutomator("new UiSelector().className(\"android.widget.TextView\").text(\""+carType+"\")"));
         click(cartype);
     }
+    public void ScrollUp()
+    {
+        scroll_up ( DefaultCar,driver );
+    }
 
 }

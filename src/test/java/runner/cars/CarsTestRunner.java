@@ -1,4 +1,4 @@
-package runner.charging_stations;
+package runner.cars;
 
 import io.cucumber.java.BeforeAll;
 import io.cucumber.testng.CucumberOptions;
@@ -7,16 +7,31 @@ import tests.base.BaseTests;
 
 import java.net.MalformedURLException;
 
+
 @org.testng.annotations.Test
-@CucumberOptions(features="src/test/resources/features/Charging_stations/CSMap.feature"
-        ,glue= {"steps.charging_stations.mapView"}
-        //,tags = "@tag"
-        ,plugin= {"pretty","html:target/cucumber-html-report.html"})
-public class CSmapViewTestRunner extends BaseTests {
+@CucumberOptions (features="src/test/resources/features/cars/cars.feature"
+        ,glue= {"steps.cars"}
+        ,plugin= {"pretty","html:target/cucumber-html-report.html"}
+//        ,plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+)
+//@Listeners (TestSuiteSetup.class)
+
+public
+class CarsTestRunner extends BaseTests {
+
     @BeforeClass
     @BeforeAll
     public  static void setup_driver () throws MalformedURLException {
         System.out.println("setting appium driver.....");
         configureAppium();
     }
+
+
+
+
+
+
+
+
+
 }

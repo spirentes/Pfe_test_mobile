@@ -79,6 +79,7 @@ public class ChargePointCSPage extends BasePage {
             return false;
         }
     }
+
     public void showCpInfo(){
 
     }
@@ -129,7 +130,7 @@ public class ChargePointCSPage extends BasePage {
         return !inactive.isEmpty();
     }
     public boolean start_session_is_disabled() throws FindFailed {
-        String imageFilePath = "C:\\Users\\Asus\\Downloads\\pfe-test-mobile-master\\resources\\disabled_start_session_btn.png";
+        String imageFilePath = "C:\\Users\\msi\\Desktop\\Pfe_test_mobile\\Pfe_test_mobile-second_branch\\resources\\disabled_start_session_btn.png";
         //Color maskColor = new Color(133, 133, 133);
 // Create a Pattern object using the image file path and specify the color range
         Pattern pattern = new Pattern(imageFilePath); // example color range: red

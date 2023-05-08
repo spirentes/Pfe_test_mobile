@@ -12,13 +12,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.NoSuchElementException;
+import tests.base.BaseTests;
 
 import static org.testng.Assert.assertTrue;
 import static tests.base.BaseTests.driver;
 
 
 public
-class RFIDStepdefs {
+class RFIDStepdefs extends BaseTests {
     RFIDCardsListPage RFIDCardsListPage   = new RFIDCardsListPage( driver );
     RfidFilterPage RfidFilterPage = new RfidFilterPage ( driver );
     SelectUsersPage selectUsersPage=new SelectUsersPage ( driver );

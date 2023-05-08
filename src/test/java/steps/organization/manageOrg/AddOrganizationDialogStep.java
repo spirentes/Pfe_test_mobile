@@ -1,12 +1,16 @@
 package steps.organization.manageOrg;
 
+import PageObjects.AlertDialogs.NoOrganizationFound;
+import PageObjects.login.LoginPage;
 import PageObjects.organization.ManageOrganizationPage;
 import PageObjects.AlertDialogs.AddAnOrganizationDialog;
 import PageObjects.AlertDialogs.AddOrganizationManuallyDialog;
 import PageObjects.organization.ScanOraganizationPage;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.NoSuchElementException;
 import tests.base.BaseTests;
 
 import java.net.MalformedURLException;
@@ -15,15 +19,33 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class AddOrganizationDialogStep extends BaseTests {
-    //AndroidDriver driver= ManageOrganizationPageSteps.driver;
-    AddAnOrganizationDialog addAnOrganizationDialog;
-    ScanOraganizationPage scanOraganizationPage;
-    AddOrganizationManuallyDialog addOrganizationManuallyDialog;
-    ManageOrganizationPage addOrganizationPage ;
+
+    AddAnOrganizationDialog addAnOrganizationDialog= new AddAnOrganizationDialog(driver);
+    ScanOraganizationPage scanOraganizationPage=new ScanOraganizationPage ( driver );
+    AddOrganizationManuallyDialog addOrganizationManuallyDialog=new AddOrganizationManuallyDialog ( driver );
+    ManageOrganizationPage manageOrganizationPage =new ManageOrganizationPage ( driver );
+    LoginPage loginPage =new LoginPage ( driver );
+    NoOrganizationFound noOrganizationFound=new NoOrganizationFound ( driver );
+    @Before("@DialogOrg")
+    public void openAddOrgDialog()
+    {  loginPage.clickOragnizationButton();
+        System.out.println("hiiiiiiiiiiiii");
+        manageOrganizationPage.clickPlusButton();
+        try {
+            noOrganizationFound.clickCancel ();
+            loginPage.clickOragnizationButton();
+            System.out.println("hiiiiiiiiiiiii");
+            manageOrganizationPage.clickPlusButton();
+        } catch ( NoSuchElementException e ) {
+            loginPage.clickOragnizationButton();
+            System.out.println("hiiiiiiiiiiiii");
+            manageOrganizationPage.clickPlusButton();
+        }
+
+    }
     @Given("User is on Add an Organization dialog")
     public void userIsOnAddAnOrganizationDialog() throws MalformedURLException {
-       // configureAppium();
-        addAnOrganizationDialog = new AddAnOrganizationDialog(driver);
+
         assertTrue(addAnOrganizationDialog.isOnPage());
     }
 
@@ -34,11 +56,9 @@ public class AddOrganizationDialogStep extends BaseTests {
 
     @Then("QR code scanner is activated")
     public void qrCodeScannerIsActivated() {
-        scanOraganizationPage = new ScanOraganizationPage(driver);
-        addOrganizationPage  = new ManageOrganizationPage(driver);
         assertTrue(scanOraganizationPage.isOnPage());
         scanOraganizationPage.return_to_organizations_page();
-        addOrganizationPage.clickPlusButton();
+        manageOrganizationPage.clickPlusButton();
 
     }
 
@@ -49,7 +69,6 @@ public class AddOrganizationDialogStep extends BaseTests {
 
     @Then("User is redirected to the manual organization page")
     public void userIsRedirectedToTheManualOrganizationPage() {
-        addOrganizationManuallyDialog= new AddOrganizationManuallyDialog(driver);
         assertTrue(addOrganizationManuallyDialog.isOnPage());
         addOrganizationManuallyDialog.click_back_button();
 
@@ -62,10 +81,9 @@ public class AddOrganizationDialogStep extends BaseTests {
 
     @Then("Add an Organization dialog is closed")
     public void addAnOrganizationDialogIsClosed() {
-        addOrganizationPage  = new ManageOrganizationPage(driver);
         assertFalse(addAnOrganizationDialog.isOnPage());
-        assertTrue(addOrganizationPage.isOnPage());
-        addOrganizationPage.clickPlusButton();
+        assertTrue(manageOrganizationPage.isOnPage());
+        manageOrganizationPage.clickPlusButton();
     }
 
     @When("User clicks on the exist button")
@@ -75,14 +93,10 @@ public class AddOrganizationDialogStep extends BaseTests {
 
     @Then("add Organization dialog is closed")
     public void addOrganizationDialogIsClosed() {
-        addOrganizationPage  = new ManageOrganizationPage(driver);
+
         //assertFalse(addAnOrganizationDialog.isOnPage());
-        assertTrue(addOrganizationPage.isOnPage());
+        assertTrue(manageOrganizationPage.isOnPage());
     }
 
-//    @Override
-//    public
-//    void onStart ( ITestContext context ) {
-//
-//    }
+
 }

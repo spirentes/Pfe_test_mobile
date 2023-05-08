@@ -20,7 +20,7 @@ public class NoOrganizationFoundSteps extends BaseTests {
     NoOrganizationFound noOrganizationFound = new NoOrganizationFound(driver);
     ScanOraganizationPage ScanOraganizationPage= new ScanOraganizationPage(driver);
     LoginPage LoginPage= new LoginPage(driver);
-    @Before("@noORG")
+    @Before("@noORG,@noORG2")
     public  void openApp()
     {
         driver.launchApp();
@@ -61,16 +61,15 @@ public class NoOrganizationFoundSteps extends BaseTests {
     }
     @When("the user clicks the Exit button")
     public void the_user_clicks_existBtn() {
-//       noOrganizationFound.reset();
-        // Write code here that turns the phrase above into concrete actions
+
         noOrganizationFound.clickExitButton();
-//        throw new io.cucumber.java.PendingException();
+
         }
     @Then("the alert is dismissed and the user redirected to login page")
     public void TheUserRedirectedToTheLoginPage() {
-        //assertFalse(noOrganizationFound.isOnPage());
+
          assertTrue(LoginPage.isOnPage());
-//        throw new io.cucumber.java.PendingException();
+
     }
 //
 //    @Override

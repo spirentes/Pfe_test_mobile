@@ -72,7 +72,7 @@ public class CsPointSteps extends BaseTests {
     }
     @When("{string} or RFID_card is inactive")
     public void orRFID_cardIsInactive(String userName) {
-        //chargePointCSPage.clickInfoBtn();
+        chargePointCSPage.clickInfoBtn();
         chargePointCSPage.select_user(userName);
         assertTrue(chargePointCSPage.user_or_RFID_is_Inactive());
     }
@@ -116,6 +116,7 @@ public class CsPointSteps extends BaseTests {
 
     @When("user click on the  add car btn")
     public void userClickOnTheAddBtn() {
+
         chargePointCSPage.click_add_car();
     }
 
@@ -127,6 +128,7 @@ public class CsPointSteps extends BaseTests {
     public void userSetThe(String vin, String licensePlate, String defaultCar, String carType) {
         addCarPage.setCarVin(vin);
         addCarPage.setCarLicensePlate(licensePlate);
+        addCarPage.ScrollUp ();
         addCarPage.setDefaultCar(defaultCar);
         addCarPage.setCarType(carType);
         addCarPage.clickAddCar();

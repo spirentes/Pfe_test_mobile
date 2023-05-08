@@ -9,7 +9,7 @@ Feature: NO Organization Found
     Given the user has the No Organization Found alert displayed
     When the user clicks Cancel
     Then the alert is dismissed and the user redirected to the login page
-
+  @noORG2
   Scenario: User clicks on Exist button  in the No Organization Found alert
     Given the user has the No Organization Found alert displayed
     When the user clicks the Exit button

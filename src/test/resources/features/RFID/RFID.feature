@@ -30,3 +30,5 @@ Feature: RFID Functionality
       |userName|userNames  |selectedUserName|
       | ADMIN    |ADMIN Admin |ADMIN Admin   |
       | OUMAIMA  |OUMAIMA kalboussi |OUMAIMA kalboussi |
+
+    #  Scenario : Filter by default user

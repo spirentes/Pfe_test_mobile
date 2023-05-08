@@ -11,13 +11,13 @@ import org.openqa.selenium.support.PageFactory;
 public
 class NoOrganizationFound extends BasePage {
     private AndroidDriver driver ;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[1]/android.widget.TextView[@index='1']")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"NO ORGANIZATION FOUND5\")")
     WebElement alertTitle;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[2]/android.widget.Button/android.widget.TextView[@index='0']")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"YES\")")
     WebElement yesButton;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[3]/android.widget.Button/android.widget.TextView[@index='0']")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"CANCEL\")")
     WebElement cancelButton;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[1]/android.widget.TextView[@index='0']")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uF110\")")
     WebElement exitBtn ;
     public
     NoOrganizationFound ( AndroidDriver driver ) {

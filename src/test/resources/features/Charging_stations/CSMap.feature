@@ -28,7 +28,7 @@ Feature: Charging Stations Map Page Functionality
       |CS-ABB-00002 |
   @inactive
   Scenario Outline: Check inactive Charging Station
-    Given user is  on the Charging Stations map page
+      Given user is  on the Charging Stations map page
     When Charging Station "<CsName>" is not active
     And  User tap on the Charging Station icon "<CsName>"
     Then "<CsName>",unavailable connector message ,red heartbeat,power consumption should be displayed and user can not perform any action
