@@ -17,16 +17,16 @@ import java.time.Duration;
 public
 class LoginPage extends BasePage {
     private AndroidDriver driver;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[3]/android.widget.TextView")
+    @AndroidFindBy(xpath = "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]")
     WebElement organizationButton;
+    @AndroidFindBy(xpath = "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]")
+    WebElement organizationButton2;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='5']/android.widget.EditText")
     WebElement emailField;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='6']/android.widget.EditText")
     WebElement passwordField;
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Login\")")
     WebElement loginButton;
-//    @AndroidFindBy(uiAutomator ="" )
-//    private WebElement forgetPassword;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='8']/android.view.ViewGroup[@index='0']/android.widget.TextView")
     WebElement conditionCheckbox;
     @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='3']/android.widget.TextView")
@@ -40,6 +40,8 @@ class LoginPage extends BasePage {
     //can not locate toast!!!!!!!!!!!!!!!!!!!
 //    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\")")
 //    WebElement passwdErrorMessage;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup/android.widget.ImageView")
+    WebElement companyImage;
 
     public
     LoginPage ( AndroidDriver driver ) {
@@ -47,10 +49,7 @@ class LoginPage extends BasePage {
         this.driver = driver;
         PageFactory.initElements ( new AppiumFieldDecorator ( driver), this );
     }
-    public void organizationButton ()
-    {
-        click(organizationButton);
-    }
+
     public
     void setEmail ( String email ) {
          sendText (emailField,email);
@@ -87,9 +86,19 @@ class LoginPage extends BasePage {
         }
     }
     public void clickOragnizationButton() {
-        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//        organizationButton = wait.until(ExpectedConditions.elementToBeClickable(organizationButton));
-        click(organizationButton);
+         try {
+             if(companyImage.isDisplayed())
+             {
+                 click(organizationButton);
+
+             }
+
+         }
+         catch (NoSuchElementException e)
+         {
+           click(organizationButton2);
+         }
+
     }
     public String getEmailFieldText(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

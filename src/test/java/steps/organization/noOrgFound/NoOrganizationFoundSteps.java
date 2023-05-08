@@ -1,4 +1,4 @@
-package steps.organization;
+package steps.organization.noOrgFound;
 
 import PageObjects.AlertDialogs.NoOrganizationFound;
 import PageObjects.login.LoginPage;

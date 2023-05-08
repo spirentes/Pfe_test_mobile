@@ -14,9 +14,9 @@ import java.time.Duration;
 
 public class ScanOraganizationPage extends BasePage {
     public AndroidDriver driver;
-    @AndroidFindBy(xpath = "//android.widget.TextView[@index='1']")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Scan Organization\")")
     WebElement pageTitle;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup/android.widget.TextView[@bounds='[13,75][75,144]']")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uE3C9\")")
     WebElement goBackBtn ;
     public ScanOraganizationPage(AndroidDriver driver ) {
         super(driver);
@@ -34,8 +34,6 @@ public class ScanOraganizationPage extends BasePage {
         }
     }
     public void return_to_organizations_page(){
-//     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//        goBackBtn = wait.until(ExpectedConditions.visibilityOf(goBackBtn));
         click(goBackBtn);
     }
 }

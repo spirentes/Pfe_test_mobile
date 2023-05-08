@@ -19,10 +19,7 @@ public class AddOrganizationTests extends BaseTests {
     }
 
     @Test
-    public void testChooseExistingOrganization(){
-        addOrganizationPage.clickOnOrganizationBtn();
 
-    }
 
     @AfterClass
     public void tearDown() {

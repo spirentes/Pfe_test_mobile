@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AddOrganizationManuallyDialog  extends BasePage {
     AndroidDriver driver ;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup/android.widget.TextView[1]")
+    @AndroidFindBy(uiAutomator =" new UiSelector().className(\"android.widget.TextView\").text(\"\uE729\")")
     WebElement addOrgLog ;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[1]/android.widget.EditText")
    WebElement subDomainField ;
