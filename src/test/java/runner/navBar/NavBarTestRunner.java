@@ -10,18 +10,18 @@ import tests.base.BaseTests;
 import java.net.MalformedURLException;
 
 @CucumberOptions(features="src/test/resources/features/navBar/NavSidebarMenu.feature"
-        ,glue= {"steps.navBar"}
+        ,glue= {"steps.navBar.NavSidebarMenuStepDefs.java"}
         ,plugin= {"pretty","html:target/cucumber-html-report.html"}
 )
 public class NavBarTestRunner extends BaseTests {
-    @BeforeClass
-    @BeforeAll
-    public static void  setup() throws MalformedURLException {
-        System.out.println("setup function");
-        configureAppium();
-        System.out.println(driver);
-
-    }
+//    @BeforeClass
+//    @BeforeAll
+//    public static void  setup() throws MalformedURLException {
+//        System.out.println("setup function");
+//        configureAppium();
+//        System.out.println(driver);
+//
+//    }
 
 //    @Override
 //    public

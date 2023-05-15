@@ -2,7 +2,9 @@ package steps.login;
 import PageObjects.login.LoginPage;
 import PageObjects.navbar.NavSidebarMenuPage;
 import PageObjects.charging_stations.SearchChargingStationsMapPage;
+import PageObjects.organization.ManageOrganizationPage;
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -16,6 +18,14 @@ public class LoginStep extends BaseTests {
     LoginPage loginPage= new LoginPage(driver);
     SearchChargingStationsMapPage searchChargingStationsMapPage =new SearchChargingStationsMapPage(driver);
     NavSidebarMenuPage navSidebarMenuPage = new NavSidebarMenuPage(driver);
+    ManageOrganizationPage manageOrganizationPage=new ManageOrganizationPage ( driver );
+//    @Before
+//    public void  add_org(){
+//        loginPage.clickOragnizationButton();
+//        manageOrganizationPage.selectOption("Admin (test)"  );
+//        System.out.println("before works");
+//
+//    }
    @After("@Successful_login")
    public void log_out(){
        searchChargingStationsMapPage.clickNavBarBtn();

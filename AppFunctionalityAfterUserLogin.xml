@@ -1,0 +1,143 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="App Functionality After User Login Suite">
+
+    <test name="Test 0">
+        <classes>
+            <class name="runner.TestSuite.TestSuiteSetup"/>
+        </classes>
+    </test>
+
+    <test name="Test 6">
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+        <classes>
+            <class name="runner.navBar.NavBarTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Test 7">
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+        <classes>
+            <class name="runner.charging_stations.CSmapViewTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Test 8">
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+        <classes>
+            <class name="runner.charging_stations.CSlistViewTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Test 9">
+
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group name ="My Test Suite"  depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+        <classes>
+            <class name="runner.charging_stations.FilterPageTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Test 10" >
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+        <classes>
+            <class name="runner.charging_stations.ChargePointTestRunner" />
+        </classes>
+
+    </test>
+
+    <test name="Test 11" >
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+        <classes>
+            <class name="runner.sites.SitesTestRunner" />
+        </classes>
+    </test>
+
+    <test name="Test 12" >
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group name ="My Test Suite"  depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+        <classes>
+            <class name="runner.users.usersTestRunner" />
+        </classes>
+    </test>
+
+    <test name="Test 13" >
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group name ="My Test Suite"  depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+        <classes>
+            <class name="runner.RFID.RFIDTestRunner" />
+        </classes>
+    </test>
+
+    <test name="Test 14" >
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group name ="My Test Suite"  depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+        <classes>
+            <class name="runner.cars.CarsTestRunner" />
+        </classes>
+    </test>
+
+    <test name="Test 15" >
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+        <classes>
+            <class name="runner.paymentMthod.PaymentmethodRunner" />
+        </classes>
+    </test>
+
+    <test name="Test 16" >
+<!--        <groups>-->
+<!--            <dependencies>-->
+<!--                <group name ="My Test Suite"  depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+<!--            </dependencies>-->
+<!--        </groups>-->
+        <classes>
+            <class name="runner.reportError.ReportErrorTestRunner" />
+        </classes>
+    </test>
+
+    <test name="Test 17">
+        <!--        <groups>-->
+        <!--            <dependencies>-->
+        <!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
+        <!--            </dependencies>-->
+        <!--        </groups>-->
+        <classes>
+            <class name="runner.navBar.LogOutTestRunner"/>
+        </classes>
+    </test>
+</suite>

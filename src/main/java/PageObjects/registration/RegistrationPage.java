@@ -14,28 +14,29 @@ import static org.openqa.selenium.support.PageFactory.initElements;
 public
 class RegistrationPage extends BasePage {
     private  AndroidDriver driver;
-    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='6']/android.widget.EditText[@bounds='[108,685][663,765]']")
+    @AndroidFindBy(xpath= "//android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.EditText")
     WebElement firstnameField ;
-    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='5']/android.widget.EditText")
+    @AndroidFindBy(xpath= "//android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText")
     WebElement nameField ;
-    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='7']/android.widget.EditText")
+    @AndroidFindBy(xpath= "//android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.EditText")
     WebElement emailField  ;
-    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='8']/android.widget.EditText")
+    @AndroidFindBy(xpath="//android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.EditText")
     WebElement passwordField  ;
-    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='9']/android.widget.EditText")
+    @AndroidFindBy(xpath= "//android.view.ViewGroup/android.view.ViewGroup[5]/android.widget.EditText")
     WebElement confirmPasswordField  ;
-    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='12']/android.widget.TextView")
+    @AndroidFindBy(uiAutomator =" new UiSelector().className(\"android.widget.TextView\").text(\"Sign Up\")")
     WebElement registerButton ;
     @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='10']/android.widget.TextView")
     WebElement  conditionCheckbox  ;
 
-    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='9']/android.widget.TextView")
+    @AndroidFindBy(uiAutomator =" new UiSelector().className(\"android.widget.TextView\").text(\"Back to Login\")")
     WebElement backToLogin;
-//    @AndroidFindBy(uiAutomator = "new UiSelector.className(\"android.widget.TextView\").text(\"Must contain 1 letter lowercase and uppercase, 1 number, 1 special char and 8 chars long\")")
-//    WebElement passwdErrorMessage;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup/android.widget.TextView[5]")
+
+    @AndroidFindBy(uiAutomator =" new UiSelector().className(\"android.widget.TextView\").text(\"Must contain 1 letter lowercase and uppercase, 1 number, 1 special char and 8 chars long\")")
     WebElement passwdErrorMessage;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup/android.widget.TextView[5]")
+    @AndroidFindBy(uiAutomator =" new UiSelector().className(\"android.widget.TextView\").text(\"Password does not match\")")
+    WebElement confirmPasswdErrorMessage;
+    @AndroidFindBy(uiAutomator =" new UiSelector().className(\"android.widget.TextView\").text(\"The email is invalid\")")
     WebElement emailErrorMessage;
     //can not locate the toast
     @AndroidFindBy(xpath = "//android.view.ViewGroup/android.widget.TextView[5]")

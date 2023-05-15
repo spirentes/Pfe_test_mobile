@@ -12,24 +12,22 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-
-
 public
 class LoginPage extends BasePage {
     private AndroidDriver driver;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[3]/android.widget.TextView")
+    @AndroidFindBy(xpath = "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]")
     WebElement organizationButton;
+    @AndroidFindBy(xpath = "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]")
+    WebElement organizationButton2;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='5']/android.widget.EditText")
     WebElement emailField;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='6']/android.widget.EditText")
     WebElement passwordField;
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Login\")")
     WebElement loginButton;
-    //    @AndroidFindBy(uiAutomator ="" )
-//    private WebElement forgetPassword;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='8']/android.view.ViewGroup[@index='0']/android.widget.TextView")
     WebElement conditionCheckbox;
-    @AndroidFindBy(xpath= "//android.view.ViewGroup[@index='3']/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"New User?\")")
     WebElement newUser   ;
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"WattzHub CPO\")")
     WebElement pageTitle;
@@ -38,8 +36,10 @@ class LoginPage extends BasePage {
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"The email is invalid\")")
     WebElement emailErrorMessage;
     //can not locate toast!!!!!!!!!!!!!!!!!!!
-//    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\")")
-//    WebElement passwdErrorMessage;
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\")")
+   WebElement passwdErrorMessage;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup/android.widget.ImageView")
+    WebElement companyImage;
 
     public
     LoginPage ( AndroidDriver driver ) {
@@ -47,10 +47,7 @@ class LoginPage extends BasePage {
         this.driver = driver;
         PageFactory.initElements ( new AppiumFieldDecorator ( driver), this );
     }
-    public void organizationButton ()
-    {
-        click(organizationButton);
-    }
+
     public
     void setEmail ( String email ) {
         sendText (emailField,email);
@@ -79,17 +76,28 @@ class LoginPage extends BasePage {
     }
     public boolean isOnPage() {
         try {
-            // Check for the presence of the alertTitle element
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+            wait.until(ExpectedConditions.visibilityOf(loginButton));
             return loginButton.isDisplayed();
         } catch (NoSuchElementException e) {
-            // The element is not present, so the alert is not displayed
+
             return false;
         }
     }
     public void clickOragnizationButton() {
-        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//        organizationButton = wait.until(ExpectedConditions.elementToBeClickable(organizationButton));
-        click(organizationButton);
+        try {
+            if(companyImage.isDisplayed())
+            {
+                click(organizationButton);
+
+            }
+
+        }
+        catch (NoSuchElementException e)
+        {
+            click(organizationButton2);
+        }
+
     }
     public String getEmailFieldText(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -105,9 +113,9 @@ class LoginPage extends BasePage {
     public String get_email_error_message ( ) {
         return getAttribute(emailErrorMessage,"text");
     }
-    //    public String get_passwd_error_message ( ) {
-//        return getAttribute(passwdErrorMessage,"text");
-//    }
+        public String get_passwd_error_message ( ) {
+       return getAttribute(passwdErrorMessage,"text");
+   }
     public String get_terms_error_message ( ) {
         return getAttribute(terms_error_message,"text");
     }

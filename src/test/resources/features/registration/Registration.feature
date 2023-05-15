@@ -18,6 +18,8 @@ Feature: Registration Page
 #    When  User clicks on the new user btn
 #    And User does not select an organization
 #    Then User should see an error message indicating that he should select an organization first
+
+  @Failed_registration
   Scenario Outline: User registers with existing email
     Given User is on the registration page
     When User enters "<FirstName>", "<LastName>", "<existingEmail>", and "<Password>"
@@ -27,6 +29,7 @@ Feature: Registration Page
     Examples:
       | FirstName | LastName | existingEmail                    | Password     |
       | oumaima   | kalboussi  | kalboussioumaima12345@gmail.com | Password123* |
+  @Failed_registration
   Scenario Outline: User does not accept terms and conditions
     Given User is on the registration page
     When User enters "<FirstName>", "<LastName>", "<Email>", and "<Password>"
@@ -36,7 +39,7 @@ Feature: Registration Page
     Examples:
       | FirstName | LastName | Email                      | Password     |
       | oumaima   | kalboussi  | kalboussioumaima12345@gmail.com | Password123* |
-
+  @Failed_registration
   Scenario Outline: User enters invalid email address
     Given User is on the registration page
     When User enters "<FirstName>", "<LastName>", "<invalidEmail>", and "<Password>"
@@ -46,7 +49,7 @@ Feature: Registration Page
     Examples:
       | FirstName | LastName | invalidEmail                      | Password     |
       | oumaima   | kalboussi  | kalboussioumaima12345gmail.com | Password123* |
-
+  @Failed_registration
   Scenario Outline: User enters invalid password
     Given User is on the registration page
     When  User enters "<FirstName>", "<LastName>", "<Email>", and "<invalid_password>"

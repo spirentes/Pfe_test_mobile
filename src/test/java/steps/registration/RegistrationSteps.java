@@ -52,7 +52,7 @@ public class RegistrationSteps extends BaseTests {
     @And("User accepts the terms and conditions")
     public void userAcceptsTheTermsAndConditions() {
         registrationPage.acceptConditions();
-        loginPage.waitForPageLoad(driver);
+        //loginPage.waitForPageLoad(driver);
     }
     @Then("User should be registered successfully")
     public void userShouldBeRegisteredSuccessfully() {

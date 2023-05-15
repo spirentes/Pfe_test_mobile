@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 
 @org.testng.annotations.Test
 @CucumberOptions (features="src/test/resources/features/organization/NoOrganizationFoundDialog.feature"
-        ,glue= {"steps.organization.manageOrg"}
+        ,glue= {"steps.organization.noOrgFound"}
         ,plugin= {"pretty","html:target/cucumber-html-report.html"})
 //@Listeners (TestSuiteSetup.class)
 public

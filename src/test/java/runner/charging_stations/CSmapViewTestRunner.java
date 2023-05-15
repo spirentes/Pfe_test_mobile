@@ -13,10 +13,10 @@ import java.net.MalformedURLException;
         //,tags = "@tag"
         ,plugin= {"pretty","html:target/cucumber-html-report.html"})
 public class CSmapViewTestRunner extends BaseTests {
-    @BeforeClass
-    @BeforeAll
-    public  static void setup_driver () throws MalformedURLException {
-        System.out.println("setting appium driver.....");
-        configureAppium();
-    }
+//    @BeforeClass
+//    @BeforeAll
+//    public  static void setup_driver () throws MalformedURLException {
+//        System.out.println("setting appium driver.....");
+//        configureAppium();
+//    }
 }

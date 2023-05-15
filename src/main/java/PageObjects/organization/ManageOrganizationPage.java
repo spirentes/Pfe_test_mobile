@@ -19,16 +19,14 @@ class ManageOrganizationPage extends BasePage {
     private AndroidDriver driver;
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Organizations\")")
     private WebElement pageTitle;
-    @AndroidFindBy (xpath = "//android.view.ViewGroup[@index='4']/android.widget.TextView")
-    private WebElement    organisationBtn;
-    @AndroidFindBy (xpath = "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup ")
-    public WebElement    organizationOption1;
+    @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uF12F\")")
+    private WebElement backBtn;
     @AndroidFindBy (uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uDB81\uDC15\")")
-    private WebElement    plusButton;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1][@bounds='[445,193][568,327]']")
-    WebElement org1DeleteBtn;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]")
-    WebElement org1updateBtn;
+    private WebElement plusButton;
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uF589\")")
+    WebElement orgDeleteBtn;
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uE3C9\")")
+    WebElement orgupdateBtn;
     List<WebElement> OrgNames ;
     WebElement       OrgName ;
     public ManageOrganizationPage( AndroidDriver driver ) {
@@ -39,7 +37,7 @@ class ManageOrganizationPage extends BasePage {
     public boolean selectOption(String orgNameTxt) {
 
         try {
-           OrgName = driver.findElement (
+            OrgName = driver.findElement (
                     MobileBy.androidUIAutomator (
                             "new UiSelector().className(\"android.widget.TextView\").text(\"" + orgNameTxt + "\")" ) );
             click ( OrgName );
@@ -49,8 +47,6 @@ class ManageOrganizationPage extends BasePage {
             System.out.println ( "Organization not found " );
             return false;
         }
-
-
     }
 
 
@@ -65,42 +61,76 @@ class ManageOrganizationPage extends BasePage {
         }
     }
 
-    public
-    void clickOnOrganizationBtn ( ) {
-        click (organisationBtn);
+    public void clickBackBtn(){
+        click(backBtn);
     }
 
-    public
-    void clickOnOrganizationOption1 ( ) {
-        click ( organizationOption1 );
-    }
     public
     void clickPlusButton () {
-//      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//        plusButton = wait.until(ExpectedConditions.elementToBeClickable(plusButton));
         click(plusButton);
     }
-    public void swipeLeft(AndroidDriver driver)
+    public void swipeLeft(String orgName)
     {
         Dimension screenSize = driver.manage().window().getSize();
+        WebElement organization;
+        try {
+            organization =driver.findElement( MobileBy.androidUIAutomator (
+                    "new UiSelector().className(\"android.widget.TextView\").text(\"" + orgName + "\")" ));
+            // Calculate the start and end points for the swipe gesture
+            int startX = (int) (screenSize.width * 0.8);
+            int endX = (int) (screenSize.width * 0.2);
+            int startY = organization.getLocation().getY() + (organization.getSize().getHeight() / 2);
+            int endY = startY;
+            new TouchAction(driver)
+                    .press(PointOption.point(startX, startY))
+                    .waitAction()
+                    .moveTo(PointOption.point(endX, endY))
+                    .release()
+                    .perform();
+        } catch (NoSuchElementException e){
+            System.out.println("no organization found to be updated or deleted");
+        }
 
-        // Calculate the start and end points for the swipe gesture
-        int startX = (int) (screenSize.width * 0.8);
-        int endX = (int) (screenSize.width * 0.2);
-        int startY = organizationOption1.getLocation().getY() + (organizationOption1.getSize().getHeight() / 2);
-        int endY = startY;
-        new TouchAction(driver)
-                .press(PointOption.point(startX, startY))
-                .waitAction()
-                .moveTo(PointOption.point(endX, endY))
-                .release()
-                .perform();
+
+    }
+    public  void Pick_organization(String orgName){
+        swipeLeft(orgName);
+    }
+    public void click_update_btn(){
+        try {
+            click(orgupdateBtn);
+        }
+        catch (NoSuchElementException e){
+
+        }
+
     }
     public void delete_organization()
     {
-        click(org1DeleteBtn);
+        click(orgDeleteBtn);
     }
-    public  void update_organization(){
-        click(org1updateBtn);
+    public boolean org_is_deleted(String orgName){
+        try {
+            OrgName = driver.findElement (
+                    MobileBy.androidUIAutomator (
+                            "new UiSelector().className(\"android.widget.TextView\").text(\"" + orgName + "\")" ) );
+            return false;
+        } catch ( NoSuchElementException e ) {
+            System.out.println ( "Organization deleted " );
+            return true;
+        }
+
+    }
+    public boolean org_is_updated (String orgName){
+        try {
+            OrgName = driver.findElement (
+                    MobileBy.androidUIAutomator (
+                            "new UiSelector().className(\"android.widget.TextView\").text(\"" + orgName + "\")" ) );
+            return true;
+        } catch ( NoSuchElementException e ) {
+            System.out.println ( "Organization  " );
+            return false;
+        }
+
     }
 }

@@ -9,6 +9,7 @@ Feature: User can login to the app
     Examples:
       |Email                          |Password     |
       |sabri.mejri@internship.continuousnet.com	 | Sabri1234* |
+  @Failed_login
   Scenario Outline: Login without accepting terms
     Given User is on the login page
     When User enters "<Email>" and "<Password>"
@@ -18,8 +19,7 @@ Feature: User can login to the app
     Examples:
       |Email                          |Password     |
       |sabri.mejri@internship.continuousnet.com	 | Sabri1234* |
-
-
+  @Failed_login
   Scenario Outline: Login with invalid password
     Given User is on the login page
     When User enters "<Email>" and "<invalidPassword>"
@@ -29,7 +29,7 @@ Feature: User can login to the app
     Examples:
       |Email                          |invalidPassword    |
       |sabri.mejri@internship.continuousnet.com	 | invalidPassword |
-
+  @Failed_login
   Scenario Outline: Login with invalid email
     Given User is on the login page
     When User enters "<invalidEmail>" and "<Password>"

@@ -11,24 +11,30 @@
         </classes>
     </test>
 
-    <test name="Test 1">
-        <classes>
-            <class name="runner.orgnization.NoOrgTestRunner"/>
-        </classes>
-    </test>
-    <test name="Test 2">
-        <classes>
-            <class name="runner.orgnization.TestRunner"/>
-        </classes>
-    </test>
-    <test name="Test 3">
-        <classes>
-            <class name="runner.orgnization.TestRunner2"/>
-        </classes>
-    </test>
-    <test name="Test 4" >
-        <classes>
-            <class name="runner.login.LoginTestRunner" />
-        </classes>
-    </test>
+<!--    <test name="Test 1">-->
+<!--        <classes>-->
+<!--            <class name="runner.orgnization.NoOrgTestRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Test 2">-->
+<!--        <classes>-->
+<!--            <class name="runner.orgnization.AddOrganizationTestRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Test 3">-->
+<!--        <classes>-->
+<!--            <class name="runner.orgnization.ManageOrganizationRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Test 4" >-->
+<!--        <classes>-->
+<!--            <class name="runner.registration.RegistrationTestRunner" />-->
+<!--        </classes>-->
+
+<!--    </test>-->
+<!--    <test name="Test 5" >-->
+<!--        <classes>-->
+<!--            <class name="runner.login.LoginTestRunner" />-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
