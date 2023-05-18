@@ -12,6 +12,8 @@ import java.net.MalformedURLException;
 @CucumberOptions(features="src/test/resources/features/navBar/NavSidebarMenu.feature"
         ,glue= {"steps.navBar"}
         ,plugin= {"pretty","html:target/cucumber-html-report.html"}
+        ,tags = " not  @logOUT"
+
 )
 public class NavBarTestRunner extends BaseTests {
     @BeforeClass
@@ -23,9 +25,5 @@ public class NavBarTestRunner extends BaseTests {
 
     }
 
-//    @Override
-//    public
-//    void onStart ( ITestContext context ) {
-//
-//    }
+
 }

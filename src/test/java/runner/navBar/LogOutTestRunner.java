@@ -14,7 +14,8 @@ import static tests.base.BaseTests.driver;
 
 @CucumberOptions(features="src/test/resources/features/navBar/NavSidebarMenu.feature"
         ,glue= {"steps.navBar"}
-        ,plugin= {"pretty","html:target/cucumber-html-report.html"} )
+        ,plugin= {"pretty","html:target/cucumber-html-report.html"}
+        ,tags = " @logOUT")
 
         public  class LogOutTestRunner {
         @BeforeClass

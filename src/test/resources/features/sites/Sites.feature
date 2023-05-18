@@ -1,4 +1,5 @@
 Feature: Sites Functionality
+
   Scenario Outline: check sites list
     Given User is  on the Sites List Page
     Then A list of  sites should be displayed "<sitesName>"

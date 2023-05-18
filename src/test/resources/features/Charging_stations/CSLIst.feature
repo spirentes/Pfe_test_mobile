@@ -15,6 +15,7 @@ Feature: Charging Stations List Page Functionality
     Examples:
       | CsName|
       | CS-ABB-00001     |
+
   Scenario: Clear Search Field
     Given User is  on the Charging Stations List Page
     When User clicks on the Clear Search Field button
@@ -53,6 +54,7 @@ Feature: Charging Stations List Page Functionality
     Given User is  on the Charging Stations List Page
     When I click on the Map View icon
     Then the Search Charging Stations Map page should be opened
+
   @tag
   Scenario Outline: Open Scan Charging Stations Page
     Given User is  on the Charging Stations List Page

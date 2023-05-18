@@ -89,6 +89,7 @@ public class RegistrationSteps extends BaseTests {
     public void userDoesNotAcceptTheTermsAndConditions() {
         assertFalse(registrationPage.check_accept_conditions());
     }
+
     @Then("User should  not be able to sign Up")
     public void userShouldShouldNotBeAbleToSignUp() {
         System.out.println(registrationPage.register_btn_is_enabled());

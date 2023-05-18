@@ -8,6 +8,7 @@ Feature: Charging Stations filter Page Functionality
     Examples:
       | available_CS |
       |CS-ABB-00001, CS-ABB-00002|
+
   @roaming
   Scenario Outline: filter by roaming charging stations
     Given User is  on the Charging Stations filer Page
@@ -27,6 +28,7 @@ Feature: Charging Stations filter Page Functionality
     Examples:
       | connectorType |
       |Type 1|
+
   @Multiple_type
   Scenario Outline: filter by multiple charging station connector type
     Given User is  on the Charging Stations filer Page

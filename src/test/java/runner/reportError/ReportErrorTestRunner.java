@@ -24,9 +24,5 @@ class ReportErrorTestRunner extends BaseTests {
         configureAppium();
     }
 
-//    @Override
-//    public
-//    void onStart ( ITestContext context ) {
-//
-//    }
+
 }

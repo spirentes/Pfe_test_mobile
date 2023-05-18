@@ -1,4 +1,5 @@
 Feature: RFID Functionality
+
   Scenario Outline: check rfids list
     Given User is  on the RFID List Page
     Then A list of  rfids should be displayed "<rfidsName>"

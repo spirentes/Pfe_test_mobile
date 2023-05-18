@@ -16,6 +16,7 @@ Feature: Charging Stations Map Page Functionality
     Examples:
       | CsName|
       | CS-ABB-00002     |
+
   @active
   Scenario Outline: Check active Charging Station
     Given user is  on the Charging Stations map page
@@ -26,6 +27,7 @@ Feature: Charging Stations Map Page Functionality
     Examples:
       |CsName|
       |CS-ABB-00002 |
+
   @inactive
   Scenario Outline: Check inactive Charging Station
       Given user is  on the Charging Stations map page
@@ -36,6 +38,7 @@ Feature: Charging Stations Map Page Functionality
     Examples:
       |CsName|
       |CS-SCHNEIDER-00001 |
+
   @ocpp
   Scenario Outline: check charging station ocpp parameters
     Given user is  on the Charging Stations map page
@@ -46,6 +49,7 @@ Feature: Charging Stations Map Page Functionality
     Examples:
       |CsName|
       |CS-ABB-00002 |
+
   @properties
   Scenario Outline: check charging station  properties
     Given user is  on the Charging Stations map page
@@ -56,10 +60,12 @@ Feature: Charging Stations Map Page Functionality
     Examples:
       |CsName|
       |CS-ABB-00002 |
+
   Scenario: switch to satellite  map Page View
     Given user is  on the Charging Stations map page
     When user clicks on the satellite view icon
     Then the charging stations satellite  map page should be displayed
+
   Scenario: switch to list Page View
     Given user is  on the Charging Stations map page
     When user clicks on the list view icon

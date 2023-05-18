@@ -1,16 +1,20 @@
 Feature: Charge Point Page Functionality
-
+  @Successful
   Scenario: Start session successfully
     Given User is on the Charge Point Page
     When user and RFID_card are active
     And  user clicks start session
     And  user clicks yes
     Then a session should be started
+
+ @Successful
   Scenario: stop session
     Given User is on the  stop Charge Point Page
     When user clicks on stop icon
     And  user clicks yes
     Then session is closed and user go back to start session page
+
+ @failed
   Scenario Outline: can not start session
     Given User is on the Charge Point Page
     When "<user>" or RFID_card is inactive
@@ -19,6 +23,7 @@ Feature: Charge Point Page Functionality
       | user |
       |OUMAIMA kalboussi|
 
+  @failed
   Scenario Outline: can not start session
     Given User is on the Charge Point Page
     When "<user>" is not associated with an RFID card
@@ -27,6 +32,8 @@ Feature: Charge Point Page Functionality
     Examples:
       | user |
       |TESTDEMO User|
+
+  @selectCar
   Scenario Outline: select a car
     Given User is on the Charge Point Page
     When user click on the  add car btn
@@ -36,11 +43,14 @@ Feature: Charge Point Page Functionality
     Examples:
       | car | vin | License Plate | Default car | car type |
       |Aiways U5 |4Y1SL65848Z411439|123456|no|Company car|
+
+  @openSessionInformationPage
   Scenario: go to session information page
     Given User is on the Charge Point Page
     When user clicks on session icon
     Then user should be redirected to the session page and all thd information should be displayed
 
+  @openReportErrorPage
   Scenario: report error
     Given User is on the Charge Point Page
     When user clicks on report error icon

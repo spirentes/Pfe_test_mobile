@@ -1,4 +1,5 @@
 Feature: Payment Method functionality
+  @successful
   Scenario Outline: add a payment Method with valid card
     Given user is on the payment Methods page
     When user click on the plus button

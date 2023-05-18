@@ -3,7 +3,7 @@ package tests.base;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
-//import io.appium.java_client.android.options.UiAutomator2Options;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -52,10 +52,11 @@ class BaseTests extends AbstractTestNGCucumberTests {
         options.setApp("C:\\Users\\msi\\IdeaProjects\\WattzHubCPO_MobileAutomation\\resources\\beta-cpo-v2.1.1 (1).apk");
         // create object for AndroidDriver/IosDriver
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));*/
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));*/
 
 
         // ________________USING PHYSICAL ANDROID DEVICE___________________
+
         DesiredCapabilities capabilities = new DesiredCapabilities ( );
         capabilities.setCapability ( "deviceName" , "Infinix X665E" );
         capabilities.setCapability ( "automationName" , "UiAutomator2" );
@@ -72,9 +73,12 @@ class BaseTests extends AbstractTestNGCucumberTests {
                 "permissions" ,
                 "{\"android.webkit.resource.VIDEO_CAPTURE\": \"grant\", \"android.webkit.resource.AUDIO_CAPTURE\": \"grant\", \"android.permission.ACCESS_FINE_LOCATION\": \"grant\"}"
                                    );
+        // ________________USING THE APPIUM SERVER___________________
 
         driver = new AndroidDriver ( new URL ( "http://127.0.0.1:4723" ) , capabilities );
 
+
+        // ________________USING THE APPIUM GRID___________________
 
 //        // Specify the URL of the Appium Grid hub
 //        String hubUrl = " http://172.25.0.1:4444";
@@ -92,7 +96,11 @@ class BaseTests extends AbstractTestNGCucumberTests {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        driver.manage ( ).timeouts ( ).implicitlyWait ( Duration.ofSeconds ( 5 ) );
+
+
+
+
+        driver.manage ( ).timeouts ( ).implicitlyWait ( Duration.ofSeconds ( 15 ) );
     }
 
 
@@ -112,13 +120,17 @@ class BaseTests extends AbstractTestNGCucumberTests {
 
 
     //@AfterClass
-    public
-    void afterTest ( ) {
+//    public
+//    void afterTest ( ) {
+//
+//        driver.quit ( );
+//
+//        // service.stop ( );
+//    }
 
-        driver.quit ( );
 
-        // service.stop ( );
-    }
+
+
 }
 
 

@@ -19,7 +19,7 @@ public class NoOrganizationFoundSteps extends BaseTests {
     ScanOraganizationPage ScanOraganizationPage;
     LoginPage LoginPage;
     @Given("the user has the No Organization Found alert displayed")
-    public void theUserHasTheNoOrganizationFoundAlertDisplayed() throws MalformedURLException {
+    public void theUserHasTheNoOrganizationFoundAlertDisplayed() throws MalformedURLException, InterruptedException {
         configureAppium();
         noOrganizationFound = new NoOrganizationFound(driver);
         ScanOraganizationPage = new ScanOraganizationPage(driver);
