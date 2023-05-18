@@ -1,0 +1,22 @@
+server:
+  port: 4723
+  use-drivers:
+    - xcuitest
+  default-capabilities:
+    wdaLocalPort: 8100
+    mjpegServerPort: 9100
+    mjpegScreenshotUrl: "http://localhost:9100"
+
+#capabilities:
+#  - platformName: Android
+#    platformVersion: "12"
+#    deviceName: "Infinix X665E"
+#    automationName: UiAutomator2
+#    udid: "088373729L006869"
+#    appPackage: com.wattzhub.cpo
+#    appActivity: com.wattzhub.cpo.MainActivity
+#    noReset: true
+#    autoGrantPermissions: true
+#    gpsEnabled: true
+#    autoDismissAlerts: true
+#    permissions: "{\"android.webkit.resource.VIDEO_CAPTURE\": \"grant\", \"android.webkit.resource.AUDIO_CAPTURE\": \"grant\", \"android.permission.ACCESS_FINE_LOCATION\": \"grant\"}"

@@ -10,7 +10,7 @@ public class TestSuiteSetup extends BaseTests implements ITestNGListener
 {
 
     @BeforeSuite
-    public void setup() throws MalformedURLException {
+    public void setup() throws MalformedURLException, InterruptedException {
         System.out.println("setup function");
         configureAppium();
         System.out.println(driver);

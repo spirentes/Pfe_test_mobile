@@ -10,18 +10,21 @@ import java.net.MalformedURLException;
 @org.testng.annotations.Test
 @CucumberOptions (features="src/test/resources/features/organization/NoOrganizationFoundDialog.feature"
         ,glue= {"steps.organization.noOrgFound"}
-        ,plugin= {"pretty","html:target/cucumber-html-report.html"})
+//        ,plugin= {"pretty","html:target/cucumber-html-report.html"}
+,plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+)
 //@Listeners (TestSuiteSetup.class)
 public
 class NoOrgTestRunner extends BaseTests {
 
-//    @BeforeClass
-//        @BeforeAll
-//        public static void  setup() throws MalformedURLException {
-//            System.out.println("setup function");
-//            configureAppium();
-//            System.out.println(driver);
-//
-//        }
+
+    @BeforeClass
+        @BeforeAll
+        public static void  setup() throws MalformedURLException, InterruptedException {
+            System.out.println("setup function");
+            configureAppium();
+            System.out.println(driver);
+
+        }
 
     }

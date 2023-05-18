@@ -21,10 +21,10 @@ import static org.testng.Assert.assertTrue;
 
 public
 class SitesStepdefs extends BaseTests {
-    SitesListPage   sitesListPage   = new SitesListPage ( driver );
-    SitesFilterPage sitesFilterPage = new SitesFilterPage ( driver );
-    SitesAreaPage   sitesAreaPage   = new SitesAreaPage ( driver );
-    SitesMapViewPage sitesMapViewPage=new SitesMapViewPage ( driver );
+    SitesListPage    sitesListPage    = new SitesListPage ( driver );
+    SitesFilterPage  sitesFilterPage  = new SitesFilterPage ( driver );
+    SitesAreaPage    sitesAreaPage    = new SitesAreaPage ( driver );
+    SitesMapViewPage sitesMapViewPage = new SitesMapViewPage ( driver );
 
     @Before
     public
@@ -37,7 +37,8 @@ class SitesStepdefs extends BaseTests {
             sitesListPage.btnOpenNonemptyFilterPage.click ( );
             sitesFilterPage.clickClear ( );
             sitesFilterPage.clickApply ( );
-        } catch ( NoSuchElementException e ) {
+        }
+        catch ( NoSuchElementException e ) {
             sitesListPage.openFilterPage ( );
             sitesFilterPage.clickClear ( );
             sitesFilterPage.clickApply ( );
@@ -56,56 +57,56 @@ class SitesStepdefs extends BaseTests {
         driver.navigate ( ).back ( );
     }
 
-    @Given ("User is  on the Sites List Page")
+    @Given ( "User is  on the Sites List Page")
     public
     void userIsOnTheSitesListPage ( ) {
         assertTrue ( sitesListPage.isOnPage ( ) );
     }
 
 
-    @Then ("A list of  sites should be displayed {string}")
+    @Then ( "A list of  sites should be displayed {string}")
     public
     void aListOfSitesShouldBeDisplayed ( String siteNameTxt ) {
         assertTrue ( sitesListPage.isSiteDisplayed ( siteNameTxt ) );
     }
 
 
-    @When ("User search for the site by {string}")
+    @When ( "User search for the site by {string}")
     public
     void userSearchForTheSiteBy ( String siteName ) {
         sitesListPage.searchForSite ( siteName );
 
     }
 
-    @Then ("the site {string} should be displayed")
+    @Then ( "the site {string} should be displayed")
     public
     void theSiteShouldBeDisplayed ( String siteName ) {
         assertTrue ( sitesListPage.isSiteDisplayed ( siteName ) );
         sitesListPage.setBtnClearSearchField ( );
     }
 
-    @And ("All site's info should be displayed")
+    @And ( "All site's info should be displayed")
     public
     void allSiteSInfoShouldBeDisplayed ( ) {
         assertTrue ( sitesListPage.SiteInfoIsDisplayed ( ) );
 
     }
 
-    @When ("User  click filterBtn")
+    @When ( "User  click filterBtn")
     public
     void userClickFilterBtn ( ) {
         sitesListPage.openFilterPage ( );
         assertTrue ( sitesFilterPage.isOnPage ( ) );
     }
 
-    @And ("User  enables the roaming users filter")
+    @And ( "User  enables the roaming users filter")
     public
     void userEnablesTheRoamingUsersFilter ( ) {
         sitesFilterPage.selectRoamingSites ( );
         assertTrue ( sitesFilterPage.isRoamingSitesEnabled ( ) );
     }
 
-    @And ("User  applies the filter")
+    @And ( "User  applies the filter")
     public
     void userAppliesTheFilter ( ) {
         sitesFilterPage.clickApply ( );
@@ -114,50 +115,50 @@ class SitesStepdefs extends BaseTests {
 
     // wrong one
     // there is no roaming users
-    @Then ("Only  the roaming users should be displayed in the list")
+    @Then ( "Only  the roaming users should be displayed in the list")
     public
     void onlyTheRoamingUsersShouldBeDisplayedInTheList ( ) {
         assertTrue ( sitesListPage.noSitesMsgIsDisplayed ( ) );
     }
 
-    @And ("User clicks   the exit button")
+    @And ( "User clicks   the exit button")
     public
     void userClicksTheExitButton ( ) {
         sitesFilterPage.clickExit ( );
     }
 
-    @Then ("User  should be redirected to the Users List Page")
+    @Then ( "User  should be redirected to the Users List Page")
     public
     void userShouldBeRedirectedToTheSitesListPage ( ) {
         assertTrue ( sitesListPage.isOnPage ( ) );
     }
 
 
-    @When ("User  click to open site area of {string}")
+    @When ( "User  click to open site area of {string}")
     public
     void userClickToOpenSiteAreaOf ( String siteName ) {
         System.out.println ( siteName );
-        sitesListPage.clickBtnOpenSiteArea ();
+        sitesListPage.clickBtnOpenSiteArea ( );
 
     }
 
 
-    @Then ("User  should be redirected to the Site area List Page : {string}")
+    @Then ( "User  should be redirected to the Site area List Page : {string}")
     public
     void userShouldBeRedirectedToTheSiteAreaListPage ( String siteName ) {
         assertTrue ( sitesAreaPage.isSiteDisplayed ( siteName ) );
     }
 
-    @When ("user switch to the sites map page")
+    @When ( "user switch to the sites map page")
     public
     void userSwitchToTheSitesMapPage ( ) {
-        sitesListPage.clickBtnSwitchToMapPage ();
+        sitesListPage.clickBtnSwitchToMapPage ( );
     }
 
-    @Then ("User  should be redirected to the Sites Map Page")
+    @Then ( "User  should be redirected to the Sites Map Page")
     public
     void userShouldBeRedirectedToTheSitesMapPage ( ) {
-        assertTrue ( sitesMapViewPage.isOnPage ());
+        assertTrue ( sitesMapViewPage.isOnPage ( ) );
     }
 
 

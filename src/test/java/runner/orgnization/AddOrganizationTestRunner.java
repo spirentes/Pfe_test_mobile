@@ -10,14 +10,16 @@ import java.net.MalformedURLException;
 @org.testng.annotations.Test
 @CucumberOptions(features="src/test/resources/features/organization/AddOrganizationDialog.feature"
         ,glue= {"steps.organization.addOrg"}
-        ,plugin= {"pretty","html:target/cucumber-html-report.html"})
+//        ,plugin= {"pretty","html:target/cucumber-html-report.html"}
+       ,plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+)
 public class AddOrganizationTestRunner extends BaseTests {
-//    @BeforeClass
-//    @BeforeAll
-//    public  static void open_manually_dialog () throws MalformedURLException {
-//        System.out.println("before il class hhh");
-//        configureAppium();
-//    }
+    @BeforeClass
+    @BeforeAll
+    public  static void open_manually_dialog () throws MalformedURLException, InterruptedException {
+        System.out.println("before il class hhh");
+        configureAppium();
+    }
 
 
 }

@@ -14,12 +14,12 @@ import java.net.MalformedURLException;
 
 public
 class SitesTestRunner extends BaseTests {
-//    @BeforeClass
-//    @BeforeAll
-//    public  static void setup_driver () throws MalformedURLException {
-//        System.out.println("setting appium driver.....");
-//        configureAppium();
-//    }
+    @BeforeClass
+    @BeforeAll
+    public  static void setup_driver () throws MalformedURLException, InterruptedException {
+        System.out.println("setting appium driver.....");
+        configureAppium();
+    }
 
 
 }

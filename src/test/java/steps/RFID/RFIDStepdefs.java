@@ -20,9 +20,10 @@ import static tests.base.BaseTests.driver;
 
 public
 class RFIDStepdefs extends BaseTests {
-    RFIDCardsListPage RFIDCardsListPage   = new RFIDCardsListPage( driver );
-    RfidFilterPage RfidFilterPage = new RfidFilterPage ( driver );
-    SelectUsersPage selectUsersPage=new SelectUsersPage ( driver );
+    RFIDCardsListPage RFIDCardsListPage = new RFIDCardsListPage ( driver );
+    RfidFilterPage    RfidFilterPage    = new RfidFilterPage ( driver );
+    SelectUsersPage   selectUsersPage   = new SelectUsersPage ( driver );
+
     @Before
     public
     void openRFIDPage ( ) {
@@ -34,50 +35,51 @@ class RFIDStepdefs extends BaseTests {
             RFIDCardsListPage.btnOpenNonemptyFilterPage.click ( );
             RfidFilterPage.clickClear ( );
             RfidFilterPage.clickApply ( );
-        } catch ( NoSuchElementException e ) {
+        }
+        catch( NoSuchElementException e ) {
             RFIDCardsListPage.openFilterPage ( );
             RfidFilterPage.clickClear ( );
             RfidFilterPage.clickApply ( );
         }
 
     }
-        @After
-        public
-        void clickBack ( ) {
-            System.out.println ( "im going back !!!!!!!!!!!" );
-            driver.navigate ( ).back ( );
-        }
+
+    @After
+    public
+    void clickBack ( ) {
+        System.out.println ( "im going back !!!!!!!!!!!" );
+        driver.navigate ( ).back ( );
+    }
 
 
-
-    @Given ("User is  on the RFID List Page")
+    @Given ( "User is  on the RFID List Page")
     public
     void userIsOnTheRFIDListPage ( ) {
-        assertTrue ( RFIDCardsListPage.isOnPage () );
+        assertTrue ( RFIDCardsListPage.isOnPage ( ) );
     }
 
-    @Then ("A list of  rfids should be displayed {string}")
+    @Then ( "A list of  rfids should be displayed {string}")
     public
     void aListOfRfidsShouldBeDisplayed ( String rfidName ) {
-        assertTrue ( RFIDCardsListPage.isRfidCardDisplayed( rfidName ) );
+        assertTrue ( RFIDCardsListPage.isRfidCardDisplayed ( rfidName ) );
     }
 
-    @When ("User search for the rfid by {string}")
+    @When ( "User search for the rfid by {string}")
     public
-    void userSearchForTheRfidBy ( String rfidName) {
-        RFIDCardsListPage.searchForRFIDcard (rfidName  );
+    void userSearchForTheRfidBy ( String rfidName ) {
+        RFIDCardsListPage.searchForRFIDcard ( rfidName );
 
 
     }
 
-    @Then ("the rfid {string} should be displayed")
+    @Then ( "the rfid {string} should be displayed")
     public
-    void theRfidShouldBeDisplayed ( String rfidName) {
-        assertTrue (RFIDCardsListPage.isRfidCardDisplayed( rfidName )  );
-        RFIDCardsListPage.setBtnClearSearchField ();
+    void theRfidShouldBeDisplayed ( String rfidName ) {
+        assertTrue ( RFIDCardsListPage.isRfidCardDisplayed ( rfidName ) );
+        RFIDCardsListPage.setBtnClearSearchField ( );
     }
 
-    @When ("User is on the User Selection Page")
+    @When ( "User is on the User Selection Page")
     public
     void userIsOnTheUserSelectionPage ( ) {
         RFIDCardsListPage.openFilterPage ( );
@@ -88,33 +90,33 @@ class RFIDStepdefs extends BaseTests {
     }
 
 
-    @And ("User enters {string} in the search field")
+    @And ( "User enters {string} in the search field")
     public
-    void userEntersInTheSearchField ( String userName) {
-        selectUsersPage.setBtnClearSearchField ();
+    void userEntersInTheSearchField ( String userName ) {
+        selectUsersPage.setBtnClearSearchField ( );
         selectUsersPage.searchForUser ( userName );
-        driver.hideKeyboard ();
+        driver.hideKeyboard ( );
     }
 
-    @And ("A list of users containing {string} should be displayed")
+    @And ( "A list of users containing {string} should be displayed")
     public
     void aListOfUsersContainingShouldBeDisplayed ( String userNames ) {
-        assertTrue (selectUsersPage.isRFIDDisplayed ( userNames )  );
+        assertTrue ( selectUsersPage.isRFIDDisplayed ( userNames ) );
     }
 
-    @And ("User selects the user {string}")
+    @And ( "User selects the user {string}")
     public
-    void userSelectsTheUser ( String userName) {
-        selectUsersPage.selectUser(userName);
-        selectUsersPage.clickValidate ();
+    void userSelectsTheUser ( String userName ) {
+        selectUsersPage.selectUser ( userName );
+        selectUsersPage.clickValidate ( );
     }
 
-    @Then ("The user {string} should be selected")
+    @Then ( "The user {string} should be selected")
     public
-    void theUserShouldBeSelected ( String userNames) {
-       assertTrue( RfidFilterPage.isUserDisplayed ( userNames ),"user not selected");
-       RfidFilterPage.clickApply ();
-        assertTrue (  RFIDCardsListPage.isRfidCardDisplayed ( userNames ));
+    void theUserShouldBeSelected ( String userNames ) {
+        assertTrue ( RfidFilterPage.isUserDisplayed ( userNames ) , "user not selected" );
+        RfidFilterPage.clickApply ( );
+        assertTrue ( RFIDCardsListPage.isRfidCardDisplayed ( userNames ) );
 
     }
 }

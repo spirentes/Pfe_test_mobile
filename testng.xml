@@ -26,15 +26,15 @@
 <!--            <class name="runner.orgnization.ManageOrganizationRunner"/>-->
 <!--        </classes>-->
 <!--    </test>-->
-<!--    <test name="Test 4" >-->
-<!--        <classes>-->
-<!--            <class name="runner.registration.RegistrationTestRunner" />-->
-<!--        </classes>-->
+    <test name="Test 4" >
+        <classes>
+            <class name="runner.registration.RegistrationTestRunner" />
+        </classes>
 
-<!--    </test>-->
-<!--    <test name="Test 5" >-->
-<!--        <classes>-->
-<!--            <class name="runner.login.LoginTestRunner" />-->
-<!--        </classes>-->
-<!--    </test>-->
+    </test>
+    <test name="Test 5" >
+        <classes>
+            <class name="runner.login.LoginTestRunner" />
+        </classes>
+    </test>
 </suite>
