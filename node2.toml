@@ -1,0 +1,15 @@
+#node2.toml
+[server]
+port = 5559
+[node]
+detect-drivers = false
+
+[relay]
+# Default Appium server endpoint
+url = "http://localhost:4729"
+status-endpoint = "/status"
+# Stereotypes supported by the service. The initial number is "max-sessions", and will allocate
+# that many test slots to that particular configuration
+configs = [
+    "3", "{\"platformName\": \"Android\", \"appium:platformVersion\": \"11\", \"appium:deviceName\": \"Pixel 4 API 30\", \"appium:automationName\": \"UiAutomator2\"}"
+]

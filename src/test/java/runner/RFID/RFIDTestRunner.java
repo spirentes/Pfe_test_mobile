@@ -16,10 +16,10 @@ import java.net.MalformedURLException;
 //@Listeners (TestSuiteSetup.class)
 public
 class RFIDTestRunner extends BaseTests {
-    @BeforeClass
-    @BeforeAll
-    public  static void setup_driver () throws MalformedURLException, InterruptedException {
-        System.out.println("setting appium driver.....");
-        configureAppium();
-    }
+//    @BeforeClass
+//    @BeforeAll
+//    public  static void setup_driver () throws MalformedURLException, InterruptedException {
+//        System.out.println("setting appium driver.....");
+//        configureAppium();
+//    }
 }

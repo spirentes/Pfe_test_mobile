@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
@@ -31,9 +32,10 @@ class BaseTests extends AbstractTestNGCucumberTests {
     //    public static WebDriver                driver;
     public        AppiumDriverLocalService service;
 
-    //@BeforeClass
+    @Parameters({"udid","platformVersion" })
     public static
-    void configureAppium ( ) throws InterruptedException, MalformedURLException {
+    void configureAppium (String udid , String platformVersion ) throws InterruptedException, MalformedURLException {
+
         System.out.println ( "Configuring Appium..." );
         // run appium server automatically
       /*  service =
@@ -58,11 +60,11 @@ class BaseTests extends AbstractTestNGCucumberTests {
         // ________________USING PHYSICAL ANDROID DEVICE___________________
 
         DesiredCapabilities capabilities = new DesiredCapabilities ( );
-        capabilities.setCapability ( "deviceName" , "Infinix X665E" );
+        //capabilities.setCapability ( "deviceName" , "Infinix X665E" );
         capabilities.setCapability ( "automationName" , "UiAutomator2" );
-        capabilities.setCapability ( "udid" , "088373729L006869" );
+        capabilities.setCapability ( "udid" , udid );
         capabilities.setCapability ( "platformName" , "Android" );
-        capabilities.setCapability ( "platformVersion" , "12" );
+        capabilities.setCapability ( "platformVersion" ,platformVersion  );
         capabilities.setCapability ( "appPackage" , "com.wattzhub.cpo" );
         capabilities.setCapability ( "appActivity" , "com.wattzhub.cpo.MainActivity" );
         capabilities.setCapability ( "noReset" , true );
@@ -75,7 +77,7 @@ class BaseTests extends AbstractTestNGCucumberTests {
                                    );
         // ________________USING THE APPIUM SERVER___________________
 
-        driver = new AndroidDriver ( new URL ( "http://127.0.0.1:4723" ) , capabilities );
+        driver = new AndroidDriver ( new URL ( " http://172.25.0.1:4444" ) , capabilities );
 
 
         // ________________USING THE APPIUM GRID___________________

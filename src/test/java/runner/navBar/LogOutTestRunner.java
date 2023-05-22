@@ -18,12 +18,12 @@ import static tests.base.BaseTests.driver;
         ,tags = " @logOUT")
 
         public  class LogOutTestRunner {
-        @BeforeClass
-        @BeforeAll
-        public static void  setup() throws MalformedURLException, InterruptedException {
-                System.out.println("setup function");
-                configureAppium();
-                System.out.println(driver);
+//        @BeforeClass
+//        @BeforeAll
+//        public static void  setup() throws MalformedURLException, InterruptedException {
+//                System.out.println("setup function");
+//                configureAppium();
+//                System.out.println(driver);
 
         }
-}
+

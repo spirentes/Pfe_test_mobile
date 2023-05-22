@@ -14,12 +14,12 @@ import java.net.MalformedURLException;
        ,plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 public class AddOrganizationTestRunner extends BaseTests {
-    @BeforeClass
-    @BeforeAll
-    public  static void open_manually_dialog () throws MalformedURLException, InterruptedException {
-        System.out.println("before il class hhh");
-        configureAppium();
-    }
+//    @BeforeClass
+//    @BeforeAll
+//    public  static void open_manually_dialog () throws MalformedURLException, InterruptedException {
+//        System.out.println("before il class hhh");
+//        configureAppium();
+//    }
 
 
 }

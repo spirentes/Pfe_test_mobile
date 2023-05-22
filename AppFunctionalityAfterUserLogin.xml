@@ -2,74 +2,56 @@
 <suite name="App Functionality After User Login Suite">
 
     <test name="Test 0">
+        <parameter name="udid" value="088373729L006869"></parameter>
+        <parameter name="platformVersion" value="12"/>
         <classes>
             <class name="runner.TestSuite.TestSuiteSetup"/>
         </classes>
     </test>
 
-    <test name="Test 6">
-<!--        <groups>-->
-<!--            <dependencies>-->
-<!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
-<!--            </dependencies>-->
-<!--        </groups>-->
+
+    <test name="Test 6" >
+
         <classes>
             <class name="runner.navBar.NavBarTestRunner"/>
         </classes>
     </test>
 
     <test name="Test 7">
-<!--        <groups>-->
-<!--            <dependencies>-->
-<!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
-<!--            </dependencies>-->
-<!--        </groups>-->
+
         <classes>
             <class name="runner.charging_stations.CSmapViewTestRunner"/>
-        </classes>
-    </test>
-
-    <test name="Test 8">
-<!--        <groups>-->
-<!--            <dependencies>-->
-<!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
-<!--            </dependencies>-->
-<!--        </groups>-->
-        <classes>
             <class name="runner.charging_stations.CSlistViewTestRunner"/>
-        </classes>
-    </test>
-
-    <test name="Test 9">
-
-<!--        <groups>-->
-<!--            <dependencies>-->
-<!--                <group name ="My Test Suite"  depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
-<!--            </dependencies>-->
-<!--        </groups>-->
-        <classes>
             <class name="runner.charging_stations.FilterPageTestRunner"/>
-        </classes>
-    </test>
-
-    <test name="Test 10" >
-<!--        <groups>-->
-<!--            <dependencies>-->
-<!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
-<!--            </dependencies>-->
-<!--        </groups>-->
-        <classes>
             <class name="runner.charging_stations.ChargePointTestRunner" />
         </classes>
-
     </test>
 
+<!--    <test name="Test 8">-->
+
+<!--        <classes>-->
+<!--            <class name="runner.charging_stations.CSlistViewTestRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Test 9">-->
+
+
+<!--        <classes>-->
+<!--            <class name="runner.charging_stations.FilterPageTestRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Test 10" >-->
+
+<!--        <classes>-->
+<!--            <class name="runner.charging_stations.ChargePointTestRunner" />-->
+<!--        </classes>-->
+
+<!--    </test>-->
+
     <test name="Test 11" >
-<!--        <groups>-->
-<!--            <dependencies>-->
-<!--                <group  name ="My Test Suite" depends-on="Test 1,Test 2,Test 3,Test 4,Test 5" />-->
-<!--            </dependencies>-->
-<!--        </groups>-->
+
         <classes>
             <class name="runner.sites.SitesTestRunner" />
         </classes>

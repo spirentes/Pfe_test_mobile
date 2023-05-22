@@ -11,13 +11,13 @@ import java.net.MalformedURLException;
         plugin = {"pretty","html:target/cucumber-html-report.html"}
 )
 public class ChargePointTestRunner extends BaseTests {
-    @BeforeClass
-    @BeforeAll
-    public  static void setup_driver () throws MalformedURLException, InterruptedException {
-        System.out.println("setting appium driver.....");
-        configureAppium();
-        System.setProperty("myParameter", "myValue");
-    }
+//    @BeforeClass
+//    @BeforeAll
+//    public  static void setup_driver () throws MalformedURLException, InterruptedException {
+//        System.out.println("setting appium driver.....");
+//        configureAppium();
+//        System.setProperty("myParameter", "myValue");
+//    }
 
 
 }

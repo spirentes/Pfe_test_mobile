@@ -13,14 +13,14 @@ import java.net.MalformedURLException;
         ,plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 public class ManageOrganizationRunner extends BaseTests {
-    private ManageOrganizationPageSteps addOrganizationPageSteps;
-    @BeforeClass
-    @BeforeAll
-    public static void  setup() throws MalformedURLException, InterruptedException {
-        System.out.println("setup function");
-        configureAppium();
-        System.out.println(driver);
 
-    }
+//    @BeforeClass
+//    @BeforeAll
+//    public static void  setup() throws MalformedURLException, InterruptedException {
+//        System.out.println("setup function");
+//        configureAppium();
+//        System.out.println(driver);
+//
+//    }
 
 }

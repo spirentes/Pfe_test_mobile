@@ -11,16 +11,16 @@ import java.net.MalformedURLException;
 @CucumberOptions(features="src/test/resources/features/login/Login.feature"
         ,glue= {"steps.login"}
        // ,tags = "@Successful_login"
-        ,plugin= {"pretty","html:target/cucumber-html-report.html"}
-//        ,plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdaypter:"}
+//        ,plugin= {"pretty","html:target/cucumber-html-report.html"}
+        ,plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 //@Listeners (TestSuiteSetup.class)
 public class LoginTestRunner extends BaseTests {
 
-    @BeforeClass
-    @BeforeAll
-    public  static void setup_driver () throws MalformedURLException, InterruptedException {
-        System.out.println("setting appium driver.....");
-        configureAppium();
-    }
+//    @BeforeClass
+//    @BeforeAll
+//    public  static void setup_driver () throws MalformedURLException, InterruptedException {
+//        System.out.println("setting appium driver.....");
+//        configureAppium();
+//    }
 }

@@ -16,14 +16,14 @@ import java.net.MalformedURLException;
 
 )
 public class NavBarTestRunner extends BaseTests {
-    @BeforeClass
-    @BeforeAll
-    public static void  setup() throws MalformedURLException, InterruptedException {
-        System.out.println("setup function");
-        configureAppium();
-        System.out.println(driver);
-
-    }
+//    @BeforeClass
+//    @BeforeAll
+//    public static void  setup() throws MalformedURLException, InterruptedException {
+//        System.out.println("setup function");
+//        configureAppium();
+//        System.out.println(driver);
+//
+//    }
 
 
 }
