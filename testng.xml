@@ -1,42 +1,52 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="My Test Suite"  >
-    <test name="Test 0">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite"  parallel="tests" thread-count="2">
+    <test name="configure Emulator 1" >
         <parameter name="udid" value="088373729L006869"></parameter>
         <parameter name="platformVersion" value="12"/>
         <classes>
-            <class name="runner.TestSuite.TestSuiteSetup"/>
+
+            <class name="runner.TestSuite.TestSuiteSetup">
+
+
+            </class>
+        </classes> </test>
+
+    <test name="Configure Emulator 2">
+
+        <parameter name="udid" value="5HRUW19927003379"></parameter>
+        <parameter name="platformVersion" value="9"/>
+        <classes>
+            <class name="runner.TestSuite.TestSuiteSetup">
+
+
+            </class>
         </classes>
     </test>
 
-    <test name="Test 1" preserve-order="true">
+    <test name="Emulator 1">
         <classes>
+
+
             <class name="runner.orgnization.NoOrgTestRunner"/>
             <class name="runner.orgnization.AddOrganizationTestRunner"/>
             <class name="runner.orgnization.ManageOrganizationRunner"/>
-            <class name="runner.registration.RegistrationTestRunner" />
-            <class name="runner.login.LoginTestRunner" />
+            <class name="runner.registration.RegistrationTestRunner"/>
+            <class name="runner.login.LoginTestRunner"/>
+
+
         </classes>
     </test>
-<!--    <test name="Test 2">-->
-<!--        <classes>-->
-<!--            <class name="runner.orgnization.AddOrganizationTestRunner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Test 3">-->
-<!--        <classes>-->
-<!--            <class name="runner.orgnization.ManageOrganizationRunner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
 
-<!--    <test name="Test 4" >-->
-<!--        <classes>-->
-<!--            <class name="runner.registration.RegistrationTestRunner" />-->
-<!--        </classes>-->
 
-<!--    </test>-->
-<!--    <test name="Test 5" >-->
-<!--        <classes>-->
-<!--            <class name="runner.login.LoginTestRunner" />-->
-<!--        </classes>-->
-<!--    </test>-->
+
+    <test name="Emulator 2">
+        <classes>
+
+            <class name="runner.navBar.NavBarTestRunner"/>
+            <class name="runner.charging_stations.CSmapViewTestRunner"/>
+            <class name="runner.charging_stations.CSlistViewTestRunner"/>
+            <class name="runner.charging_stations.FilterPageTestRunner"/>
+            <class name="runner.charging_stations.ChargePointTestRunner"/>
+        </classes>
+    </test>
 </suite>

@@ -11,5 +11,5 @@ status-endpoint = "/status"
 # Stereotypes supported by the service. The initial number is "max-sessions", and will allocate
 # that many test slots to that particular configuration
 configs = [
-    "3", "{\"platformName\": \"Android\", \"appium:platformVersion\": \"11\", \"appium:deviceName\": \"Pixel 4 API 30\", \"appium:automationName\": \"UiAutomator2\"}"
+    "3", "{\"platformName\": \"Android\", \"appium:platformVersion\": \"9\", \"appium:deviceName\": \"HUAWEI Y6 Prime\", \"appium:automationName\": \"UiAutomator2\"}"
 ]

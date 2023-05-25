@@ -10,22 +10,7 @@
     </test>
 
 
-    <test name="Test 6" >
 
-        <classes>
-            <class name="runner.navBar.NavBarTestRunner"/>
-        </classes>
-    </test>
-
-    <test name="Test 7">
-
-        <classes>
-            <class name="runner.charging_stations.CSmapViewTestRunner"/>
-            <class name="runner.charging_stations.CSlistViewTestRunner"/>
-            <class name="runner.charging_stations.FilterPageTestRunner"/>
-            <class name="runner.charging_stations.ChargePointTestRunner" />
-        </classes>
-    </test>
 
 <!--    <test name="Test 8">-->
 

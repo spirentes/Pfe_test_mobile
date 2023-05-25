@@ -58,6 +58,7 @@ class SearchChargingStationsMapPage extends BasePage {
     public
     boolean isOnPage ( ) {
         try {
+            waitForVisibility ( pageTitle );
             // Check for the presence of the navMenuIcon element
             return pageTitle.isDisplayed();
         } catch ( NoSuchElementException e) {

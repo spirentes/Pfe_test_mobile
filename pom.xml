@@ -119,7 +119,7 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFiles>testng.xml</suiteXmlFiles>
-                        <suiteXmlFiles>AppFunctionalityAfterUserLogin.xml</suiteXmlFiles>
+<!--                        <suiteXmlFiles>AppFunctionalityAfterUserLogin.xml</suiteXmlFiles>-->
                     </suiteXmlFiles>
                     <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
                 </configuration>

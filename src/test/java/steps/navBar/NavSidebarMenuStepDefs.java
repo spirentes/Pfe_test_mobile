@@ -50,7 +50,7 @@ public class NavSidebarMenuStepDefs  extends BaseTests {
         SearchChargingStationsMapPage searchChargingStationsMapPage= new SearchChargingStationsMapPage ( driver );
         searchChargingStationsMapPage.clickNavBarBtn ();
     }
-    @After ( value = "not @openCS and not @logOUT")
+    @After ( value = "not @openChargingStationPage and not @logOUT")
     public void clickBack(){
         System.out.println ( "im going back !!!!!!!!!!!" );
         driver.navigate ().back ();

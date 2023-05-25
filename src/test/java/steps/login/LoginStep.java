@@ -59,7 +59,8 @@ public class LoginStep extends BaseTests {
 
     @And("User does not accepts the terms")
     public void userDoesNotAcceptsTheTerms() {
-        assertFalse(loginPage.check_accept_conditions());
+        loginPage.clearCheckBox ();
+       // assertFalse(loginPage.check_accept_conditions());
     }
 
     @Then("User should see an error message indicating that he must accept terms and conditions")

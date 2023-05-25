@@ -19,13 +19,15 @@ class LoginPage extends BasePage {
     WebElement organizationButton;
     @AndroidFindBy(xpath = "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]")
     WebElement organizationButton2;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='5']/android.widget.EditText")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='\uDB80\uDDEE']/../android.widget.EditText")
     WebElement emailField;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='6']/android.widget.EditText")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='\uDB80\uDF3E']/../android.widget.EditText")
     WebElement passwordField;
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"Login\")")
     WebElement loginButton;
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@index='8']/android.view.ViewGroup[@index='0']/android.widget.TextView")
+    @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"\uF1FC\")")
+    WebElement checkMark;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='I accept the End-User License Agreement']/../android.view.ViewGroup/android.widget.TextView")
     WebElement conditionCheckbox;
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.TextView\").text(\"New User?\")")
     WebElement newUser   ;
@@ -57,10 +59,23 @@ class LoginPage extends BasePage {
     void setPassword ( String password ) {
         sendText (passwordField, password );
     }
+    public void clearCheckBox(){
+        try {
+            if (checkMark.isDisplayed ()){
+                click ( conditionCheckbox );
+
+            }
+
+        } catch(NoSuchElementException e  ){}
+
+    }
 
     public
     void acceptConditions ( ) {
-        click (conditionCheckbox );
+
+clearCheckBox ();
+click (conditionCheckbox );
+
     }
 
     public SearchChargingStationsMapPage clickLoginButton ( ) {
@@ -108,8 +123,16 @@ class LoginPage extends BasePage {
         System.out.println("waiting for login page to load.....");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOf(loginButton));
+    }public boolean check_accept_conditions(){
+        try{
+            if (checkMark.isDisplayed ())
+            { System.out.println ( checkMark.isDisplayed () );
+                return true;}
+        } catch(NoSuchElementException e )
+            {return false;}
+       return false;
     }
-    public boolean check_accept_conditions(){return conditionCheckbox.isSelected();}
+
     public String get_email_error_message ( ) {
         return getAttribute(emailErrorMessage,"text");
     }

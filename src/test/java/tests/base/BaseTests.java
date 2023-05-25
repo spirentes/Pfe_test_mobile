@@ -28,9 +28,11 @@ import java.time.Duration;
 
 public abstract
 class BaseTests extends AbstractTestNGCucumberTests {
-    public static AndroidDriver driver;
     //    public static WebDriver                driver;
     public        AppiumDriverLocalService service;
+    public static AndroidDriver driver;
+    public static DesiredCapabilities capabilities;
+
 
     @Parameters({"udid","platformVersion" })
     public static
@@ -59,8 +61,8 @@ class BaseTests extends AbstractTestNGCucumberTests {
 
         // ________________USING PHYSICAL ANDROID DEVICE___________________
 
-        DesiredCapabilities capabilities = new DesiredCapabilities ( );
-        //capabilities.setCapability ( "deviceName" , "Infinix X665E" );
+        capabilities = new DesiredCapabilities ( );
+
         capabilities.setCapability ( "automationName" , "UiAutomator2" );
         capabilities.setCapability ( "udid" , udid );
         capabilities.setCapability ( "platformName" , "Android" );
@@ -77,7 +79,7 @@ class BaseTests extends AbstractTestNGCucumberTests {
                                    );
         // ________________USING THE APPIUM SERVER___________________
 
-        driver = new AndroidDriver ( new URL ( " http://172.25.0.1:4444" ) , capabilities );
+       // driver = new AndroidDriver ( new URL ( " http://172.25.0.1:4444" ) , capabilities );
 
 
         // ________________USING THE APPIUM GRID___________________
@@ -102,7 +104,7 @@ class BaseTests extends AbstractTestNGCucumberTests {
 
 
 
-        driver.manage ( ).timeouts ( ).implicitlyWait ( Duration.ofSeconds ( 15 ) );
+
     }
 
 

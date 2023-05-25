@@ -16,5 +16,5 @@ public class TestSuiteSetup extends BaseTests {
     public void setup(String udid, String platformVersion) throws MalformedURLException, InterruptedException {
         System.out.println("setup function");
         configureAppium(udid,platformVersion);
-        System.out.println(driver);
+
     }}
