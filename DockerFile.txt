@@ -1,0 +1,43 @@
+FROM ubuntu:latest
+
+# Install necessary packages
+RUN apt-get update && \
+    apt-get install -y wget unzip && \
+    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && \
+    apt-get install -y nodejs npm && \
+    if [ ! -f /usr/bin/node ]; then ln -s /usr/bin/nodejs /usr/bin/node; fi
+RUN apt-get update && \
+    apt-get install -y sudo
+RUN sudo npm install -g n && sudo n latest
+# Upgrade npm
+RUN npm install -g npm@latest
+# Download and install Appium
+RUN npm install -g appium@2.0.0-beta.55
+# Install Java
+RUN apt-get update && \
+    apt-get install -y default-jre
+# Download and install Selenium server
+RUN mkdir -p /opt/selenium && \
+    wget https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.9.0/selenium-server-4.9.1.jar && \
+    mv selenium-server-4.9.1.jar /opt/selenium/selenium-server.jar
+
+RUN mkdir -p /opt/selenium/tomlfiles
+# Set the working directory
+WORKDIR /opt/selenium
+
+# Expose the necessary ports
+EXPOSE $APPIUM_PORT
+EXPOSE 5558
+EXPOSE 4444
+EXPOSE 5559
+# Set the default values for command-line arguments
+#ENV NODE_CONFIG_FILE=/opt/selenium
+ENV APPIUM_PORTS=4723
+# Copy the entrypoint script
+COPY entrypoint.sh /opt/selenium/entrypoint.sh
+RUN chmod +x /opt/selenium/entrypoint.sh
+# Set the entrypoint
+ENTRYPOINT ["/opt/selenium/entrypoint.sh"]
+# Start the Appium server, Selenium hub, and node
+#CMD [ "sh", "-c", "java -jar /opt/selenium/selenium-server.jar hub & java -jar /opt/selenium/selenium-server.jar node --config $NODE_CONFIG_FILE" ]

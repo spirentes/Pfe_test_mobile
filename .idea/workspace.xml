@@ -4,95 +4,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d470034b-f243-42b1-8a48-36c7b85c8fca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/mycompany101-a-qr-codes.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/AddAnOrganizationDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/AddOrganizationManuallyDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/EditOrganizationdialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/RegisterOrSginInDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/CarsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ScanOraganizationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/login/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/organization/ManageOrganizationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/registration/RegistrationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runner/login/LoginTestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runner/navBar/NavBarTestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runner/orgnization/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runner/orgnization/TestRunner2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runner/registration/RegistrationTestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/ChargingStationsListPageSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/login/LoginStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/organization/AddOrganizationDialogStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/organization/ManageOrganizationPageSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/organization/NoOrganizationFoundSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/organization/manually/AddOrganizationManuallyDialogSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/filters/FiltersTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/navSidebarmenu/NavSidebarMenuTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/registration/RegistrationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/search/SearchTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/CSLIst.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/organization/AddOrganizationDialog.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/organization/AddOrganizationManuallyDialog.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/organization/ManageOrganizationPage.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/organization/NoOrganizationFoundDialog.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d470034b-f243-42b1-8a48-36c7b85c8fca" name="Changes" comment="CS commit">
+      <change afterPath="$PROJECT_DIR$/DockerFile.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DockerFile.txt.save" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TomlFiles/node1.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TomlFiles/node2.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/NoOrganizationFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AlertDialogs/NoOrganizationFound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/FiltersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/FiltersPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/InvoicesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/InvoicesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/NavSidebarMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/navbar/NavSidebarMenuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/RFIDCardsListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/RFIDCardsListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ReportErrorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ReportErrorPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/ScanChargingStations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ScanChargingStations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SearchChargingStationsMapPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SearchChargingStationsMapPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsHistoryListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SessionsHistoryListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SitesListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SitesListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/StatisticsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/StatisticsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/UsersListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/UsersListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/chargingStationList/ChargingStationsListPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/chargingStationList/ChargingStationsListPageSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/navBar/LogOutStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/navBar/LogOutStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/navBar/NavSidebarMenuStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/navBar/NavSidebarMenuStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/registration/FailedRegistrationSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/registration/SuccessfulRegistrationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/registration/SuccessfulRegistrationSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/base/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/base/BaseTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/login/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/login/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/organizations/AddOrganizationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/organizations/AddOrganizationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/login/Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/navBar/NavSidebarMenu.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/navBar/NavSidebarMenu.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/registration/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/registration/Registration.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node1.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node2.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/login/LoginTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/login/LoginTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/navBar/LogOutTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/navBar/LogOutTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/orgnization/AddOrganizationTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/orgnization/AddOrganizationTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/orgnization/ManageOrganizationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/orgnization/ManageOrganizationRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/orgnization/NoOrgTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/orgnization/NoOrgTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/registration/RegistrationTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/registration/RegistrationTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="new-feature" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
     <option name="showPreview" value="true" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2LztbYCCkO8PvDstsLOj5cjWl7g" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -103,39 +65,67 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
-        &quot;keyToString&quot;: {
-        &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-        &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-        &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-        &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-        &quot;last_opened_file_path&quot;: &quot;C:/Users/msi/Desktop/jar_files&quot;,
-        &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-        &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-        &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-        &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-        &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
-        }
-        }</component>
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/Downloads/pfe-test-mobile-master/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
+  }
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\resources" />
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\resources\features\Charging_stations" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\msi\IdeaProjects\WattzHubCPO_MobileAutomation\src\test\resources\features\chargingStationList" />
-      <recent name="C:\Users\msi\IdeaProjects\WattzHubCPO_MobileAutomation\src\test\resources\features\navBar" />
-      <recent name="C:\Users\msi\IdeaProjects\WattzHubCPO_MobileAutomation\src\test\resources\features\login" />
-      <recent name="C:\Users\msi\IdeaProjects\WattzHubCPO_MobileAutomation\src\test\resources\features\Registration" />
-      <recent name="C:\Users\msi\IdeaProjects\WattzHubCPO_MobileAutomation\data" />
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\resources" />
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\java\runner\charging_stations" />
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\java\steps" />
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\resources\cs_qr_codes" />
+      <recent name="C:\Users\Asus\Downloads\pfe-test-mobile-master\src\test\resources\features\Charging stations" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="runner.charging_stations" />
+      <recent name="steps.charging_stations" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginTestRunner.runScenario">
-    <configuration name="LoginTestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AddOrganizationTestRunner">
+    <configuration name="Scenario: delete a payment Method" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/paymentMethods/paymentMethod.feature" />
+      <option name="GLUE" value="steps.charging_stations.mapView steps.paymentMethod steps.charging_stations.filterPage steps.navBar steps.organization steps.login steps.registration" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="WattzHubCPO_MobileAutomation" />
+      <option name="NAME_FILTER" value="^delete a payment Method$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^delete a payment Method$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: delete a payment Method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runner.login.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runner.login" />
-      <option name="MAIN_CLASS_NAME" value="runner.login.LoginTestRunner" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddOrganizationTestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WattzHubCPO_MobileAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.orgnization.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runner.orgnization" />
+      <option name="MAIN_CLASS_NAME" value="runner.orgnization.AddOrganizationTestRunner" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -143,34 +133,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTestRunner.runScenario" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ChargePointTestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runner.login.*" />
+          <option name="PATTERN" value="runner.charging_stations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runner.login" />
-      <option name="MAIN_CLASS_NAME" value="runner.login.LoginTestRunner" />
-      <option name="METHOD_NAME" value="runScenario" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NavBarTestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="WattzHubCPO_MobileAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runner.navBar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runner.navBar" />
-      <option name="MAIN_CLASS_NAME" value="runner.navBar.NavBarTestRunner" />
+      <option name="PACKAGE_NAME" value="runner.charging_stations" />
+      <option name="MAIN_CLASS_NAME" value="runner.charging_stations.ChargePointTestRunner" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -178,45 +150,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NavBarTestRunner.runScenario (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ManageOrganizationRunner (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runner.navBar.*" />
+          <option name="PATTERN" value="runner.orgnization.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runner.navBar" />
-      <option name="MAIN_CLASS_NAME" value="runner.navBar.NavBarTestRunner" />
-      <option name="METHOD_NAME" value="runScenario" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="11" />
+      <option name="PACKAGE_NAME" value="runner.orgnization" />
+      <option name="MAIN_CLASS_NAME" value="runner.orgnization.ManageOrganizationRunner" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NavBarTestRunner.runScenario (3)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="WattzHubCPO_MobileAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runner.navBar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runner.navBar" />
-      <option name="MAIN_CLASS_NAME" value="runner.navBar.NavBarTestRunner" />
-      <option name="METHOD_NAME" value="runScenario" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="11" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestRunner" type="TestNG" nameIsGenerated="true">
+    <configuration name="ManageOrganizationRunner" type="TestNG" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
@@ -227,11 +178,11 @@
         </pattern>
       </extension>
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="runner.orgnization" />
-      <option name="MAIN_CLASS_NAME" value="runner.orgnization.TestRunner" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.orgnization.ManageOrganizationRunner" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="--add-opens java.base/java.lang=ALL-UNNAMED" />
+      <option name="VM_PARAMETERS" value="--add-opens java.base/java.lang=ALL-UNNAMED " />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
       <option name="TEST_SEARCH_SCOPE">
@@ -244,28 +195,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentmethodRunner" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="WattzHubCPO_MobileAutomation" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runner.*" />
+          <option name="PATTERN" value="runner.paymentMthod.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="runner" />
-      <option name="MAIN_CLASS_NAME" value="runner.TestRunner" />
-      <option name="GROUP_NAME" value="" />
+      <option name="PACKAGE_NAME" value="runner.paymentMthod" />
+      <option name="MAIN_CLASS_NAME" value="runner.paymentMthod.PaymentmethodRunner" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="--add-opens java.base/java.lang=ALL-UNNAMED " />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WattzHubCPO_MobileAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.orgnization.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.orgnization.TestRunner" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -302,40 +259,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRunner.runScenario" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="WattzHubCPO_MobileAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runner.navBar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runner" />
-      <option name="MAIN_CLASS_NAME" value="runner.navBar.TestRunner" />
-      <option name="METHOD_NAME" value="runScenario" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="4" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Cucumber Java.Scenario: delete a payment Method" />
+      <item itemvalue="TestNG.ManageOrganizationRunner" />
       <item itemvalue="TestNG.TestRunner" />
-      <item itemvalue="TestNG.LoginTestRunner" />
-      <item itemvalue="TestNG.LoginTestRunner.runScenario" />
-      <item itemvalue="TestNG.NavBarTestRunner" />
-      <item itemvalue="TestNG.NavBarTestRunner.runScenario (2)" />
-      <item itemvalue="TestNG.NavBarTestRunner.runScenario (3)" />
+      <item itemvalue="TestNG.AddOrganizationTestRunner" />
+      <item itemvalue="TestNG.ManageOrganizationRunner (1)" />
+      <item itemvalue="TestNG.PaymentmethodRunner" />
+      <item itemvalue="TestNG.ChargePointTestRunner" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTestRunner.runScenario" />
-        <item itemvalue="TestNG.LoginTestRunner" />
-        <item itemvalue="TestNG.NavBarTestRunner.runScenario (3)" />
-        <item itemvalue="TestNG.NavBarTestRunner" />
-        <item itemvalue="TestNG.NavBarTestRunner.runScenario (2)" />
+        <item itemvalue="TestNG.AddOrganizationTestRunner" />
+        <item itemvalue="TestNG.ManageOrganizationRunner (1)" />
+        <item itemvalue="TestNG.PaymentmethodRunner" />
+        <item itemvalue="Cucumber Java.Scenario: delete a payment Method" />
+        <item itemvalue="TestNG.ChargePointTestRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -348,6 +287,35 @@
       <option name="presentableId" value="Default" />
       <updated>1676885813177</updated>
     </task>
+    <task id="LOCAL-00001" summary="sabri commit">
+      <created>1680092559450</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680092559450</updated>
+    </task>
+    <task id="LOCAL-00002" summary="sabri commit">
+      <created>1680093333522</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680093333522</updated>
+    </task>
+    <task id="LOCAL-00003" summary="sabri commit">
+      <created>1680793693250</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680793693250</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CS commit">
+      <created>1681266709197</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681266709198</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -355,7 +323,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -363,6 +343,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="sabri commit" />
+    <MESSAGE value="CS commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="CS commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -373,14 +356,15 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="TestNG">
+        <watch expression="((ByXPath)((LoginPage)this).emailField).xpathExpression" custom="org.openqa.selenium.By.ByXPath,pages.LoginPage" />
+        <watch expression="((LoginPage)this).emailField" custom="pages.LoginPage" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/WattzHubCPO_MobileAutomation$TestRunner__1_.ic" NAME="TestRunner (1) Coverage Results" MODIFIED="1680255631746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>runner.*</FILTER>
-    </SUITE>
   </component>
 </project>
